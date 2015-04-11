@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="dsLinqData">
+  <DataContextMoniker Name="/dsLinqDataDataContext" />
+  <nestedChildShapes>
+    <classShape Id="f4f8f8ed-42d6-4790-be1d-688f2cc10f2d" absoluteBounds="1, 4.125, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/dsLinqDataDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="15edb33d-2e35-4154-8100-0d83ab3012a1" absoluteBounds="1.0150000000000001, 4.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a99ef471-c147-47e2-8c8f-c76cea62aa27" absoluteBounds="4.75, 2.5, 2, 1.3862939453125">
+      <DataClassMoniker Name="/dsLinqDataDataContext/Rule" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dc914223-3059-4080-84a4-fcdd83fc6529" absoluteBounds="4.765, 2.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8cc35086-ec2e-47d0-b3c7-34befac0ad7d" absoluteBounds="1.125, 1.75, 2, 1.9631982421875">
+      <DataClassMoniker Name="/dsLinqDataDataContext/TblEmp" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e7f39df9-b66a-4872-ac23-4b3d0acae700" absoluteBounds="1.1400000000000001, 2.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9a16f6b3-d027-459b-8f69-b1d7e33056eb" absoluteBounds="1.875, 6.75, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/dsLinqDataDataContext/CdJob" />
+      <nestedChildShapes>
+        <elementListCompartment Id="94074bc0-6b9c-4c31-a46b-48178486c257" absoluteBounds="1.8900000000000001, 7.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="91051e7b-ac2b-48d4-a6c8-67d512f44a87" absoluteBounds="5.625, 6.75, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/dsLinqDataDataContext/CdDepertment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e0cd9be7-e270-4052-bc1f-cb2a8fc60981" absoluteBounds="5.64, 7.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

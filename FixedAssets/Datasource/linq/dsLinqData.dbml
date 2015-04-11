@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="FixedAssets" Class="dsLinqDataDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=FixedAssets;Integrated Security=True" SettingsObjectName="FixedAssets.Properties.Settings" SettingsPropertyName="FixedAssetsConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Users" Member="Users">
+    <Type Name="User">
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="LastActivityDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsAdmin" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ModereaId" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="EmpId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Rule]" Member="Rules">
+    <Type Name="Rule">
+      <Column Name="RuleID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RuleName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="RuleDesc" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TblEmp" Member="TblEmps">
+    <Type Name="TblEmp">
+      <Column Name="EmpId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="EmpName" Type="System.String" DbType="NVarChar(75) NOT NULL" CanBeNull="false" />
+      <Column Name="EmpJobId" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="EmpDepertment" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="dateIn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserIn" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CdJob" Member="CdJobs">
+    <Type Name="CdJob">
+      <Column Name="JobId" Type="System.Byte" DbType="TinyInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="JobName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CdDepertment" Member="CdDepertments">
+    <Type Name="CdDepertment">
+      <Column Name="DepertmentId" Type="System.Byte" DbType="TinyInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Depertment" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>
