@@ -45,6 +45,15 @@ namespace FixedAssets.Datasource.linq
     partial void InsertCdDepertment(CdDepertment instance);
     partial void UpdateCdDepertment(CdDepertment instance);
     partial void DeleteCdDepertment(CdDepertment instance);
+    partial void InsertCdAssetplace(CdAssetplace instance);
+    partial void UpdateCdAssetplace(CdAssetplace instance);
+    partial void DeleteCdAssetplace(CdAssetplace instance);
+    partial void InsertCdAssetState(CdAssetState instance);
+    partial void UpdateCdAssetState(CdAssetState instance);
+    partial void DeleteCdAssetState(CdAssetState instance);
+    partial void InsertCdAssetPropertiy(CdAssetPropertiy instance);
+    partial void UpdateCdAssetPropertiy(CdAssetPropertiy instance);
+    partial void DeleteCdAssetPropertiy(CdAssetPropertiy instance);
     #endregion
 		
 		public dsLinqDataDataContext() : 
@@ -114,6 +123,30 @@ namespace FixedAssets.Datasource.linq
 			get
 			{
 				return this.GetTable<CdDepertment>();
+			}
+		}
+		
+		public System.Data.Linq.Table<CdAssetplace> CdAssetplaces
+		{
+			get
+			{
+				return this.GetTable<CdAssetplace>();
+			}
+		}
+		
+		public System.Data.Linq.Table<CdAssetState> CdAssetStates
+		{
+			get
+			{
+				return this.GetTable<CdAssetState>();
+			}
+		}
+		
+		public System.Data.Linq.Table<CdAssetPropertiy> CdAssetPropertiys
+		{
+			get
+			{
+				return this.GetTable<CdAssetPropertiy>();
 			}
 		}
 	}
@@ -763,6 +796,288 @@ namespace FixedAssets.Datasource.linq
 					this._Depertment = value;
 					this.SendPropertyChanged("Depertment");
 					this.OnDepertmentChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.CdAssetplace")]
+	public partial class CdAssetplace : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _AssetplaceId;
+		
+		private string _Assetplace;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnAssetplaceIdChanging(int value);
+    partial void OnAssetplaceIdChanged();
+    partial void OnAssetplaceChanging(string value);
+    partial void OnAssetplaceChanged();
+    #endregion
+		
+		public CdAssetplace()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AssetplaceId", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int AssetplaceId
+		{
+			get
+			{
+				return this._AssetplaceId;
+			}
+			set
+			{
+				if ((this._AssetplaceId != value))
+				{
+					this.OnAssetplaceIdChanging(value);
+					this.SendPropertyChanging();
+					this._AssetplaceId = value;
+					this.SendPropertyChanged("AssetplaceId");
+					this.OnAssetplaceIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Assetplace", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string Assetplace
+		{
+			get
+			{
+				return this._Assetplace;
+			}
+			set
+			{
+				if ((this._Assetplace != value))
+				{
+					this.OnAssetplaceChanging(value);
+					this.SendPropertyChanging();
+					this._Assetplace = value;
+					this.SendPropertyChanged("Assetplace");
+					this.OnAssetplaceChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.CdAssetState")]
+	public partial class CdAssetState : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private byte _AssetStateId;
+		
+		private string _AssetState;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnAssetStateIdChanging(byte value);
+    partial void OnAssetStateIdChanged();
+    partial void OnAssetStateChanging(string value);
+    partial void OnAssetStateChanged();
+    #endregion
+		
+		public CdAssetState()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AssetStateId", DbType="TinyInt NOT NULL", IsPrimaryKey=true)]
+		public byte AssetStateId
+		{
+			get
+			{
+				return this._AssetStateId;
+			}
+			set
+			{
+				if ((this._AssetStateId != value))
+				{
+					this.OnAssetStateIdChanging(value);
+					this.SendPropertyChanging();
+					this._AssetStateId = value;
+					this.SendPropertyChanged("AssetStateId");
+					this.OnAssetStateIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AssetState", DbType="NVarChar(20) NOT NULL", CanBeNull=false)]
+		public string AssetState
+		{
+			get
+			{
+				return this._AssetState;
+			}
+			set
+			{
+				if ((this._AssetState != value))
+				{
+					this.OnAssetStateChanging(value);
+					this.SendPropertyChanging();
+					this._AssetState = value;
+					this.SendPropertyChanged("AssetState");
+					this.OnAssetStateChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.CdAssetPropertiy")]
+	public partial class CdAssetPropertiy : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private byte _AssetPropertiyId;
+		
+		private string _AssetPropertiy;
+		
+		private string _AssetPropertiyDes;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnAssetPropertiyIdChanging(byte value);
+    partial void OnAssetPropertiyIdChanged();
+    partial void OnAssetPropertiyChanging(string value);
+    partial void OnAssetPropertiyChanged();
+    partial void OnAssetPropertiyDesChanging(string value);
+    partial void OnAssetPropertiyDesChanged();
+    #endregion
+		
+		public CdAssetPropertiy()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AssetPropertiyId", DbType="TinyInt NOT NULL", IsPrimaryKey=true)]
+		public byte AssetPropertiyId
+		{
+			get
+			{
+				return this._AssetPropertiyId;
+			}
+			set
+			{
+				if ((this._AssetPropertiyId != value))
+				{
+					this.OnAssetPropertiyIdChanging(value);
+					this.SendPropertyChanging();
+					this._AssetPropertiyId = value;
+					this.SendPropertyChanged("AssetPropertiyId");
+					this.OnAssetPropertiyIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AssetPropertiy", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string AssetPropertiy
+		{
+			get
+			{
+				return this._AssetPropertiy;
+			}
+			set
+			{
+				if ((this._AssetPropertiy != value))
+				{
+					this.OnAssetPropertiyChanging(value);
+					this.SendPropertyChanging();
+					this._AssetPropertiy = value;
+					this.SendPropertyChanged("AssetPropertiy");
+					this.OnAssetPropertiyChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AssetPropertiyDes", DbType="NVarChar(50)")]
+		public string AssetPropertiyDes
+		{
+			get
+			{
+				return this._AssetPropertiyDes;
+			}
+			set
+			{
+				if ((this._AssetPropertiyDes != value))
+				{
+					this.OnAssetPropertiyDesChanging(value);
+					this.SendPropertyChanging();
+					this._AssetPropertiyDes = value;
+					this.SendPropertyChanged("AssetPropertiyDes");
+					this.OnAssetPropertiyDesChanged();
 				}
 			}
 		}

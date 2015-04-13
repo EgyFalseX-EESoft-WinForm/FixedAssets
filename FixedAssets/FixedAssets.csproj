@@ -161,6 +161,30 @@
     <Compile Include="Views\Code\CdAssetStateEditorUC.designer.cs">
       <DependentUpon>CdAssetStateEditorUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Data\TBLAssetPlaceDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Data\TBLAssetPlaceDlg.Designer.cs">
+      <DependentUpon>TBLAssetPlaceDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Data\TBLReEvaluationDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Data\TBLReEvaluationDlg.Designer.cs">
+      <DependentUpon>TBLReEvaluationDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Data\TBLAssetPropertiyDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Data\TBLAssetPropertiyDlg.Designer.cs">
+      <DependentUpon>TBLAssetPropertiyDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Data\AssetEditorFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Data\AssetEditorFrm.Designer.cs">
+      <DependentUpon>AssetEditorFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Data\TblEmpEditorUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -255,6 +279,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Code\CdAssetStateEditorUC.resx">
       <DependentUpon>CdAssetStateEditorUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Data\TBLAssetPlaceDlg.resx">
+      <DependentUpon>TBLAssetPlaceDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Data\TBLReEvaluationDlg.resx">
+      <DependentUpon>TBLReEvaluationDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Data\TBLAssetPropertiyDlg.resx">
+      <DependentUpon>TBLAssetPropertiyDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Data\AssetEditorFrm.resx">
+      <DependentUpon>AssetEditorFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Data\TblEmpEditorUC.resx">
       <DependentUpon>TblEmpEditorUC.cs</DependentUpon>
