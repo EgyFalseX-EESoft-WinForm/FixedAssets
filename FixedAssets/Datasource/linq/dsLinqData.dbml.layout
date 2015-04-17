@@ -44,10 +44,16 @@
         <elementListCompartment Id="aa2e33f2-2a4f-4627-ada1-18c229dc5b0f" absoluteBounds="4.265, 8.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="9578692a-03f4-4c41-a4e0-7c42324bf91a" absoluteBounds="3.375, 10, 2, 1.3862939453125">
+    <classShape Id="9578692a-03f4-4c41-a4e0-7c42324bf91a" absoluteBounds="2.5, 9.875, 2, 1.3862939453125">
       <DataClassMoniker Name="/dsLinqDataDataContext/CdAssetPropertiy" />
       <nestedChildShapes>
-        <elementListCompartment Id="f856a8ab-31af-45bb-a668-03dd1ae2a584" absoluteBounds="3.39, 10.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="f856a8ab-31af-45bb-a668-03dd1ae2a584" absoluteBounds="2.515, 10.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3bda6c74-a36b-4fb6-92d1-de820fed1506" absoluteBounds="5.125, 10, 2, 1.3862939453125">
+      <DataClassMoniker Name="/dsLinqDataDataContext/CDComponent" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f3ae54ac-2cfd-410f-9352-276f4442eda4" absoluteBounds="5.1400000000000006, 10.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

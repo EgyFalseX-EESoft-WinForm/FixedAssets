@@ -54,6 +54,9 @@ namespace FixedAssets.Datasource.linq
     partial void InsertCdAssetPropertiy(CdAssetPropertiy instance);
     partial void UpdateCdAssetPropertiy(CdAssetPropertiy instance);
     partial void DeleteCdAssetPropertiy(CdAssetPropertiy instance);
+    partial void InsertCDComponent(CDComponent instance);
+    partial void UpdateCDComponent(CDComponent instance);
+    partial void DeleteCDComponent(CDComponent instance);
     #endregion
 		
 		public dsLinqDataDataContext() : 
@@ -147,6 +150,14 @@ namespace FixedAssets.Datasource.linq
 			get
 			{
 				return this.GetTable<CdAssetPropertiy>();
+			}
+		}
+		
+		public System.Data.Linq.Table<CDComponent> CDComponents
+		{
+			get
+			{
+				return this.GetTable<CDComponent>();
 			}
 		}
 	}
@@ -1078,6 +1089,116 @@ namespace FixedAssets.Datasource.linq
 					this._AssetPropertiyDes = value;
 					this.SendPropertyChanged("AssetPropertiyDes");
 					this.OnAssetPropertiyDesChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.CDComponents")]
+	public partial class CDComponent : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ComponentId;
+		
+		private string _Component;
+		
+		private string _ComponentDes;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnComponentIdChanging(int value);
+    partial void OnComponentIdChanged();
+    partial void OnComponentChanging(string value);
+    partial void OnComponentChanged();
+    partial void OnComponentDesChanging(string value);
+    partial void OnComponentDesChanged();
+    #endregion
+		
+		public CDComponent()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ComponentId", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int ComponentId
+		{
+			get
+			{
+				return this._ComponentId;
+			}
+			set
+			{
+				if ((this._ComponentId != value))
+				{
+					this.OnComponentIdChanging(value);
+					this.SendPropertyChanging();
+					this._ComponentId = value;
+					this.SendPropertyChanged("ComponentId");
+					this.OnComponentIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Component", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string Component
+		{
+			get
+			{
+				return this._Component;
+			}
+			set
+			{
+				if ((this._Component != value))
+				{
+					this.OnComponentChanging(value);
+					this.SendPropertyChanging();
+					this._Component = value;
+					this.SendPropertyChanged("Component");
+					this.OnComponentChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ComponentDes", DbType="NVarChar(100)")]
+		public string ComponentDes
+		{
+			get
+			{
+				return this._ComponentDes;
+			}
+			set
+			{
+				if ((this._ComponentDes != value))
+				{
+					this.OnComponentDesChanging(value);
+					this.SendPropertyChanging();
+					this._ComponentDes = value;
+					this.SendPropertyChanged("ComponentDes");
+					this.OnComponentDesChanged();
 				}
 			}
 		}

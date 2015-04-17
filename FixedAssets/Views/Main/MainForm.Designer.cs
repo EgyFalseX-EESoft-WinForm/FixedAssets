@@ -157,6 +157,8 @@
             this.docTilReport = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
             this.docTilRule = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
             this.docTilUserSetting = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
+            this.docCodeCDComponents = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
+            this.docTilCodeCDComponents = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.documentManagerMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.windowsUIView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tileContainerMain)).BeginInit();
@@ -204,6 +206,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.docTilReport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.docTilRule)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.docTilUserSetting)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.docCodeCDComponents)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.docTilCodeCDComponents)).BeginInit();
             this.SuspendLayout();
             // 
             // documentManagerMain
@@ -248,7 +252,8 @@
             this.docRuleUserRoles,
             this.docRuleRuleDetails,
             this.docQryQry1,
-            this.docReportRep1});
+            this.docReportRep1,
+            this.docCodeCDComponents});
             this.windowsUIView.LoadingIndicatorProperties.Caption = "انتظر من فضلك";
             this.windowsUIView.LoadingIndicatorProperties.Description = "تحميل .......";
             this.windowsUIView.OptionsLayout.LayoutVersion = "1";
@@ -280,7 +285,8 @@
             this.docTilRuleUserRoles,
             this.docTilRuleRuleDetails,
             this.docTilQryQry1,
-            this.docTilReportRep1});
+            this.docTilReportRep1,
+            this.docTilCodeCDComponents});
             this.windowsUIView.QueryControl += new DevExpress.XtraBars.Docking2010.Views.QueryControlEventHandler(this.windowsUIView_QueryControl);
             // 
             // tileContainerMain
@@ -328,7 +334,8 @@
             this.docTilCodecdJob,
             this.docTilCodeCdDepertment,
             this.docTilCodeCdAssetPropertiy,
-            this.docTilCodeCdAssetState});
+            this.docTilCodeCdAssetState,
+            this.docTilCodeCDComponents});
             this.tileContainerCode.Name = "tileContainerCode";
             this.tileContainerCode.Parent = this.tileContainerMain;
             // 
@@ -886,6 +893,17 @@
             this.docTilUserSetting.Name = "docTilUserSetting";
             this.docTilUserSetting.Tag = true;
             // 
+            // docCodeCDComponents
+            // 
+            this.docCodeCDComponents.Caption = "مكونات الاصول";
+            this.docCodeCDComponents.ControlName = "docCodeCDComponents";
+            // 
+            // docTilCodeCDComponents
+            // 
+            this.docTilCodeCDComponents.Document = this.docCodeCDComponents;
+            this.tileContainerCode.SetID(this.docTilCodeCDComponents, 5);
+            this.docTilCodeCDComponents.Name = "docTilCodeCDComponents";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -944,6 +962,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.docTilReport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.docTilRule)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.docTilUserSetting)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.docCodeCDComponents)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.docTilCodeCDComponents)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -997,6 +1017,8 @@
         private DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile docTilQryQry1;
         private DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile docTilReportRep1;
         private DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document docReportRep1;
+        private DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile docTilCodeCDComponents;
+        private DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document docCodeCDComponents;
     }
 }
 

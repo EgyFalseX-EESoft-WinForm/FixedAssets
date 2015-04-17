@@ -107,22 +107,35 @@
             this.btnAddTBLReEvaluation = new DevExpress.XtraEditors.SimpleButton();
             this.btnDeleteTBLReEvaluation = new DevExpress.XtraEditors.SimpleButton();
             this.btnEditTBLReEvaluation = new DevExpress.XtraEditors.SimpleButton();
-            this.tBLAssetPropertiyTableAdapter = new FixedAssets.Datasource.dsDataTableAdapters.TBLAssetPropertiyTableAdapter();
-            this.tBLReEvaluationTableAdapter = new FixedAssets.Datasource.dsDataTableAdapters.TBLReEvaluationTableAdapter();
             this.xtraTabPageTBLAssetPlace = new DevExpress.XtraTab.XtraTabPage();
+            this.gridControlTBLAssetPlace = new DevExpress.XtraGrid.GridControl();
+            this.tBLAssetPlaceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridViewTBLAssetPlace = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.coldatep = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAssetplaceId1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemLookUpEditAssetplaceId2 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.colEmpOhda1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemLookUpEditEmpOhda = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.panelControlTBLAssetPlace = new DevExpress.XtraEditors.PanelControl();
             this.btnAddTBLAssetPlace = new DevExpress.XtraEditors.SimpleButton();
             this.btnDeleteTBLAssetPlace = new DevExpress.XtraEditors.SimpleButton();
             this.btnEditTBLAssetPlace = new DevExpress.XtraEditors.SimpleButton();
-            this.gridControlTBLAssetPlace = new DevExpress.XtraGrid.GridControl();
-            this.gridViewTBLAssetPlace = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.tBLAssetPlaceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.xtraTabPageTblAssetComponent = new DevExpress.XtraTab.XtraTabPage();
+            this.gridControlTBLAssetComponent = new DevExpress.XtraGrid.GridControl();
+            this.tBLAssetComponentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridViewTBLAssetComponent = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colComponentId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemLookUpEditComponentId = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.LSMSCDComponents = new DevExpress.Data.Linq.LinqServerModeSource();
+            this.colQuantity = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.btnAddTBLAssetComponent = new DevExpress.XtraEditors.SimpleButton();
+            this.btnDeleteTBLAssetComponent = new DevExpress.XtraEditors.SimpleButton();
+            this.btnEditTBLAssetComponent = new DevExpress.XtraEditors.SimpleButton();
+            this.tBLAssetPropertiyTableAdapter = new FixedAssets.Datasource.dsDataTableAdapters.TBLAssetPropertiyTableAdapter();
+            this.tBLReEvaluationTableAdapter = new FixedAssets.Datasource.dsDataTableAdapters.TBLReEvaluationTableAdapter();
             this.tBLAssetPlaceTableAdapter = new FixedAssets.Datasource.dsDataTableAdapters.TBLAssetPlaceTableAdapter();
-            this.coldatep = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colAssetplaceId1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colEmpOhda1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemLookUpEditAssetplaceId2 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.repositoryItemLookUpEditEmpOhda = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.tBLAssetComponentTableAdapter = new FixedAssets.Datasource.dsDataTableAdapters.TBLAssetComponentTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditAssetplaceId1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditEmp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditAssetStateId)).BeginInit();
@@ -172,13 +185,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControlTBLReEvaluation)).BeginInit();
             this.panelControlTBLReEvaluation.SuspendLayout();
             this.xtraTabPageTBLAssetPlace.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControlTBLAssetPlace)).BeginInit();
-            this.panelControlTBLAssetPlace.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlTBLAssetPlace)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewTBLAssetPlace)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLAssetPlaceBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewTBLAssetPlace)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditAssetplaceId2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditEmpOhda)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControlTBLAssetPlace)).BeginInit();
+            this.panelControlTBLAssetPlace.SuspendLayout();
+            this.xtraTabPageTblAssetComponent.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlTBLAssetComponent)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLAssetComponentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewTBLAssetComponent)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditComponentId)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LSMSCDComponents)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // repositoryItemLookUpEditAssetplaceId1
@@ -515,6 +536,8 @@
             this.colasasemony.Caption = "القيمة الراسمالية";
             this.colasasemony.FieldName = "asasemony";
             this.colasasemony.Name = "colasasemony";
+            this.colasasemony.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "asasemony", "{0:0.##}")});
             this.colasasemony.Visible = true;
             this.colasasemony.VisibleIndex = 2;
             this.colasasemony.Width = 100;
@@ -528,6 +551,8 @@
             this.colsumehlak.Caption = "مجمع اهلاك";
             this.colsumehlak.FieldName = "sumehlak";
             this.colsumehlak.Name = "colsumehlak";
+            this.colsumehlak.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "sumehlak", "{0:0.##}")});
             this.colsumehlak.Visible = true;
             this.colsumehlak.VisibleIndex = 3;
             this.colsumehlak.Width = 76;
@@ -541,6 +566,8 @@
             this.colcontentnumber.Caption = "عدد الاجزاء";
             this.colcontentnumber.FieldName = "contentnumber";
             this.colcontentnumber.Name = "colcontentnumber";
+            this.colcontentnumber.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "contentnumber", "{0:0.##}")});
             this.colcontentnumber.Visible = true;
             this.colcontentnumber.VisibleIndex = 4;
             this.colcontentnumber.Width = 93;
@@ -600,6 +627,8 @@
             this.colnesbaehlak.Caption = "نسبة الاهلاك";
             this.colnesbaehlak.FieldName = "nesbaehlak";
             this.colnesbaehlak.Name = "colnesbaehlak";
+            this.colnesbaehlak.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Average, "nesbaehlak", "{0:0.##}")});
             this.colnesbaehlak.Visible = true;
             this.colnesbaehlak.VisibleIndex = 7;
             this.colnesbaehlak.Width = 82;
@@ -735,7 +764,8 @@
             this.xtraTabControlAssetProperties.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPageTBLAssetPropertiy,
             this.xtraTabPageTBLReEvaluation,
-            this.xtraTabPageTBLAssetPlace});
+            this.xtraTabPageTBLAssetPlace,
+            this.xtraTabPageTblAssetComponent});
             // 
             // xtraTabPageTBLAssetPropertiy
             // 
@@ -1033,14 +1063,6 @@
             this.btnEditTBLReEvaluation.Text = "تعديل";
             this.btnEditTBLReEvaluation.Click += new System.EventHandler(this.btnEditTBLReEvaluation_Click);
             // 
-            // tBLAssetPropertiyTableAdapter
-            // 
-            this.tBLAssetPropertiyTableAdapter.ClearBeforeFill = true;
-            // 
-            // tBLReEvaluationTableAdapter
-            // 
-            this.tBLReEvaluationTableAdapter.ClearBeforeFill = true;
-            // 
             // xtraTabPageTBLAssetPlace
             // 
             this.xtraTabPageTBLAssetPlace.Controls.Add(this.gridControlTBLAssetPlace);
@@ -1048,6 +1070,108 @@
             this.xtraTabPageTBLAssetPlace.Name = "xtraTabPageTBLAssetPlace";
             this.xtraTabPageTBLAssetPlace.Size = new System.Drawing.Size(624, 288);
             this.xtraTabPageTBLAssetPlace.Text = "اماكن الاصل";
+            // 
+            // gridControlTBLAssetPlace
+            // 
+            this.gridControlTBLAssetPlace.DataSource = this.tBLAssetPlaceBindingSource;
+            this.gridControlTBLAssetPlace.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControlTBLAssetPlace.Location = new System.Drawing.Point(0, 30);
+            this.gridControlTBLAssetPlace.MainView = this.gridViewTBLAssetPlace;
+            this.gridControlTBLAssetPlace.MenuManager = this.barManagerMain;
+            this.gridControlTBLAssetPlace.Name = "gridControlTBLAssetPlace";
+            this.gridControlTBLAssetPlace.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemLookUpEditAssetplaceId2,
+            this.repositoryItemLookUpEditEmpOhda});
+            this.gridControlTBLAssetPlace.Size = new System.Drawing.Size(624, 258);
+            this.gridControlTBLAssetPlace.TabIndex = 8;
+            this.gridControlTBLAssetPlace.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridViewTBLAssetPlace});
+            // 
+            // tBLAssetPlaceBindingSource
+            // 
+            this.tBLAssetPlaceBindingSource.DataMember = "TBLAssetPlace";
+            this.tBLAssetPlaceBindingSource.DataSource = this.dsData;
+            // 
+            // gridViewTBLAssetPlace
+            // 
+            this.gridViewTBLAssetPlace.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.coldatep,
+            this.colAssetplaceId1,
+            this.colEmpOhda1});
+            this.gridViewTBLAssetPlace.GridControl = this.gridControlTBLAssetPlace;
+            this.gridViewTBLAssetPlace.Name = "gridViewTBLAssetPlace";
+            this.gridViewTBLAssetPlace.OptionsBehavior.Editable = false;
+            this.gridViewTBLAssetPlace.OptionsView.ColumnAutoWidth = false;
+            this.gridViewTBLAssetPlace.OptionsView.ShowFooter = true;
+            this.gridViewTBLAssetPlace.OptionsView.ShowGroupPanel = false;
+            // 
+            // coldatep
+            // 
+            this.coldatep.AppearanceCell.Options.UseTextOptions = true;
+            this.coldatep.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.coldatep.AppearanceHeader.Options.UseTextOptions = true;
+            this.coldatep.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.coldatep.Caption = "التاريخ";
+            this.coldatep.FieldName = "datep";
+            this.coldatep.Name = "coldatep";
+            this.coldatep.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "datep", "{0}")});
+            this.coldatep.Visible = true;
+            this.coldatep.VisibleIndex = 0;
+            // 
+            // colAssetplaceId1
+            // 
+            this.colAssetplaceId1.AppearanceCell.Options.UseTextOptions = true;
+            this.colAssetplaceId1.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colAssetplaceId1.AppearanceHeader.Options.UseTextOptions = true;
+            this.colAssetplaceId1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colAssetplaceId1.Caption = "مكان الاصل";
+            this.colAssetplaceId1.ColumnEdit = this.repositoryItemLookUpEditAssetplaceId2;
+            this.colAssetplaceId1.FieldName = "AssetplaceId";
+            this.colAssetplaceId1.Name = "colAssetplaceId1";
+            this.colAssetplaceId1.Visible = true;
+            this.colAssetplaceId1.VisibleIndex = 1;
+            // 
+            // repositoryItemLookUpEditAssetplaceId2
+            // 
+            this.repositoryItemLookUpEditAssetplaceId2.AutoHeight = false;
+            this.repositoryItemLookUpEditAssetplaceId2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemLookUpEditAssetplaceId2.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Assetplace", "الاسم", 62, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
+            this.repositoryItemLookUpEditAssetplaceId2.DataSource = this.LSMSAssetplaceId;
+            this.repositoryItemLookUpEditAssetplaceId2.DisplayMember = "Assetplace";
+            this.repositoryItemLookUpEditAssetplaceId2.Name = "repositoryItemLookUpEditAssetplaceId2";
+            this.repositoryItemLookUpEditAssetplaceId2.NullText = "";
+            this.repositoryItemLookUpEditAssetplaceId2.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.repositoryItemLookUpEditAssetplaceId2.ValueMember = "AssetplaceId";
+            // 
+            // colEmpOhda1
+            // 
+            this.colEmpOhda1.AppearanceCell.Options.UseTextOptions = true;
+            this.colEmpOhda1.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colEmpOhda1.AppearanceHeader.Options.UseTextOptions = true;
+            this.colEmpOhda1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colEmpOhda1.Caption = "موظف العهدة";
+            this.colEmpOhda1.ColumnEdit = this.repositoryItemLookUpEditEmpOhda;
+            this.colEmpOhda1.FieldName = "EmpOhda";
+            this.colEmpOhda1.Name = "colEmpOhda1";
+            this.colEmpOhda1.Visible = true;
+            this.colEmpOhda1.VisibleIndex = 2;
+            // 
+            // repositoryItemLookUpEditEmpOhda
+            // 
+            this.repositoryItemLookUpEditEmpOhda.AutoHeight = false;
+            this.repositoryItemLookUpEditEmpOhda.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemLookUpEditEmpOhda.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("EmpName", "الاسم", 60, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
+            this.repositoryItemLookUpEditEmpOhda.DataSource = this.LSMSEmp;
+            this.repositoryItemLookUpEditEmpOhda.DisplayMember = "EmpName";
+            this.repositoryItemLookUpEditEmpOhda.Name = "repositoryItemLookUpEditEmpOhda";
+            this.repositoryItemLookUpEditEmpOhda.NullText = "";
+            this.repositoryItemLookUpEditEmpOhda.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.repositoryItemLookUpEditEmpOhda.ValueMember = "EmpId";
             // 
             // panelControlTBLAssetPlace
             // 
@@ -1090,109 +1214,141 @@
             this.btnEditTBLAssetPlace.Text = "تعديل";
             this.btnEditTBLAssetPlace.Click += new System.EventHandler(this.btnEditTBLAssetPlace_Click);
             // 
-            // gridControlTBLAssetPlace
+            // xtraTabPageTblAssetComponent
             // 
-            this.gridControlTBLAssetPlace.DataSource = this.tBLAssetPlaceBindingSource;
-            this.gridControlTBLAssetPlace.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControlTBLAssetPlace.Location = new System.Drawing.Point(0, 30);
-            this.gridControlTBLAssetPlace.MainView = this.gridViewTBLAssetPlace;
-            this.gridControlTBLAssetPlace.MenuManager = this.barManagerMain;
-            this.gridControlTBLAssetPlace.Name = "gridControlTBLAssetPlace";
-            this.gridControlTBLAssetPlace.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repositoryItemLookUpEditAssetplaceId2,
-            this.repositoryItemLookUpEditEmpOhda});
-            this.gridControlTBLAssetPlace.Size = new System.Drawing.Size(624, 258);
-            this.gridControlTBLAssetPlace.TabIndex = 8;
-            this.gridControlTBLAssetPlace.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridViewTBLAssetPlace});
+            this.xtraTabPageTblAssetComponent.Controls.Add(this.gridControlTBLAssetComponent);
+            this.xtraTabPageTblAssetComponent.Controls.Add(this.panelControl1);
+            this.xtraTabPageTblAssetComponent.Name = "xtraTabPageTblAssetComponent";
+            this.xtraTabPageTblAssetComponent.Size = new System.Drawing.Size(624, 288);
+            this.xtraTabPageTblAssetComponent.Text = "مكونات الاصل";
             // 
-            // gridViewTBLAssetPlace
+            // gridControlTBLAssetComponent
             // 
-            this.gridViewTBLAssetPlace.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.coldatep,
-            this.colAssetplaceId1,
-            this.colEmpOhda1});
-            this.gridViewTBLAssetPlace.GridControl = this.gridControlTBLAssetPlace;
-            this.gridViewTBLAssetPlace.Name = "gridViewTBLAssetPlace";
-            this.gridViewTBLAssetPlace.OptionsBehavior.Editable = false;
-            this.gridViewTBLAssetPlace.OptionsView.ColumnAutoWidth = false;
-            this.gridViewTBLAssetPlace.OptionsView.ShowFooter = true;
-            this.gridViewTBLAssetPlace.OptionsView.ShowGroupPanel = false;
+            this.gridControlTBLAssetComponent.DataSource = this.tBLAssetComponentBindingSource;
+            this.gridControlTBLAssetComponent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControlTBLAssetComponent.Location = new System.Drawing.Point(0, 30);
+            this.gridControlTBLAssetComponent.MainView = this.gridViewTBLAssetComponent;
+            this.gridControlTBLAssetComponent.MenuManager = this.barManagerMain;
+            this.gridControlTBLAssetComponent.Name = "gridControlTBLAssetComponent";
+            this.gridControlTBLAssetComponent.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemLookUpEditComponentId});
+            this.gridControlTBLAssetComponent.Size = new System.Drawing.Size(624, 258);
+            this.gridControlTBLAssetComponent.TabIndex = 7;
+            this.gridControlTBLAssetComponent.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridViewTBLAssetComponent});
             // 
-            // tBLAssetPlaceBindingSource
+            // tBLAssetComponentBindingSource
             // 
-            this.tBLAssetPlaceBindingSource.DataMember = "TBLAssetPlace";
-            this.tBLAssetPlaceBindingSource.DataSource = this.dsData;
+            this.tBLAssetComponentBindingSource.DataMember = "TBLAssetComponent";
+            this.tBLAssetComponentBindingSource.DataSource = this.dsData;
+            // 
+            // gridViewTBLAssetComponent
+            // 
+            this.gridViewTBLAssetComponent.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colComponentId,
+            this.colQuantity});
+            this.gridViewTBLAssetComponent.GridControl = this.gridControlTBLAssetComponent;
+            this.gridViewTBLAssetComponent.Name = "gridViewTBLAssetComponent";
+            this.gridViewTBLAssetComponent.OptionsBehavior.Editable = false;
+            this.gridViewTBLAssetComponent.OptionsView.ColumnAutoWidth = false;
+            this.gridViewTBLAssetComponent.OptionsView.ShowFooter = true;
+            this.gridViewTBLAssetComponent.OptionsView.ShowGroupPanel = false;
+            // 
+            // colComponentId
+            // 
+            this.colComponentId.Caption = "المكون";
+            this.colComponentId.ColumnEdit = this.repositoryItemLookUpEditComponentId;
+            this.colComponentId.FieldName = "ComponentId";
+            this.colComponentId.Name = "colComponentId";
+            this.colComponentId.Visible = true;
+            this.colComponentId.VisibleIndex = 0;
+            this.colComponentId.Width = 88;
+            // 
+            // repositoryItemLookUpEditComponentId
+            // 
+            this.repositoryItemLookUpEditComponentId.AutoHeight = false;
+            this.repositoryItemLookUpEditComponentId.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemLookUpEditComponentId.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Component", "الاسم", 65, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
+            this.repositoryItemLookUpEditComponentId.DataSource = this.LSMSCDComponents;
+            this.repositoryItemLookUpEditComponentId.DisplayMember = "Component";
+            this.repositoryItemLookUpEditComponentId.Name = "repositoryItemLookUpEditComponentId";
+            this.repositoryItemLookUpEditComponentId.NullText = "";
+            this.repositoryItemLookUpEditComponentId.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.repositoryItemLookUpEditComponentId.ValueMember = "ComponentId";
+            // 
+            // LSMSCDComponents
+            // 
+            this.LSMSCDComponents.ElementType = typeof(FixedAssets.Datasource.linq.CDComponent);
+            this.LSMSCDComponents.KeyExpression = "[ComponentId]";
+            // 
+            // colQuantity
+            // 
+            this.colQuantity.Caption = "الكمية";
+            this.colQuantity.FieldName = "Quantity";
+            this.colQuantity.Name = "colQuantity";
+            this.colQuantity.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Quantity", "{0:0.##}")});
+            this.colQuantity.Visible = true;
+            this.colQuantity.VisibleIndex = 1;
+            // 
+            // panelControl1
+            // 
+            this.panelControl1.Controls.Add(this.btnAddTBLAssetComponent);
+            this.panelControl1.Controls.Add(this.btnDeleteTBLAssetComponent);
+            this.panelControl1.Controls.Add(this.btnEditTBLAssetComponent);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl1.Location = new System.Drawing.Point(0, 0);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(624, 30);
+            this.panelControl1.TabIndex = 6;
+            // 
+            // btnAddTBLAssetComponent
+            // 
+            this.btnAddTBLAssetComponent.Image = global::FixedAssets.Properties.Resources.add_16x16;
+            this.btnAddTBLAssetComponent.Location = new System.Drawing.Point(5, 3);
+            this.btnAddTBLAssetComponent.Name = "btnAddTBLAssetComponent";
+            this.btnAddTBLAssetComponent.Size = new System.Drawing.Size(60, 23);
+            this.btnAddTBLAssetComponent.TabIndex = 3;
+            this.btnAddTBLAssetComponent.Text = "اضافة";
+            this.btnAddTBLAssetComponent.Click += new System.EventHandler(this.btnAddTBLAssetComponent_Click);
+            // 
+            // btnDeleteTBLAssetComponent
+            // 
+            this.btnDeleteTBLAssetComponent.Image = global::FixedAssets.Properties.Resources.cancel_16x16;
+            this.btnDeleteTBLAssetComponent.Location = new System.Drawing.Point(137, 4);
+            this.btnDeleteTBLAssetComponent.Name = "btnDeleteTBLAssetComponent";
+            this.btnDeleteTBLAssetComponent.Size = new System.Drawing.Size(60, 23);
+            this.btnDeleteTBLAssetComponent.TabIndex = 3;
+            this.btnDeleteTBLAssetComponent.Text = "حذف";
+            this.btnDeleteTBLAssetComponent.Click += new System.EventHandler(this.btnDeleteTBLAssetComponent_Click);
+            // 
+            // btnEditTBLAssetComponent
+            // 
+            this.btnEditTBLAssetComponent.Image = global::FixedAssets.Properties.Resources.pictureshapeoutlinecolor_16x16;
+            this.btnEditTBLAssetComponent.Location = new System.Drawing.Point(71, 4);
+            this.btnEditTBLAssetComponent.Name = "btnEditTBLAssetComponent";
+            this.btnEditTBLAssetComponent.Size = new System.Drawing.Size(60, 23);
+            this.btnEditTBLAssetComponent.TabIndex = 3;
+            this.btnEditTBLAssetComponent.Text = "تعديل";
+            this.btnEditTBLAssetComponent.Click += new System.EventHandler(this.btnEditTBLAssetComponent_Click);
+            // 
+            // tBLAssetPropertiyTableAdapter
+            // 
+            this.tBLAssetPropertiyTableAdapter.ClearBeforeFill = true;
+            // 
+            // tBLReEvaluationTableAdapter
+            // 
+            this.tBLReEvaluationTableAdapter.ClearBeforeFill = true;
             // 
             // tBLAssetPlaceTableAdapter
             // 
             this.tBLAssetPlaceTableAdapter.ClearBeforeFill = true;
             // 
-            // coldatep
+            // tBLAssetComponentTableAdapter
             // 
-            this.coldatep.AppearanceCell.Options.UseTextOptions = true;
-            this.coldatep.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.coldatep.AppearanceHeader.Options.UseTextOptions = true;
-            this.coldatep.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.coldatep.Caption = "التاريخ";
-            this.coldatep.FieldName = "datep";
-            this.coldatep.Name = "coldatep";
-            this.coldatep.Visible = true;
-            this.coldatep.VisibleIndex = 0;
-            // 
-            // colAssetplaceId1
-            // 
-            this.colAssetplaceId1.AppearanceCell.Options.UseTextOptions = true;
-            this.colAssetplaceId1.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colAssetplaceId1.AppearanceHeader.Options.UseTextOptions = true;
-            this.colAssetplaceId1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colAssetplaceId1.Caption = "مكان الاصل";
-            this.colAssetplaceId1.ColumnEdit = this.repositoryItemLookUpEditAssetplaceId2;
-            this.colAssetplaceId1.FieldName = "AssetplaceId";
-            this.colAssetplaceId1.Name = "colAssetplaceId1";
-            this.colAssetplaceId1.Visible = true;
-            this.colAssetplaceId1.VisibleIndex = 1;
-            // 
-            // colEmpOhda1
-            // 
-            this.colEmpOhda1.AppearanceCell.Options.UseTextOptions = true;
-            this.colEmpOhda1.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colEmpOhda1.AppearanceHeader.Options.UseTextOptions = true;
-            this.colEmpOhda1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colEmpOhda1.Caption = "موظف العهدة";
-            this.colEmpOhda1.ColumnEdit = this.repositoryItemLookUpEditEmpOhda;
-            this.colEmpOhda1.FieldName = "EmpOhda";
-            this.colEmpOhda1.Name = "colEmpOhda1";
-            this.colEmpOhda1.Visible = true;
-            this.colEmpOhda1.VisibleIndex = 2;
-            // 
-            // repositoryItemLookUpEditAssetplaceId2
-            // 
-            this.repositoryItemLookUpEditAssetplaceId2.AutoHeight = false;
-            this.repositoryItemLookUpEditAssetplaceId2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemLookUpEditAssetplaceId2.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Assetplace", "الاسم", 62, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
-            this.repositoryItemLookUpEditAssetplaceId2.DataSource = this.LSMSAssetplaceId;
-            this.repositoryItemLookUpEditAssetplaceId2.DisplayMember = "Assetplace";
-            this.repositoryItemLookUpEditAssetplaceId2.Name = "repositoryItemLookUpEditAssetplaceId2";
-            this.repositoryItemLookUpEditAssetplaceId2.NullText = "";
-            this.repositoryItemLookUpEditAssetplaceId2.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.repositoryItemLookUpEditAssetplaceId2.ValueMember = "AssetplaceId";
-            // 
-            // repositoryItemLookUpEditEmpOhda
-            // 
-            this.repositoryItemLookUpEditEmpOhda.AutoHeight = false;
-            this.repositoryItemLookUpEditEmpOhda.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemLookUpEditEmpOhda.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("EmpName", "الاسم", 60, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
-            this.repositoryItemLookUpEditEmpOhda.DataSource = this.LSMSEmp;
-            this.repositoryItemLookUpEditEmpOhda.DisplayMember = "EmpName";
-            this.repositoryItemLookUpEditEmpOhda.Name = "repositoryItemLookUpEditEmpOhda";
-            this.repositoryItemLookUpEditEmpOhda.NullText = "";
-            this.repositoryItemLookUpEditEmpOhda.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.repositoryItemLookUpEditEmpOhda.ValueMember = "EmpId";
+            this.tBLAssetComponentTableAdapter.ClearBeforeFill = true;
             // 
             // CdAssetsCategoryEditorUC
             // 
@@ -1255,13 +1411,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControlTBLReEvaluation)).EndInit();
             this.panelControlTBLReEvaluation.ResumeLayout(false);
             this.xtraTabPageTBLAssetPlace.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControlTBLAssetPlace)).EndInit();
-            this.panelControlTBLAssetPlace.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControlTBLAssetPlace)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewTBLAssetPlace)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLAssetPlaceBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewTBLAssetPlace)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditAssetplaceId2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditEmpOhda)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControlTBLAssetPlace)).EndInit();
+            this.panelControlTBLAssetPlace.ResumeLayout(false);
+            this.xtraTabPageTblAssetComponent.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlTBLAssetComponent)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLAssetComponentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewTBLAssetComponent)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditComponentId)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LSMSCDComponents)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1360,5 +1524,18 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEditAssetplaceId2;
         private DevExpress.XtraGrid.Columns.GridColumn colEmpOhda1;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEditEmpOhda;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPageTblAssetComponent;
+        private DevExpress.XtraGrid.GridControl gridControlTBLAssetComponent;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridViewTBLAssetComponent;
+        private DevExpress.XtraEditors.PanelControl panelControl1;
+        private DevExpress.XtraEditors.SimpleButton btnAddTBLAssetComponent;
+        private DevExpress.XtraEditors.SimpleButton btnDeleteTBLAssetComponent;
+        private DevExpress.XtraEditors.SimpleButton btnEditTBLAssetComponent;
+        private System.Windows.Forms.BindingSource tBLAssetComponentBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn colComponentId;
+        private DevExpress.XtraGrid.Columns.GridColumn colQuantity;
+        private Datasource.dsDataTableAdapters.TBLAssetComponentTableAdapter tBLAssetComponentTableAdapter;
+        private DevExpress.Data.Linq.LinqServerModeSource LSMSCDComponents;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEditComponentId;
     }
 }

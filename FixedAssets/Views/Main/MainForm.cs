@@ -128,6 +128,10 @@ namespace FixedAssets.Views.Main
             {
                 e.Control = new CdAssetStateEditorUC(RuleElemet);
             }
+            else if (e.Document == docCodeCDComponents)
+            {
+                e.Control = new CDComponentsEditorUC(RuleElemet);
+            }
             //---------Data
             else if (e.Document == docDataCdAssetsCategory)
             {
