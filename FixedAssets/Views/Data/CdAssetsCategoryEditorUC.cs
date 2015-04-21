@@ -223,7 +223,24 @@ namespace FixedAssets.Views.Data
                 tBLAssetComponentTableAdapter.FillByAssetsID(dsData.TBLAssetComponent, Convert.ToInt32(row.GetMemberValue("AssetsID")));
                 gridViewTBLAssetComponent.RefreshData();
                 gridViewTBLAssetComponent.HideLoadingPanel();
-                
+
+                //Load TBLAddAssetComponent Grid
+                gridViewTBLAddAssetComponent.ShowLoadingPanel();
+                tBLAddAssetComponentTableAdapter.FillByAssetsID(dsData.TBLAddAssetComponent, Convert.ToInt32(row.GetMemberValue("AssetsID")));
+                gridViewTBLAddAssetComponent.RefreshData();
+                gridViewTBLAddAssetComponent.HideLoadingPanel();
+
+                //Load TBLDeleteAssetComponent Grid
+                gridViewTBLDeleteAssetComponent.ShowLoadingPanel();
+                tBLDeleteAssetComponentTableAdapter.FillByAssetsID(dsData.TBLDeleteAssetComponent, Convert.ToInt32(row.GetMemberValue("AssetsID")));
+                gridViewTBLDeleteAssetComponent.RefreshData();
+                gridViewTBLDeleteAssetComponent.HideLoadingPanel();
+
+                //Load TBLAssetOhda Grid
+                gridViewTBLAssetOhda.ShowLoadingPanel();
+                tBLAssetOhdaTableAdapter.FillByAssetsID(dsData.TBLAssetOhda, Convert.ToInt32(row.GetMemberValue("AssetsID")));
+                gridViewTBLAssetOhda.RefreshData();
+                gridViewTBLAssetOhda.HideLoadingPanel();
             }
             }
             catch (Exception ex)
@@ -442,7 +459,7 @@ namespace FixedAssets.Views.Data
                     return;
                 if (row == null)
                     return;
-                TBLAssetComponentDlg frm = new TBLAssetComponentDlg(Convert.ToInt32(row.GetMemberValue("AssetsID")), true);
+                TBLAddAssetComponentDlg frm = new TBLAddAssetComponentDlg(Convert.ToInt32(row.GetMemberValue("AssetsID")), true);
                 if (frm.ShowDialog() == DialogResult.OK)
                 {
                     gridViewTBLAssetComponent.ShowLoadingPanel();
@@ -501,9 +518,215 @@ namespace FixedAssets.Views.Data
                 MsgDlg.Show(ex.Message, MsgDlg.MessageType.Error, ex);
             }
         }
+        private void btnAddTBLAddAssetComponent_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                XPDataTableObject row = (XPDataTableObject)gridViewAsset.GetRow(gridViewAsset.FocusedRowHandle);
+                if (row == null)
+                    return;
+                if (row == null)
+                    return;
+                TBLAddAssetComponentDlg frm = new TBLAddAssetComponentDlg(Convert.ToInt32(row.GetMemberValue("AssetsID")), true);
+                if (frm.ShowDialog() == DialogResult.OK)
+                {
+                    gridViewTBLAddAssetComponent.ShowLoadingPanel();
+                    tBLAddAssetComponentTableAdapter.FillByAssetsID(dsData.TBLAddAssetComponent, Convert.ToInt32(row.GetMemberValue("AssetsID")));
+                    gridViewTBLAddAssetComponent.RefreshData();
+                    gridViewTBLAddAssetComponent.HideLoadingPanel();
+                }
+            }
+            catch (Exception ex)
+            {
+                MsgDlg.Show(ex.Message, MsgDlg.MessageType.Error, ex);
+            }
+        }
+        private void btnEditTBLAddAssetComponent_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DataRowView drv = (DataRowView)gridViewTBLAddAssetComponent.GetRow(gridViewTBLAddAssetComponent.FocusedRowHandle);
+                if (drv == null)
+                    return;
+                Datasource.dsData.TBLAddAssetComponentRow row = (Datasource.dsData.TBLAddAssetComponentRow)(drv).Row;
+                if (row == null)
+                    return;
+                TBLAddAssetComponentDlg frm = new TBLAddAssetComponentDlg(row.AddComponentezn, false);
+                if (frm.ShowDialog() == DialogResult.OK)
+                {
+                    gridViewTBLAddAssetComponent.ShowLoadingPanel();
+                    tBLAddAssetComponentTableAdapter.FillByAssetsID(dsData.TBLAddAssetComponent, row.AssetsID);
+                    gridViewTBLAddAssetComponent.RefreshData();
+                    gridViewTBLAddAssetComponent.HideLoadingPanel();
+                }
+            }
+            catch (Exception ex)
+            {
+                MsgDlg.Show(ex.Message, MsgDlg.MessageType.Error, ex);
+            }
+        }
+        private void btnDeleteTBLAddAssetComponent_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Datasource.dsData.TBLAddAssetComponentRow row = (Datasource.dsData.TBLAddAssetComponentRow)((DataRowView)gridViewTBLAddAssetComponent.GetRow(gridViewTBLAddAssetComponent.FocusedRowHandle)).Row;
+                if (row == null)
+                    return;
+                if (MsgDlg.Show("هل انت متأكد ؟", MsgDlg.MessageType.Question) == DialogResult.Yes)
+                {
+                    gridViewTBLAddAssetComponent.ShowLoadingPanel();
+                    tBLAddAssetComponentTableAdapter.Delete(row.AddComponentezn);
+                    gridViewTBLAddAssetComponent.DeleteRow(gridViewTBLAddAssetComponent.FocusedRowHandle);
+                    gridViewTBLAddAssetComponent.RefreshData();
+                    gridViewTBLAddAssetComponent.HideLoadingPanel();
+                }
+            }
+            catch (Exception ex)
+            {
+                MsgDlg.Show(ex.Message, MsgDlg.MessageType.Error, ex);
+            }
+        }
+        private void btnAddTBLDeleteAssetComponent_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                XPDataTableObject row = (XPDataTableObject)gridViewAsset.GetRow(gridViewAsset.FocusedRowHandle);
+                if (row == null)
+                    return;
+                if (row == null)
+                    return;
+                TBLDeleteAssetComponentDlg frm = new TBLDeleteAssetComponentDlg(Convert.ToInt32(row.GetMemberValue("AssetsID")), true);
+                if (frm.ShowDialog() == DialogResult.OK)
+                {
+                    gridViewTBLDeleteAssetComponent.ShowLoadingPanel();
+                    tBLDeleteAssetComponentTableAdapter.FillByAssetsID(dsData.TBLDeleteAssetComponent, Convert.ToInt32(row.GetMemberValue("AssetsID")));
+                    gridViewTBLDeleteAssetComponent.RefreshData();
+                    gridViewTBLDeleteAssetComponent.HideLoadingPanel();
+                }
+            }
+            catch (Exception ex)
+            {
+                MsgDlg.Show(ex.Message, MsgDlg.MessageType.Error, ex);
+            }
+        }
+        private void btnEditTBLDeleteAssetComponent_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DataRowView drv = (DataRowView)gridViewTBLDeleteAssetComponent.GetRow(gridViewTBLDeleteAssetComponent.FocusedRowHandle);
+                if (drv == null)
+                    return;
+                Datasource.dsData.TBLDeleteAssetComponentRow row = (Datasource.dsData.TBLDeleteAssetComponentRow)(drv).Row;
+                if (row == null)
+                    return;
+                TBLDeleteAssetComponentDlg frm = new TBLDeleteAssetComponentDlg(row.DeleteComponentezn, false);
+                if (frm.ShowDialog() == DialogResult.OK)
+                {
+                    gridViewTBLDeleteAssetComponent.ShowLoadingPanel();
+                    tBLDeleteAssetComponentTableAdapter.FillByAssetsID(dsData.TBLDeleteAssetComponent, row.AssetsID);
+                    gridViewTBLDeleteAssetComponent.RefreshData();
+                    gridViewTBLDeleteAssetComponent.HideLoadingPanel();
+                }
+            }
+            catch (Exception ex)
+            {
+                MsgDlg.Show(ex.Message, MsgDlg.MessageType.Error, ex);
+            }
+        }
+        private void btnDeleteTBLDeleteAssetComponent_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Datasource.dsData.TBLDeleteAssetComponentRow row = (Datasource.dsData.TBLDeleteAssetComponentRow)((DataRowView)gridViewTBLDeleteAssetComponent.GetRow(gridViewTBLDeleteAssetComponent.FocusedRowHandle)).Row;
+                if (row == null)
+                    return;
+                if (MsgDlg.Show("هل انت متأكد ؟", MsgDlg.MessageType.Question) == DialogResult.Yes)
+                {
+                    gridViewTBLDeleteAssetComponent.ShowLoadingPanel();
+                    tBLDeleteAssetComponentTableAdapter.Delete(row.DeleteComponentezn);
+                    gridViewTBLDeleteAssetComponent.DeleteRow(gridViewTBLDeleteAssetComponent.FocusedRowHandle);
+                    gridViewTBLDeleteAssetComponent.RefreshData();
+                    gridViewTBLDeleteAssetComponent.HideLoadingPanel();
+                }
+            }
+            catch (Exception ex)
+            {
+                MsgDlg.Show(ex.Message, MsgDlg.MessageType.Error, ex);
+            }
+        }
+        private void btnAddTBLAssetOhda_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                XPDataTableObject row = (XPDataTableObject)gridViewAsset.GetRow(gridViewAsset.FocusedRowHandle);
+                if (row == null)
+                    return;
+                if (row == null)
+                    return;
+                TBLAssetOhdaDlg frm = new TBLAssetOhdaDlg(Convert.ToInt32(row.GetMemberValue("AssetsID")), true);
+                if (frm.ShowDialog() == DialogResult.OK)
+                {
+                    gridViewTBLAssetOhda.ShowLoadingPanel();
+                    tBLAssetOhdaTableAdapter.FillByAssetsID(dsData.TBLAssetOhda, Convert.ToInt32(row.GetMemberValue("AssetsID")));
+                    gridViewTBLAssetOhda.RefreshData();
+                    gridViewTBLAssetOhda.HideLoadingPanel();
+                }
+            }
+            catch (Exception ex)
+            {
+                MsgDlg.Show(ex.Message, MsgDlg.MessageType.Error, ex);
+            }
+        }
+        private void btnEditTBLAssetOhda_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DataRowView drv = (DataRowView)gridViewTBLAssetOhda.GetRow(gridViewTBLAssetOhda.FocusedRowHandle);
+                if (drv == null)
+                    return;
+                Datasource.dsData.TBLAssetOhdaRow row = (Datasource.dsData.TBLAssetOhdaRow)(drv).Row;
+                if (row == null)
+                    return;
+                TBLAssetOhdaDlg frm = new TBLAssetOhdaDlg(row.AssetOhdaId, false);
+                if (frm.ShowDialog() == DialogResult.OK)
+                {
+                    gridViewTBLAssetOhda.ShowLoadingPanel();
+                    tBLAssetOhdaTableAdapter.FillByAssetsID(dsData.TBLAssetOhda, row.AssetsID);
+                    gridViewTBLAssetOhda.RefreshData();
+                    gridViewTBLAssetOhda.HideLoadingPanel();
+                }
+            }
+            catch (Exception ex)
+            {
+                MsgDlg.Show(ex.Message, MsgDlg.MessageType.Error, ex);
+            }
+        }
+        private void btnDeleteTBLAssetOhda_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Datasource.dsData.TBLAssetOhdaRow row = (Datasource.dsData.TBLAssetOhdaRow)((DataRowView)gridViewTBLAssetOhda.GetRow(gridViewTBLAssetOhda.FocusedRowHandle)).Row;
+                if (row == null)
+                    return;
+                if (MsgDlg.Show("هل انت متأكد ؟", MsgDlg.MessageType.Question) == DialogResult.Yes)
+                {
+                    gridViewTBLAssetOhda.ShowLoadingPanel();
+                    tBLAssetOhdaTableAdapter.Delete(row.AssetsID, row.EmoOhdaId, row.fromdate);
+                    gridViewTBLAssetOhda.DeleteRow(gridViewTBLAssetOhda.FocusedRowHandle);
+                    gridViewTBLAssetOhda.RefreshData();
+                    gridViewTBLAssetOhda.HideLoadingPanel();
+                }
+            }
+            catch (Exception ex)
+            {
+                MsgDlg.Show(ex.Message, MsgDlg.MessageType.Error, ex);
+            }
+        }
+
         #endregion
 
-    
+        
 
+        
     }
 }

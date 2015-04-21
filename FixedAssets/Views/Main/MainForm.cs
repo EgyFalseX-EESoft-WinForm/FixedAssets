@@ -132,6 +132,11 @@ namespace FixedAssets.Views.Main
             {
                 e.Control = new CDComponentsEditorUC(RuleElemet);
             }
+            else if (e.Document == docCodeCDInsuranceCo)
+            {
+                e.Control = new CDInsuranceCoEditorUC(RuleElemet);
+            }
+
             //---------Data
             else if (e.Document == docDataCdAssetsCategory)
             {

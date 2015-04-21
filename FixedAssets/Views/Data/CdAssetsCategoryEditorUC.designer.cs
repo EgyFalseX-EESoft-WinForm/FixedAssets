@@ -132,10 +132,57 @@
             this.btnAddTBLAssetComponent = new DevExpress.XtraEditors.SimpleButton();
             this.btnDeleteTBLAssetComponent = new DevExpress.XtraEditors.SimpleButton();
             this.btnEditTBLAssetComponent = new DevExpress.XtraEditors.SimpleButton();
+            this.xtraTabPageTBLAddAssetComponent = new DevExpress.XtraTab.XtraTabPage();
+            this.gridControlTBLAddAssetComponent = new DevExpress.XtraGrid.GridControl();
+            this.tBLAddAssetComponentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridViewTBLAddAssetComponent = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colAddComponentezn = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colComponentId1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemLookUpEditComponentId2 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.colAddQuantity = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPriceOne = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAdddate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemDateEditDMY = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
+            this.colAddReson = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.panelControlTBLAddAssetComponent = new DevExpress.XtraEditors.PanelControl();
+            this.btnAddTBLAddAssetComponent = new DevExpress.XtraEditors.SimpleButton();
+            this.btnDeleteTBLAddAssetComponent = new DevExpress.XtraEditors.SimpleButton();
+            this.btnEditTBLAddAssetComponent = new DevExpress.XtraEditors.SimpleButton();
+            this.xtraTabPageTBLDeleteAssetComponent = new DevExpress.XtraTab.XtraTabPage();
+            this.gridControlTBLDeleteAssetComponent = new DevExpress.XtraGrid.GridControl();
+            this.tBLDeleteAssetComponentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridViewTBLDeleteAssetComponent = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colDeleteComponentezn = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colComponentId2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDelQuantity = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPriceOne1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDeldate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDelReson = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemLookUpEditComponentId3 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.repositoryItemDateEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
+            this.panelControlTBLDeleteAssetComponent = new DevExpress.XtraEditors.PanelControl();
+            this.btnAddTBLDeleteAssetComponent = new DevExpress.XtraEditors.SimpleButton();
+            this.btnDeleteTBLDeleteAssetComponent = new DevExpress.XtraEditors.SimpleButton();
+            this.btnEditTBLDeleteAssetComponent = new DevExpress.XtraEditors.SimpleButton();
+            this.xtraTabPageTBLAssetOhda = new DevExpress.XtraTab.XtraTabPage();
+            this.gridControlTBLAssetOhda = new DevExpress.XtraGrid.GridControl();
+            this.tBLAssetOhdaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridViewTBLAssetOhda = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colEmoOhdaId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemLookUpEditEmoOhdaId = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.colfromdate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDes = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.panelControlTBLAssetOhda = new DevExpress.XtraEditors.PanelControl();
+            this.btnAddTBLAssetOhda = new DevExpress.XtraEditors.SimpleButton();
+            this.btnDeleteTBLAssetOhda = new DevExpress.XtraEditors.SimpleButton();
+            this.btnEditTBLAssetOhda = new DevExpress.XtraEditors.SimpleButton();
             this.tBLAssetPropertiyTableAdapter = new FixedAssets.Datasource.dsDataTableAdapters.TBLAssetPropertiyTableAdapter();
             this.tBLReEvaluationTableAdapter = new FixedAssets.Datasource.dsDataTableAdapters.TBLReEvaluationTableAdapter();
             this.tBLAssetPlaceTableAdapter = new FixedAssets.Datasource.dsDataTableAdapters.TBLAssetPlaceTableAdapter();
             this.tBLAssetComponentTableAdapter = new FixedAssets.Datasource.dsDataTableAdapters.TBLAssetComponentTableAdapter();
+            this.tBLAddAssetComponentTableAdapter = new FixedAssets.Datasource.dsDataTableAdapters.TBLAddAssetComponentTableAdapter();
+            this.tBLDeleteAssetComponentTableAdapter = new FixedAssets.Datasource.dsDataTableAdapters.TBLDeleteAssetComponentTableAdapter();
+            this.tBLAssetOhdaTableAdapter = new FixedAssets.Datasource.dsDataTableAdapters.TBLAssetOhdaTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditAssetplaceId1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditEmp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditAssetStateId)).BeginInit();
@@ -200,6 +247,31 @@
             ((System.ComponentModel.ISupportInitialize)(this.LSMSCDComponents)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            this.xtraTabPageTBLAddAssetComponent.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlTBLAddAssetComponent)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLAddAssetComponentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewTBLAddAssetComponent)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditComponentId2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEditDMY)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEditDMY.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControlTBLAddAssetComponent)).BeginInit();
+            this.panelControlTBLAddAssetComponent.SuspendLayout();
+            this.xtraTabPageTBLDeleteAssetComponent.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlTBLDeleteAssetComponent)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLDeleteAssetComponentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewTBLDeleteAssetComponent)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditComponentId3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControlTBLDeleteAssetComponent)).BeginInit();
+            this.panelControlTBLDeleteAssetComponent.SuspendLayout();
+            this.xtraTabPageTBLAssetOhda.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlTBLAssetOhda)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLAssetOhdaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewTBLAssetOhda)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditEmoOhdaId)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControlTBLAssetOhda)).BeginInit();
+            this.panelControlTBLAssetOhda.SuspendLayout();
             this.SuspendLayout();
             // 
             // repositoryItemLookUpEditAssetplaceId1
@@ -762,10 +834,13 @@
             this.xtraTabControlAssetProperties.Size = new System.Drawing.Size(630, 316);
             this.xtraTabControlAssetProperties.TabIndex = 0;
             this.xtraTabControlAssetProperties.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.xtraTabPageTblAssetComponent,
             this.xtraTabPageTBLAssetPropertiy,
             this.xtraTabPageTBLReEvaluation,
             this.xtraTabPageTBLAssetPlace,
-            this.xtraTabPageTblAssetComponent});
+            this.xtraTabPageTBLAddAssetComponent,
+            this.xtraTabPageTBLDeleteAssetComponent,
+            this.xtraTabPageTBLAssetOhda});
             // 
             // xtraTabPageTBLAssetPropertiy
             // 
@@ -1334,6 +1409,536 @@
             this.btnEditTBLAssetComponent.Text = "تعديل";
             this.btnEditTBLAssetComponent.Click += new System.EventHandler(this.btnEditTBLAssetComponent_Click);
             // 
+            // xtraTabPageTBLAddAssetComponent
+            // 
+            this.xtraTabPageTBLAddAssetComponent.Controls.Add(this.gridControlTBLAddAssetComponent);
+            this.xtraTabPageTBLAddAssetComponent.Controls.Add(this.panelControlTBLAddAssetComponent);
+            this.xtraTabPageTBLAddAssetComponent.Name = "xtraTabPageTBLAddAssetComponent";
+            this.xtraTabPageTBLAddAssetComponent.Size = new System.Drawing.Size(624, 288);
+            this.xtraTabPageTBLAddAssetComponent.Text = "اضافة مكون ";
+            // 
+            // gridControlTBLAddAssetComponent
+            // 
+            this.gridControlTBLAddAssetComponent.DataSource = this.tBLAddAssetComponentBindingSource;
+            this.gridControlTBLAddAssetComponent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControlTBLAddAssetComponent.Location = new System.Drawing.Point(0, 30);
+            this.gridControlTBLAddAssetComponent.MainView = this.gridViewTBLAddAssetComponent;
+            this.gridControlTBLAddAssetComponent.MenuManager = this.barManagerMain;
+            this.gridControlTBLAddAssetComponent.Name = "gridControlTBLAddAssetComponent";
+            this.gridControlTBLAddAssetComponent.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemLookUpEditComponentId2,
+            this.repositoryItemDateEditDMY});
+            this.gridControlTBLAddAssetComponent.Size = new System.Drawing.Size(624, 258);
+            this.gridControlTBLAddAssetComponent.TabIndex = 8;
+            this.gridControlTBLAddAssetComponent.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridViewTBLAddAssetComponent});
+            // 
+            // tBLAddAssetComponentBindingSource
+            // 
+            this.tBLAddAssetComponentBindingSource.DataMember = "TBLAddAssetComponent";
+            this.tBLAddAssetComponentBindingSource.DataSource = this.dsData;
+            // 
+            // gridViewTBLAddAssetComponent
+            // 
+            this.gridViewTBLAddAssetComponent.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colAddComponentezn,
+            this.colComponentId1,
+            this.colAddQuantity,
+            this.colPriceOne,
+            this.colAdddate,
+            this.colAddReson});
+            this.gridViewTBLAddAssetComponent.GridControl = this.gridControlTBLAddAssetComponent;
+            this.gridViewTBLAddAssetComponent.Name = "gridViewTBLAddAssetComponent";
+            this.gridViewTBLAddAssetComponent.OptionsBehavior.Editable = false;
+            this.gridViewTBLAddAssetComponent.OptionsView.ColumnAutoWidth = false;
+            this.gridViewTBLAddAssetComponent.OptionsView.ShowFooter = true;
+            this.gridViewTBLAddAssetComponent.OptionsView.ShowGroupPanel = false;
+            // 
+            // colAddComponentezn
+            // 
+            this.colAddComponentezn.AppearanceCell.Options.UseTextOptions = true;
+            this.colAddComponentezn.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colAddComponentezn.AppearanceHeader.Options.UseTextOptions = true;
+            this.colAddComponentezn.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colAddComponentezn.Caption = "اذن الاضافة";
+            this.colAddComponentezn.FieldName = "AddComponentezn";
+            this.colAddComponentezn.Name = "colAddComponentezn";
+            this.colAddComponentezn.Visible = true;
+            this.colAddComponentezn.VisibleIndex = 0;
+            this.colAddComponentezn.Width = 92;
+            // 
+            // colComponentId1
+            // 
+            this.colComponentId1.AppearanceCell.Options.UseTextOptions = true;
+            this.colComponentId1.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colComponentId1.AppearanceHeader.Options.UseTextOptions = true;
+            this.colComponentId1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colComponentId1.Caption = "المكون";
+            this.colComponentId1.ColumnEdit = this.repositoryItemLookUpEditComponentId2;
+            this.colComponentId1.FieldName = "ComponentId";
+            this.colComponentId1.Name = "colComponentId1";
+            this.colComponentId1.Visible = true;
+            this.colComponentId1.VisibleIndex = 1;
+            // 
+            // repositoryItemLookUpEditComponentId2
+            // 
+            this.repositoryItemLookUpEditComponentId2.AutoHeight = false;
+            this.repositoryItemLookUpEditComponentId2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemLookUpEditComponentId2.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Component", "الاسم", 65, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
+            this.repositoryItemLookUpEditComponentId2.DataSource = this.LSMSCDComponents;
+            this.repositoryItemLookUpEditComponentId2.DisplayMember = "Component";
+            this.repositoryItemLookUpEditComponentId2.Name = "repositoryItemLookUpEditComponentId2";
+            this.repositoryItemLookUpEditComponentId2.NullText = "";
+            this.repositoryItemLookUpEditComponentId2.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.repositoryItemLookUpEditComponentId2.ValueMember = "ComponentId";
+            // 
+            // colAddQuantity
+            // 
+            this.colAddQuantity.AppearanceCell.Options.UseTextOptions = true;
+            this.colAddQuantity.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colAddQuantity.AppearanceHeader.Options.UseTextOptions = true;
+            this.colAddQuantity.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colAddQuantity.Caption = "الكمية";
+            this.colAddQuantity.FieldName = "AddQuantity";
+            this.colAddQuantity.Name = "colAddQuantity";
+            this.colAddQuantity.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "AddQuantity", "{0:0.##}")});
+            this.colAddQuantity.Visible = true;
+            this.colAddQuantity.VisibleIndex = 2;
+            // 
+            // colPriceOne
+            // 
+            this.colPriceOne.AppearanceCell.Options.UseTextOptions = true;
+            this.colPriceOne.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colPriceOne.AppearanceHeader.Options.UseTextOptions = true;
+            this.colPriceOne.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colPriceOne.Caption = "سعر الوحدة";
+            this.colPriceOne.FieldName = "PriceOne";
+            this.colPriceOne.Name = "colPriceOne";
+            this.colPriceOne.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PriceOne", "{0:0.##}")});
+            this.colPriceOne.Visible = true;
+            this.colPriceOne.VisibleIndex = 3;
+            this.colPriceOne.Width = 85;
+            // 
+            // colAdddate
+            // 
+            this.colAdddate.AppearanceCell.Options.UseTextOptions = true;
+            this.colAdddate.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colAdddate.AppearanceHeader.Options.UseTextOptions = true;
+            this.colAdddate.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colAdddate.Caption = "تاريخ الاضافة";
+            this.colAdddate.ColumnEdit = this.repositoryItemDateEditDMY;
+            this.colAdddate.FieldName = "Adddate";
+            this.colAdddate.Name = "colAdddate";
+            this.colAdddate.Visible = true;
+            this.colAdddate.VisibleIndex = 4;
+            this.colAdddate.Width = 102;
+            // 
+            // repositoryItemDateEditDMY
+            // 
+            this.repositoryItemDateEditDMY.AutoHeight = false;
+            this.repositoryItemDateEditDMY.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemDateEditDMY.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemDateEditDMY.DisplayFormat.FormatString = "d/M/yyyy";
+            this.repositoryItemDateEditDMY.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.repositoryItemDateEditDMY.EditFormat.FormatString = "d/M/yyyy";
+            this.repositoryItemDateEditDMY.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.repositoryItemDateEditDMY.Mask.EditMask = "d/M/yyyy";
+            this.repositoryItemDateEditDMY.Name = "repositoryItemDateEditDMY";
+            // 
+            // colAddReson
+            // 
+            this.colAddReson.AppearanceCell.Options.UseTextOptions = true;
+            this.colAddReson.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colAddReson.AppearanceHeader.Options.UseTextOptions = true;
+            this.colAddReson.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colAddReson.Caption = "سبب الاضافة";
+            this.colAddReson.FieldName = "AddReson";
+            this.colAddReson.Name = "colAddReson";
+            this.colAddReson.Visible = true;
+            this.colAddReson.VisibleIndex = 5;
+            this.colAddReson.Width = 98;
+            // 
+            // panelControlTBLAddAssetComponent
+            // 
+            this.panelControlTBLAddAssetComponent.Controls.Add(this.btnAddTBLAddAssetComponent);
+            this.panelControlTBLAddAssetComponent.Controls.Add(this.btnDeleteTBLAddAssetComponent);
+            this.panelControlTBLAddAssetComponent.Controls.Add(this.btnEditTBLAddAssetComponent);
+            this.panelControlTBLAddAssetComponent.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControlTBLAddAssetComponent.Location = new System.Drawing.Point(0, 0);
+            this.panelControlTBLAddAssetComponent.Name = "panelControlTBLAddAssetComponent";
+            this.panelControlTBLAddAssetComponent.Size = new System.Drawing.Size(624, 30);
+            this.panelControlTBLAddAssetComponent.TabIndex = 7;
+            // 
+            // btnAddTBLAddAssetComponent
+            // 
+            this.btnAddTBLAddAssetComponent.Image = global::FixedAssets.Properties.Resources.add_16x16;
+            this.btnAddTBLAddAssetComponent.Location = new System.Drawing.Point(5, 3);
+            this.btnAddTBLAddAssetComponent.Name = "btnAddTBLAddAssetComponent";
+            this.btnAddTBLAddAssetComponent.Size = new System.Drawing.Size(60, 23);
+            this.btnAddTBLAddAssetComponent.TabIndex = 3;
+            this.btnAddTBLAddAssetComponent.Text = "اضافة";
+            this.btnAddTBLAddAssetComponent.Click += new System.EventHandler(this.btnAddTBLAddAssetComponent_Click);
+            // 
+            // btnDeleteTBLAddAssetComponent
+            // 
+            this.btnDeleteTBLAddAssetComponent.Image = global::FixedAssets.Properties.Resources.cancel_16x16;
+            this.btnDeleteTBLAddAssetComponent.Location = new System.Drawing.Point(137, 4);
+            this.btnDeleteTBLAddAssetComponent.Name = "btnDeleteTBLAddAssetComponent";
+            this.btnDeleteTBLAddAssetComponent.Size = new System.Drawing.Size(60, 23);
+            this.btnDeleteTBLAddAssetComponent.TabIndex = 3;
+            this.btnDeleteTBLAddAssetComponent.Text = "حذف";
+            this.btnDeleteTBLAddAssetComponent.Click += new System.EventHandler(this.btnDeleteTBLAddAssetComponent_Click);
+            // 
+            // btnEditTBLAddAssetComponent
+            // 
+            this.btnEditTBLAddAssetComponent.Image = global::FixedAssets.Properties.Resources.pictureshapeoutlinecolor_16x16;
+            this.btnEditTBLAddAssetComponent.Location = new System.Drawing.Point(71, 4);
+            this.btnEditTBLAddAssetComponent.Name = "btnEditTBLAddAssetComponent";
+            this.btnEditTBLAddAssetComponent.Size = new System.Drawing.Size(60, 23);
+            this.btnEditTBLAddAssetComponent.TabIndex = 3;
+            this.btnEditTBLAddAssetComponent.Text = "تعديل";
+            this.btnEditTBLAddAssetComponent.Click += new System.EventHandler(this.btnEditTBLAddAssetComponent_Click);
+            // 
+            // xtraTabPageTBLDeleteAssetComponent
+            // 
+            this.xtraTabPageTBLDeleteAssetComponent.Controls.Add(this.gridControlTBLDeleteAssetComponent);
+            this.xtraTabPageTBLDeleteAssetComponent.Controls.Add(this.panelControlTBLDeleteAssetComponent);
+            this.xtraTabPageTBLDeleteAssetComponent.Name = "xtraTabPageTBLDeleteAssetComponent";
+            this.xtraTabPageTBLDeleteAssetComponent.Size = new System.Drawing.Size(624, 288);
+            this.xtraTabPageTBLDeleteAssetComponent.Text = "استبعاد مكون";
+            // 
+            // gridControlTBLDeleteAssetComponent
+            // 
+            this.gridControlTBLDeleteAssetComponent.DataSource = this.tBLDeleteAssetComponentBindingSource;
+            this.gridControlTBLDeleteAssetComponent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControlTBLDeleteAssetComponent.Location = new System.Drawing.Point(0, 30);
+            this.gridControlTBLDeleteAssetComponent.MainView = this.gridViewTBLDeleteAssetComponent;
+            this.gridControlTBLDeleteAssetComponent.MenuManager = this.barManagerMain;
+            this.gridControlTBLDeleteAssetComponent.Name = "gridControlTBLDeleteAssetComponent";
+            this.gridControlTBLDeleteAssetComponent.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemLookUpEditComponentId3,
+            this.repositoryItemDateEdit1});
+            this.gridControlTBLDeleteAssetComponent.Size = new System.Drawing.Size(624, 258);
+            this.gridControlTBLDeleteAssetComponent.TabIndex = 9;
+            this.gridControlTBLDeleteAssetComponent.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridViewTBLDeleteAssetComponent});
+            // 
+            // tBLDeleteAssetComponentBindingSource
+            // 
+            this.tBLDeleteAssetComponentBindingSource.DataMember = "TBLDeleteAssetComponent";
+            this.tBLDeleteAssetComponentBindingSource.DataSource = this.dsData;
+            // 
+            // gridViewTBLDeleteAssetComponent
+            // 
+            this.gridViewTBLDeleteAssetComponent.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colDeleteComponentezn,
+            this.colComponentId2,
+            this.colDelQuantity,
+            this.colPriceOne1,
+            this.colDeldate,
+            this.colDelReson});
+            this.gridViewTBLDeleteAssetComponent.GridControl = this.gridControlTBLDeleteAssetComponent;
+            this.gridViewTBLDeleteAssetComponent.Name = "gridViewTBLDeleteAssetComponent";
+            this.gridViewTBLDeleteAssetComponent.OptionsBehavior.Editable = false;
+            this.gridViewTBLDeleteAssetComponent.OptionsView.ColumnAutoWidth = false;
+            this.gridViewTBLDeleteAssetComponent.OptionsView.ShowFooter = true;
+            this.gridViewTBLDeleteAssetComponent.OptionsView.ShowGroupPanel = false;
+            // 
+            // colDeleteComponentezn
+            // 
+            this.colDeleteComponentezn.AppearanceCell.Options.UseTextOptions = true;
+            this.colDeleteComponentezn.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colDeleteComponentezn.AppearanceHeader.Options.UseTextOptions = true;
+            this.colDeleteComponentezn.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colDeleteComponentezn.Caption = "اذن الاستبعاد";
+            this.colDeleteComponentezn.FieldName = "DeleteComponentezn";
+            this.colDeleteComponentezn.Name = "colDeleteComponentezn";
+            this.colDeleteComponentezn.Visible = true;
+            this.colDeleteComponentezn.VisibleIndex = 0;
+            this.colDeleteComponentezn.Width = 94;
+            // 
+            // colComponentId2
+            // 
+            this.colComponentId2.AppearanceCell.Options.UseTextOptions = true;
+            this.colComponentId2.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colComponentId2.AppearanceHeader.Options.UseTextOptions = true;
+            this.colComponentId2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colComponentId2.Caption = "المكون";
+            this.colComponentId2.FieldName = "ComponentId";
+            this.colComponentId2.Name = "colComponentId2";
+            this.colComponentId2.Visible = true;
+            this.colComponentId2.VisibleIndex = 1;
+            // 
+            // colDelQuantity
+            // 
+            this.colDelQuantity.AppearanceCell.Options.UseTextOptions = true;
+            this.colDelQuantity.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colDelQuantity.AppearanceHeader.Options.UseTextOptions = true;
+            this.colDelQuantity.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colDelQuantity.Caption = "الكمية";
+            this.colDelQuantity.FieldName = "DelQuantity";
+            this.colDelQuantity.Name = "colDelQuantity";
+            this.colDelQuantity.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "DelQuantity", "{0:0.##}")});
+            this.colDelQuantity.Visible = true;
+            this.colDelQuantity.VisibleIndex = 2;
+            // 
+            // colPriceOne1
+            // 
+            this.colPriceOne1.AppearanceCell.Options.UseTextOptions = true;
+            this.colPriceOne1.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colPriceOne1.AppearanceHeader.Options.UseTextOptions = true;
+            this.colPriceOne1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colPriceOne1.Caption = "سعر الوحدة";
+            this.colPriceOne1.FieldName = "PriceOne";
+            this.colPriceOne1.Name = "colPriceOne1";
+            this.colPriceOne1.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PriceOne", "{0:0.##}")});
+            this.colPriceOne1.Visible = true;
+            this.colPriceOne1.VisibleIndex = 3;
+            this.colPriceOne1.Width = 78;
+            // 
+            // colDeldate
+            // 
+            this.colDeldate.AppearanceCell.Options.UseTextOptions = true;
+            this.colDeldate.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colDeldate.AppearanceHeader.Options.UseTextOptions = true;
+            this.colDeldate.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colDeldate.Caption = "تاريخ الاستبعاد";
+            this.colDeldate.FieldName = "Deldate";
+            this.colDeldate.Name = "colDeldate";
+            this.colDeldate.Visible = true;
+            this.colDeldate.VisibleIndex = 4;
+            this.colDeldate.Width = 102;
+            // 
+            // colDelReson
+            // 
+            this.colDelReson.AppearanceCell.Options.UseTextOptions = true;
+            this.colDelReson.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colDelReson.AppearanceHeader.Options.UseTextOptions = true;
+            this.colDelReson.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colDelReson.Caption = "سبب الاستبعاد";
+            this.colDelReson.FieldName = "DelReson";
+            this.colDelReson.Name = "colDelReson";
+            this.colDelReson.Visible = true;
+            this.colDelReson.VisibleIndex = 5;
+            this.colDelReson.Width = 383;
+            // 
+            // repositoryItemLookUpEditComponentId3
+            // 
+            this.repositoryItemLookUpEditComponentId3.AutoHeight = false;
+            this.repositoryItemLookUpEditComponentId3.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemLookUpEditComponentId3.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Component", "الاسم", 65, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
+            this.repositoryItemLookUpEditComponentId3.DataSource = this.LSMSCDComponents;
+            this.repositoryItemLookUpEditComponentId3.DisplayMember = "Component";
+            this.repositoryItemLookUpEditComponentId3.Name = "repositoryItemLookUpEditComponentId3";
+            this.repositoryItemLookUpEditComponentId3.NullText = "";
+            this.repositoryItemLookUpEditComponentId3.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.repositoryItemLookUpEditComponentId3.ValueMember = "ComponentId";
+            // 
+            // repositoryItemDateEdit1
+            // 
+            this.repositoryItemDateEdit1.AutoHeight = false;
+            this.repositoryItemDateEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemDateEdit1.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemDateEdit1.DisplayFormat.FormatString = "d/M/yyyy";
+            this.repositoryItemDateEdit1.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.repositoryItemDateEdit1.EditFormat.FormatString = "d/M/yyyy";
+            this.repositoryItemDateEdit1.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.repositoryItemDateEdit1.Mask.EditMask = "d/M/yyyy";
+            this.repositoryItemDateEdit1.Name = "repositoryItemDateEdit1";
+            // 
+            // panelControlTBLDeleteAssetComponent
+            // 
+            this.panelControlTBLDeleteAssetComponent.Controls.Add(this.btnAddTBLDeleteAssetComponent);
+            this.panelControlTBLDeleteAssetComponent.Controls.Add(this.btnDeleteTBLDeleteAssetComponent);
+            this.panelControlTBLDeleteAssetComponent.Controls.Add(this.btnEditTBLDeleteAssetComponent);
+            this.panelControlTBLDeleteAssetComponent.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControlTBLDeleteAssetComponent.Location = new System.Drawing.Point(0, 0);
+            this.panelControlTBLDeleteAssetComponent.Name = "panelControlTBLDeleteAssetComponent";
+            this.panelControlTBLDeleteAssetComponent.Size = new System.Drawing.Size(624, 30);
+            this.panelControlTBLDeleteAssetComponent.TabIndex = 8;
+            // 
+            // btnAddTBLDeleteAssetComponent
+            // 
+            this.btnAddTBLDeleteAssetComponent.Image = global::FixedAssets.Properties.Resources.add_16x16;
+            this.btnAddTBLDeleteAssetComponent.Location = new System.Drawing.Point(5, 3);
+            this.btnAddTBLDeleteAssetComponent.Name = "btnAddTBLDeleteAssetComponent";
+            this.btnAddTBLDeleteAssetComponent.Size = new System.Drawing.Size(60, 23);
+            this.btnAddTBLDeleteAssetComponent.TabIndex = 3;
+            this.btnAddTBLDeleteAssetComponent.Text = "اضافة";
+            this.btnAddTBLDeleteAssetComponent.Click += new System.EventHandler(this.btnAddTBLDeleteAssetComponent_Click);
+            // 
+            // btnDeleteTBLDeleteAssetComponent
+            // 
+            this.btnDeleteTBLDeleteAssetComponent.Image = global::FixedAssets.Properties.Resources.cancel_16x16;
+            this.btnDeleteTBLDeleteAssetComponent.Location = new System.Drawing.Point(137, 4);
+            this.btnDeleteTBLDeleteAssetComponent.Name = "btnDeleteTBLDeleteAssetComponent";
+            this.btnDeleteTBLDeleteAssetComponent.Size = new System.Drawing.Size(60, 23);
+            this.btnDeleteTBLDeleteAssetComponent.TabIndex = 3;
+            this.btnDeleteTBLDeleteAssetComponent.Text = "حذف";
+            this.btnDeleteTBLDeleteAssetComponent.Click += new System.EventHandler(this.btnDeleteTBLDeleteAssetComponent_Click);
+            // 
+            // btnEditTBLDeleteAssetComponent
+            // 
+            this.btnEditTBLDeleteAssetComponent.Image = global::FixedAssets.Properties.Resources.pictureshapeoutlinecolor_16x16;
+            this.btnEditTBLDeleteAssetComponent.Location = new System.Drawing.Point(71, 4);
+            this.btnEditTBLDeleteAssetComponent.Name = "btnEditTBLDeleteAssetComponent";
+            this.btnEditTBLDeleteAssetComponent.Size = new System.Drawing.Size(60, 23);
+            this.btnEditTBLDeleteAssetComponent.TabIndex = 3;
+            this.btnEditTBLDeleteAssetComponent.Text = "تعديل";
+            this.btnEditTBLDeleteAssetComponent.Click += new System.EventHandler(this.btnEditTBLDeleteAssetComponent_Click);
+            // 
+            // xtraTabPageTBLAssetOhda
+            // 
+            this.xtraTabPageTBLAssetOhda.Controls.Add(this.gridControlTBLAssetOhda);
+            this.xtraTabPageTBLAssetOhda.Controls.Add(this.panelControlTBLAssetOhda);
+            this.xtraTabPageTBLAssetOhda.Name = "xtraTabPageTBLAssetOhda";
+            this.xtraTabPageTBLAssetOhda.Size = new System.Drawing.Size(624, 288);
+            this.xtraTabPageTBLAssetOhda.Text = "تغيير العهدة";
+            // 
+            // gridControlTBLAssetOhda
+            // 
+            this.gridControlTBLAssetOhda.DataSource = this.tBLAssetOhdaBindingSource;
+            this.gridControlTBLAssetOhda.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControlTBLAssetOhda.Location = new System.Drawing.Point(0, 30);
+            this.gridControlTBLAssetOhda.MainView = this.gridViewTBLAssetOhda;
+            this.gridControlTBLAssetOhda.MenuManager = this.barManagerMain;
+            this.gridControlTBLAssetOhda.Name = "gridControlTBLAssetOhda";
+            this.gridControlTBLAssetOhda.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemLookUpEditEmoOhdaId});
+            this.gridControlTBLAssetOhda.Size = new System.Drawing.Size(624, 258);
+            this.gridControlTBLAssetOhda.TabIndex = 7;
+            this.gridControlTBLAssetOhda.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridViewTBLAssetOhda});
+            // 
+            // tBLAssetOhdaBindingSource
+            // 
+            this.tBLAssetOhdaBindingSource.DataMember = "TBLAssetOhda";
+            this.tBLAssetOhdaBindingSource.DataSource = this.dsData;
+            // 
+            // gridViewTBLAssetOhda
+            // 
+            this.gridViewTBLAssetOhda.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colEmoOhdaId,
+            this.colfromdate,
+            this.colDes});
+            this.gridViewTBLAssetOhda.GridControl = this.gridControlTBLAssetOhda;
+            this.gridViewTBLAssetOhda.Name = "gridViewTBLAssetOhda";
+            this.gridViewTBLAssetOhda.OptionsBehavior.Editable = false;
+            this.gridViewTBLAssetOhda.OptionsView.ColumnAutoWidth = false;
+            this.gridViewTBLAssetOhda.OptionsView.ShowFooter = true;
+            this.gridViewTBLAssetOhda.OptionsView.ShowGroupPanel = false;
+            this.gridViewTBLAssetOhda.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colfromdate, DevExpress.Data.ColumnSortOrder.Descending)});
+            // 
+            // colEmoOhdaId
+            // 
+            this.colEmoOhdaId.AppearanceCell.Options.UseTextOptions = true;
+            this.colEmoOhdaId.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colEmoOhdaId.AppearanceHeader.Options.UseTextOptions = true;
+            this.colEmoOhdaId.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colEmoOhdaId.Caption = "موظف العهدة";
+            this.colEmoOhdaId.ColumnEdit = this.repositoryItemLookUpEditEmoOhdaId;
+            this.colEmoOhdaId.FieldName = "EmoOhdaId";
+            this.colEmoOhdaId.Name = "colEmoOhdaId";
+            this.colEmoOhdaId.Visible = true;
+            this.colEmoOhdaId.VisibleIndex = 0;
+            this.colEmoOhdaId.Width = 156;
+            // 
+            // repositoryItemLookUpEditEmoOhdaId
+            // 
+            this.repositoryItemLookUpEditEmoOhdaId.AutoHeight = false;
+            this.repositoryItemLookUpEditEmoOhdaId.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemLookUpEditEmoOhdaId.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("EmpName", "Emp Name", 60, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
+            this.repositoryItemLookUpEditEmoOhdaId.DataSource = this.LSMSEmp;
+            this.repositoryItemLookUpEditEmoOhdaId.DisplayMember = "EmpName";
+            this.repositoryItemLookUpEditEmoOhdaId.Name = "repositoryItemLookUpEditEmoOhdaId";
+            this.repositoryItemLookUpEditEmoOhdaId.NullText = "";
+            this.repositoryItemLookUpEditEmoOhdaId.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.repositoryItemLookUpEditEmoOhdaId.ValueMember = "EmpId";
+            // 
+            // colfromdate
+            // 
+            this.colfromdate.AppearanceCell.Options.UseTextOptions = true;
+            this.colfromdate.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colfromdate.AppearanceHeader.Options.UseTextOptions = true;
+            this.colfromdate.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colfromdate.Caption = "من تاريخ";
+            this.colfromdate.FieldName = "fromdate";
+            this.colfromdate.Name = "colfromdate";
+            this.colfromdate.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Max, "fromdate", "{0}")});
+            this.colfromdate.Visible = true;
+            this.colfromdate.VisibleIndex = 1;
+            this.colfromdate.Width = 172;
+            // 
+            // colDes
+            // 
+            this.colDes.AppearanceCell.Options.UseTextOptions = true;
+            this.colDes.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colDes.AppearanceHeader.Options.UseTextOptions = true;
+            this.colDes.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colDes.Caption = "ملاحظات";
+            this.colDes.FieldName = "Des";
+            this.colDes.Name = "colDes";
+            this.colDes.Visible = true;
+            this.colDes.VisibleIndex = 2;
+            this.colDes.Width = 184;
+            // 
+            // panelControlTBLAssetOhda
+            // 
+            this.panelControlTBLAssetOhda.Controls.Add(this.btnAddTBLAssetOhda);
+            this.panelControlTBLAssetOhda.Controls.Add(this.btnDeleteTBLAssetOhda);
+            this.panelControlTBLAssetOhda.Controls.Add(this.btnEditTBLAssetOhda);
+            this.panelControlTBLAssetOhda.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControlTBLAssetOhda.Location = new System.Drawing.Point(0, 0);
+            this.panelControlTBLAssetOhda.Name = "panelControlTBLAssetOhda";
+            this.panelControlTBLAssetOhda.Size = new System.Drawing.Size(624, 30);
+            this.panelControlTBLAssetOhda.TabIndex = 6;
+            // 
+            // btnAddTBLAssetOhda
+            // 
+            this.btnAddTBLAssetOhda.Image = global::FixedAssets.Properties.Resources.add_16x16;
+            this.btnAddTBLAssetOhda.Location = new System.Drawing.Point(5, 3);
+            this.btnAddTBLAssetOhda.Name = "btnAddTBLAssetOhda";
+            this.btnAddTBLAssetOhda.Size = new System.Drawing.Size(60, 23);
+            this.btnAddTBLAssetOhda.TabIndex = 3;
+            this.btnAddTBLAssetOhda.Text = "اضافة";
+            this.btnAddTBLAssetOhda.Click += new System.EventHandler(this.btnAddTBLAssetOhda_Click);
+            // 
+            // btnDeleteTBLAssetOhda
+            // 
+            this.btnDeleteTBLAssetOhda.Image = global::FixedAssets.Properties.Resources.cancel_16x16;
+            this.btnDeleteTBLAssetOhda.Location = new System.Drawing.Point(137, 4);
+            this.btnDeleteTBLAssetOhda.Name = "btnDeleteTBLAssetOhda";
+            this.btnDeleteTBLAssetOhda.Size = new System.Drawing.Size(60, 23);
+            this.btnDeleteTBLAssetOhda.TabIndex = 3;
+            this.btnDeleteTBLAssetOhda.Text = "حذف";
+            this.btnDeleteTBLAssetOhda.Click += new System.EventHandler(this.btnDeleteTBLAssetOhda_Click);
+            // 
+            // btnEditTBLAssetOhda
+            // 
+            this.btnEditTBLAssetOhda.Image = global::FixedAssets.Properties.Resources.pictureshapeoutlinecolor_16x16;
+            this.btnEditTBLAssetOhda.Location = new System.Drawing.Point(71, 4);
+            this.btnEditTBLAssetOhda.Name = "btnEditTBLAssetOhda";
+            this.btnEditTBLAssetOhda.Size = new System.Drawing.Size(60, 23);
+            this.btnEditTBLAssetOhda.TabIndex = 3;
+            this.btnEditTBLAssetOhda.Text = "تعديل";
+            this.btnEditTBLAssetOhda.Click += new System.EventHandler(this.btnEditTBLAssetOhda_Click);
+            // 
             // tBLAssetPropertiyTableAdapter
             // 
             this.tBLAssetPropertiyTableAdapter.ClearBeforeFill = true;
@@ -1349,6 +1954,18 @@
             // tBLAssetComponentTableAdapter
             // 
             this.tBLAssetComponentTableAdapter.ClearBeforeFill = true;
+            // 
+            // tBLAddAssetComponentTableAdapter
+            // 
+            this.tBLAddAssetComponentTableAdapter.ClearBeforeFill = true;
+            // 
+            // tBLDeleteAssetComponentTableAdapter
+            // 
+            this.tBLDeleteAssetComponentTableAdapter.ClearBeforeFill = true;
+            // 
+            // tBLAssetOhdaTableAdapter
+            // 
+            this.tBLAssetOhdaTableAdapter.ClearBeforeFill = true;
             // 
             // CdAssetsCategoryEditorUC
             // 
@@ -1426,6 +2043,31 @@
             ((System.ComponentModel.ISupportInitialize)(this.LSMSCDComponents)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
+            this.xtraTabPageTBLAddAssetComponent.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlTBLAddAssetComponent)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLAddAssetComponentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewTBLAddAssetComponent)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditComponentId2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEditDMY.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEditDMY)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControlTBLAddAssetComponent)).EndInit();
+            this.panelControlTBLAddAssetComponent.ResumeLayout(false);
+            this.xtraTabPageTBLDeleteAssetComponent.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlTBLDeleteAssetComponent)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLDeleteAssetComponentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewTBLDeleteAssetComponent)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditComponentId3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControlTBLDeleteAssetComponent)).EndInit();
+            this.panelControlTBLDeleteAssetComponent.ResumeLayout(false);
+            this.xtraTabPageTBLAssetOhda.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlTBLAssetOhda)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLAssetOhdaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewTBLAssetOhda)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditEmoOhdaId)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControlTBLAssetOhda)).EndInit();
+            this.panelControlTBLAssetOhda.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1537,5 +2179,52 @@
         private Datasource.dsDataTableAdapters.TBLAssetComponentTableAdapter tBLAssetComponentTableAdapter;
         private DevExpress.Data.Linq.LinqServerModeSource LSMSCDComponents;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEditComponentId;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPageTBLAddAssetComponent;
+        private DevExpress.XtraGrid.GridControl gridControlTBLAddAssetComponent;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridViewTBLAddAssetComponent;
+        private DevExpress.XtraEditors.PanelControl panelControlTBLAddAssetComponent;
+        private DevExpress.XtraEditors.SimpleButton btnAddTBLAddAssetComponent;
+        private DevExpress.XtraEditors.SimpleButton btnDeleteTBLAddAssetComponent;
+        private DevExpress.XtraEditors.SimpleButton btnEditTBLAddAssetComponent;
+        private System.Windows.Forms.BindingSource tBLAddAssetComponentBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn colAddComponentezn;
+        private DevExpress.XtraGrid.Columns.GridColumn colComponentId1;
+        private DevExpress.XtraGrid.Columns.GridColumn colAddQuantity;
+        private DevExpress.XtraGrid.Columns.GridColumn colPriceOne;
+        private DevExpress.XtraGrid.Columns.GridColumn colAdddate;
+        private DevExpress.XtraGrid.Columns.GridColumn colAddReson;
+        private Datasource.dsDataTableAdapters.TBLAddAssetComponentTableAdapter tBLAddAssetComponentTableAdapter;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEditComponentId2;
+        private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit repositoryItemDateEditDMY;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPageTBLDeleteAssetComponent;
+        private DevExpress.XtraGrid.GridControl gridControlTBLDeleteAssetComponent;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridViewTBLDeleteAssetComponent;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEditComponentId3;
+        private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit repositoryItemDateEdit1;
+        private DevExpress.XtraEditors.PanelControl panelControlTBLDeleteAssetComponent;
+        private DevExpress.XtraEditors.SimpleButton btnAddTBLDeleteAssetComponent;
+        private DevExpress.XtraEditors.SimpleButton btnDeleteTBLDeleteAssetComponent;
+        private DevExpress.XtraEditors.SimpleButton btnEditTBLDeleteAssetComponent;
+        private System.Windows.Forms.BindingSource tBLDeleteAssetComponentBindingSource;
+        private Datasource.dsDataTableAdapters.TBLDeleteAssetComponentTableAdapter tBLDeleteAssetComponentTableAdapter;
+        private DevExpress.XtraGrid.Columns.GridColumn colDeleteComponentezn;
+        private DevExpress.XtraGrid.Columns.GridColumn colComponentId2;
+        private DevExpress.XtraGrid.Columns.GridColumn colDelQuantity;
+        private DevExpress.XtraGrid.Columns.GridColumn colPriceOne1;
+        private DevExpress.XtraGrid.Columns.GridColumn colDeldate;
+        private DevExpress.XtraGrid.Columns.GridColumn colDelReson;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPageTBLAssetOhda;
+        private DevExpress.XtraGrid.GridControl gridControlTBLAssetOhda;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridViewTBLAssetOhda;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEditEmoOhdaId;
+        private DevExpress.XtraEditors.PanelControl panelControlTBLAssetOhda;
+        private DevExpress.XtraEditors.SimpleButton btnAddTBLAssetOhda;
+        private DevExpress.XtraEditors.SimpleButton btnDeleteTBLAssetOhda;
+        private DevExpress.XtraEditors.SimpleButton btnEditTBLAssetOhda;
+        private System.Windows.Forms.BindingSource tBLAssetOhdaBindingSource;
+        private Datasource.dsDataTableAdapters.TBLAssetOhdaTableAdapter tBLAssetOhdaTableAdapter;
+        private DevExpress.XtraGrid.Columns.GridColumn colEmoOhdaId;
+        private DevExpress.XtraGrid.Columns.GridColumn colfromdate;
+        private DevExpress.XtraGrid.Columns.GridColumn colDes;
     }
 }

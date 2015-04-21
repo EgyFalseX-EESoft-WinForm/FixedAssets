@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.TileItemFrame tileItemFrame11 = new DevExpress.XtraEditors.TileItemFrame();
-            DevExpress.XtraEditors.TileItemElement tileItemElement16 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemFrame tileItemFrame12 = new DevExpress.XtraEditors.TileItemFrame();
-            DevExpress.XtraEditors.TileItemElement tileItemElement17 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement18 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemFrame tileItemFrame15 = new DevExpress.XtraEditors.TileItemFrame();
+            DevExpress.XtraEditors.TileItemElement tileItemElement22 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemFrame tileItemFrame16 = new DevExpress.XtraEditors.TileItemFrame();
+            DevExpress.XtraEditors.TileItemElement tileItemElement23 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement24 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemFrame tileItemFrame1 = new DevExpress.XtraEditors.TileItemFrame();
             DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemFrame tileItemFrame2 = new DevExpress.XtraEditors.TileItemFrame();
@@ -59,31 +58,26 @@
             DevExpress.XtraEditors.TileItemFrame tileItemFrame10 = new DevExpress.XtraEditors.TileItemFrame();
             DevExpress.XtraEditors.TileItemElement tileItemElement14 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement15 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemFrame tileItemFrame17 = new DevExpress.XtraEditors.TileItemFrame();
-            DevExpress.XtraEditors.TileItemElement tileItemElement25 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemFrame tileItemFrame18 = new DevExpress.XtraEditors.TileItemFrame();
-            DevExpress.XtraEditors.TileItemElement tileItemElement26 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement27 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemFrame tileItemFrame13 = new DevExpress.XtraEditors.TileItemFrame();
-            DevExpress.XtraEditors.TileItemElement tileItemElement19 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemFrame tileItemFrame14 = new DevExpress.XtraEditors.TileItemFrame();
-            DevExpress.XtraEditors.TileItemElement tileItemElement20 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement21 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemFrame tileItemFrame15 = new DevExpress.XtraEditors.TileItemFrame();
-            DevExpress.XtraEditors.TileItemElement tileItemElement22 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemFrame tileItemFrame16 = new DevExpress.XtraEditors.TileItemFrame();
-            DevExpress.XtraEditors.TileItemElement tileItemElement23 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement24 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemFrame tileItemFrame19 = new DevExpress.XtraEditors.TileItemFrame();
-            DevExpress.XtraEditors.TileItemElement tileItemElement28 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemFrame tileItemFrame20 = new DevExpress.XtraEditors.TileItemFrame();
-            DevExpress.XtraEditors.TileItemElement tileItemElement29 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement30 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemFrame tileItemFrame11 = new DevExpress.XtraEditors.TileItemFrame();
+            DevExpress.XtraEditors.TileItemElement tileItemElement16 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemFrame tileItemFrame12 = new DevExpress.XtraEditors.TileItemFrame();
+            DevExpress.XtraEditors.TileItemElement tileItemElement17 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement18 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemFrame tileItemFrame21 = new DevExpress.XtraEditors.TileItemFrame();
             DevExpress.XtraEditors.TileItemElement tileItemElement31 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemFrame tileItemFrame22 = new DevExpress.XtraEditors.TileItemFrame();
             DevExpress.XtraEditors.TileItemElement tileItemElement32 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement33 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemFrame tileItemFrame17 = new DevExpress.XtraEditors.TileItemFrame();
+            DevExpress.XtraEditors.TileItemElement tileItemElement25 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemFrame tileItemFrame18 = new DevExpress.XtraEditors.TileItemFrame();
+            DevExpress.XtraEditors.TileItemElement tileItemElement26 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement27 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemFrame tileItemFrame19 = new DevExpress.XtraEditors.TileItemFrame();
+            DevExpress.XtraEditors.TileItemElement tileItemElement28 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemFrame tileItemFrame20 = new DevExpress.XtraEditors.TileItemFrame();
+            DevExpress.XtraEditors.TileItemElement tileItemElement29 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement30 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemFrame tileItemFrame23 = new DevExpress.XtraEditors.TileItemFrame();
             DevExpress.XtraEditors.TileItemElement tileItemElement34 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemFrame tileItemFrame24 = new DevExpress.XtraEditors.TileItemFrame();
@@ -109,56 +103,73 @@
             DevExpress.XtraEditors.TileItemFrame tileItemFrame32 = new DevExpress.XtraEditors.TileItemFrame();
             DevExpress.XtraEditors.TileItemElement tileItemElement47 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement48 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemFrame tileItemFrame33 = new DevExpress.XtraEditors.TileItemFrame();
+            DevExpress.XtraEditors.TileItemElement tileItemElement49 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemFrame tileItemFrame34 = new DevExpress.XtraEditors.TileItemFrame();
+            DevExpress.XtraEditors.TileItemElement tileItemElement50 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement51 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemFrame tileItemFrame35 = new DevExpress.XtraEditors.TileItemFrame();
+            DevExpress.XtraEditors.TileItemElement tileItemElement52 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemFrame tileItemFrame36 = new DevExpress.XtraEditors.TileItemFrame();
+            DevExpress.XtraEditors.TileItemElement tileItemElement53 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement54 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemFrame tileItemFrame13 = new DevExpress.XtraEditors.TileItemFrame();
+            DevExpress.XtraEditors.TileItemElement tileItemElement19 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemFrame tileItemFrame14 = new DevExpress.XtraEditors.TileItemFrame();
+            DevExpress.XtraEditors.TileItemElement tileItemElement20 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement21 = new DevExpress.XtraEditors.TileItemElement();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.documentManagerMain = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
-            this.windowsUIView = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView(this.components);
-            this.tileContainerMain = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.TileContainer(this.components);
-            this.docTilCode = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
-            this.tileContainerCode = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.TileContainer(this.components);
-            this.docTilCodeCdAssetplaceEditor = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
-            this.docCodeCdAssetplace = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
-            this.docTilCodecdJob = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
-            this.docCodecdJob = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
-            this.docTilCodeCdDepertment = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
-            this.docCodeCdDepertment = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
-            this.docTilCodeCdAssetPropertiy = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
-            this.docCodeCdAssetPropertiy = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
-            this.docTilCodeCdAssetState = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
-            this.docCodeCdAssetState = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
-            this.docCode = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
-            this.docTilData = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
-            this.tileContainerData = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.TileContainer(this.components);
-            this.docTilDataCdAssetsCategory = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
-            this.docDataCdAssetsCategory = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
-            this.docTilDataTblEmp = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
-            this.docDataTblEmp = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
-            this.docData = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
-            this.tileContainerQry = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.TileContainer(this.components);
-            this.docTilQryQry1 = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
-            this.docQryQry1 = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
-            this.tileContainerReport = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.TileContainer(this.components);
-            this.docTilReportRep1 = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
-            this.docReportRep1 = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
-            this.tileContainerRule = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.TileContainer(this.components);
-            this.docTilRuleUsers = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
-            this.docRuleUsers = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
-            this.docTilRuleRule = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
-            this.docRuleRule = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
-            this.docTilRuleUserRoles = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
-            this.docRuleUserRoles = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
-            this.docTilRuleRuleDetails = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
-            this.docRuleRuleDetails = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
-            this.pageUserSettings = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Page(this.components);
-            this.docUserSetting = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
-            this.docQry = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
-            this.docReport = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
-            this.docRules = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
-            this.docTilQry = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
-            this.docTilReport = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
-            this.docTilRule = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
-            this.docTilUserSetting = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
-            this.docCodeCDComponents = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
-            this.docTilCodeCDComponents = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
+            this.documentManagerMain = new DevExpress.XtraBars.Docking2010.DocumentManager();
+            this.windowsUIView = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.WindowsUIView();
+            this.tileContainerMain = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.TileContainer();
+            this.docTilCode = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile();
+            this.tileContainerCode = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.TileContainer();
+            this.docTilCodeCdAssetplaceEditor = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile();
+            this.docCodeCdAssetplace = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document();
+            this.docTilCodecdJob = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile();
+            this.docCodecdJob = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document();
+            this.docTilCodeCdDepertment = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile();
+            this.docCodeCdDepertment = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document();
+            this.docTilCodeCdAssetPropertiy = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile();
+            this.docCodeCdAssetPropertiy = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document();
+            this.docTilCodeCdAssetState = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile();
+            this.docCodeCdAssetState = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document();
+            this.docTilCodeCDComponents = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile();
+            this.docCodeCDComponents = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document();
+            this.docCode = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document();
+            this.docTilData = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile();
+            this.tileContainerData = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.TileContainer();
+            this.docTilDataCdAssetsCategory = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile();
+            this.docDataCdAssetsCategory = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document();
+            this.docTilDataTblEmp = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile();
+            this.docDataTblEmp = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document();
+            this.docData = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document();
+            this.tileContainerQry = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.TileContainer();
+            this.docTilQryQry1 = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile();
+            this.docQryQry1 = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document();
+            this.tileContainerReport = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.TileContainer();
+            this.docTilReportRep1 = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile();
+            this.docReportRep1 = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document();
+            this.tileContainerRule = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.TileContainer();
+            this.docTilRuleUsers = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile();
+            this.docRuleUsers = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document();
+            this.docTilRuleRule = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile();
+            this.docRuleRule = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document();
+            this.docTilRuleUserRoles = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile();
+            this.docRuleUserRoles = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document();
+            this.docTilRuleRuleDetails = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile();
+            this.docRuleRuleDetails = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document();
+            this.pageUserSettings = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Page();
+            this.docUserSetting = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document();
+            this.docQry = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document();
+            this.docReport = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document();
+            this.docRules = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document();
+            this.docTilQry = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile();
+            this.docTilReport = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile();
+            this.docTilRule = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile();
+            this.docTilUserSetting = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile();
+            this.docCodeCDInsuranceCo = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document();
+            this.docTillCodeCDInsuranceCo = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile();
             ((System.ComponentModel.ISupportInitialize)(this.documentManagerMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.windowsUIView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tileContainerMain)).BeginInit();
@@ -174,6 +185,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.docCodeCdAssetPropertiy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.docTilCodeCdAssetState)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.docCodeCdAssetState)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.docTilCodeCDComponents)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.docCodeCDComponents)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.docCode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.docTilData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tileContainerData)).BeginInit();
@@ -206,8 +219,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.docTilReport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.docTilRule)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.docTilUserSetting)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.docCodeCDComponents)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.docTilCodeCDComponents)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.docCodeCDInsuranceCo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.docTillCodeCDInsuranceCo)).BeginInit();
             this.SuspendLayout();
             // 
             // documentManagerMain
@@ -253,7 +266,8 @@
             this.docRuleRuleDetails,
             this.docQryQry1,
             this.docReportRep1,
-            this.docCodeCDComponents});
+            this.docCodeCDComponents,
+            this.docCodeCDInsuranceCo});
             this.windowsUIView.LoadingIndicatorProperties.Caption = "انتظر من فضلك";
             this.windowsUIView.LoadingIndicatorProperties.Description = "تحميل .......";
             this.windowsUIView.OptionsLayout.LayoutVersion = "1";
@@ -286,7 +300,8 @@
             this.docTilRuleRuleDetails,
             this.docTilQryQry1,
             this.docTilReportRep1,
-            this.docTilCodeCDComponents});
+            this.docTilCodeCDComponents,
+            this.docTillCodeCDInsuranceCo});
             this.windowsUIView.QueryControl += new DevExpress.XtraBars.Docking2010.Views.QueryControlEventHandler(this.windowsUIView_QueryControl);
             // 
             // tileContainerMain
@@ -306,22 +321,22 @@
             this.docTilCode.Appearances.Normal.Options.UseBackColor = true;
             this.docTilCode.Appearances.Normal.Options.UseForeColor = true;
             this.docTilCode.Document = this.docCode;
-            tileItemElement16.Image = global::FixedAssets.Properties.Resources.Code64;
-            tileItemElement16.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemElement16.Text = "بيانات عامة";
-            tileItemElement16.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
-            tileItemFrame11.Elements.Add(tileItemElement16);
-            tileItemFrame11.Image = global::FixedAssets.Properties.Resources.Code64;
-            tileItemElement17.Image = global::FixedAssets.Properties.Resources.Code32;
-            tileItemElement17.Text = "بيانات عامة";
-            tileItemElement17.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
-            tileItemElement18.Text = "عرض و تعديل البيانات العامة و الرئيسية";
-            tileItemElement18.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemFrame12.Elements.Add(tileItemElement17);
-            tileItemFrame12.Elements.Add(tileItemElement18);
-            tileItemFrame12.Image = global::FixedAssets.Properties.Resources.Code32;
-            this.docTilCode.Frames.Add(tileItemFrame11);
-            this.docTilCode.Frames.Add(tileItemFrame12);
+            tileItemElement22.Image = global::FixedAssets.Properties.Resources.Code64;
+            tileItemElement22.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemElement22.Text = "بيانات عامة";
+            tileItemElement22.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
+            tileItemFrame15.Elements.Add(tileItemElement22);
+            tileItemFrame15.Image = global::FixedAssets.Properties.Resources.Code64;
+            tileItemElement23.Image = global::FixedAssets.Properties.Resources.Code32;
+            tileItemElement23.Text = "بيانات عامة";
+            tileItemElement23.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
+            tileItemElement24.Text = "عرض و تعديل البيانات العامة و الرئيسية";
+            tileItemElement24.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemFrame16.Elements.Add(tileItemElement23);
+            tileItemFrame16.Elements.Add(tileItemElement24);
+            tileItemFrame16.Image = global::FixedAssets.Properties.Resources.Code32;
+            this.docTilCode.Frames.Add(tileItemFrame15);
+            this.docTilCode.Frames.Add(tileItemFrame16);
             this.docTilCode.Group = "بيانات عامة";
             this.docTilCode.Name = "docTilCode";
             this.docTilCode.Properties.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
@@ -335,7 +350,8 @@
             this.docTilCodeCdDepertment,
             this.docTilCodeCdAssetPropertiy,
             this.docTilCodeCdAssetState,
-            this.docTilCodeCDComponents});
+            this.docTilCodeCDComponents,
+            this.docTillCodeCDInsuranceCo});
             this.tileContainerCode.Name = "tileContainerCode";
             this.tileContainerCode.Parent = this.tileContainerMain;
             // 
@@ -493,6 +509,37 @@
             this.docCodeCdAssetState.Caption = "حالة الاصول";
             this.docCodeCdAssetState.ControlName = "docCodeCdAssetState";
             // 
+            // docTilCodeCDComponents
+            // 
+            this.docTilCodeCDComponents.Appearances.Normal.BackColor = System.Drawing.Color.Yellow;
+            this.docTilCodeCDComponents.Appearances.Normal.ForeColor = System.Drawing.Color.Black;
+            this.docTilCodeCDComponents.Appearances.Normal.Options.UseBackColor = true;
+            this.docTilCodeCDComponents.Appearances.Normal.Options.UseForeColor = true;
+            this.docTilCodeCDComponents.Document = this.docCodeCDComponents;
+            tileItemElement16.Image = global::FixedAssets.Properties.Resources.EditData64;
+            tileItemElement16.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemElement16.Text = "مكونات الاصول";
+            tileItemElement16.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
+            tileItemFrame11.Elements.Add(tileItemElement16);
+            tileItemFrame11.Image = global::FixedAssets.Properties.Resources.EditData64;
+            tileItemElement17.Image = global::FixedAssets.Properties.Resources.EditData32;
+            tileItemElement17.Text = "مكونات الاصول";
+            tileItemElement17.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
+            tileItemElement18.Text = "اضافة و تعديل مكونات الاصول";
+            tileItemElement18.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemFrame12.Elements.Add(tileItemElement17);
+            tileItemFrame12.Elements.Add(tileItemElement18);
+            tileItemFrame12.Image = global::FixedAssets.Properties.Resources.EditData32;
+            this.docTilCodeCDComponents.Frames.Add(tileItemFrame11);
+            this.docTilCodeCDComponents.Frames.Add(tileItemFrame12);
+            this.tileContainerCode.SetID(this.docTilCodeCDComponents, 5);
+            this.docTilCodeCDComponents.Name = "docTilCodeCDComponents";
+            // 
+            // docCodeCDComponents
+            // 
+            this.docCodeCDComponents.Caption = "مكونات الاصول";
+            this.docCodeCDComponents.ControlName = "docCodeCDComponents";
+            // 
             // docCode
             // 
             this.docCode.Caption = "بيانات عامة";
@@ -506,22 +553,22 @@
             this.docTilData.Appearances.Normal.Options.UseBackColor = true;
             this.docTilData.Appearances.Normal.Options.UseForeColor = true;
             this.docTilData.Document = this.docData;
-            tileItemElement25.Image = global::FixedAssets.Properties.Resources.Data64;
-            tileItemElement25.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemElement25.Text = "ادخال البيانات";
-            tileItemElement25.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
-            tileItemFrame17.Elements.Add(tileItemElement25);
-            tileItemFrame17.Image = global::FixedAssets.Properties.Resources.Data64;
-            tileItemElement26.Image = global::FixedAssets.Properties.Resources.Data64;
-            tileItemElement26.Text = "ادخال البيانات";
-            tileItemElement26.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
-            tileItemElement27.Text = "اضافة وتعديل البيانات";
-            tileItemElement27.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemFrame18.Elements.Add(tileItemElement26);
-            tileItemFrame18.Elements.Add(tileItemElement27);
-            tileItemFrame18.Image = global::FixedAssets.Properties.Resources.Data64;
-            this.docTilData.Frames.Add(tileItemFrame17);
-            this.docTilData.Frames.Add(tileItemFrame18);
+            tileItemElement31.Image = global::FixedAssets.Properties.Resources.Data64;
+            tileItemElement31.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemElement31.Text = "ادخال البيانات";
+            tileItemElement31.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
+            tileItemFrame21.Elements.Add(tileItemElement31);
+            tileItemFrame21.Image = global::FixedAssets.Properties.Resources.Data64;
+            tileItemElement32.Image = global::FixedAssets.Properties.Resources.Data64;
+            tileItemElement32.Text = "ادخال البيانات";
+            tileItemElement32.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
+            tileItemElement33.Text = "اضافة وتعديل البيانات";
+            tileItemElement33.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemFrame22.Elements.Add(tileItemElement32);
+            tileItemFrame22.Elements.Add(tileItemElement33);
+            tileItemFrame22.Image = global::FixedAssets.Properties.Resources.Data64;
+            this.docTilData.Frames.Add(tileItemFrame21);
+            this.docTilData.Frames.Add(tileItemFrame22);
             this.docTilData.Group = "ادخال البيانات";
             this.tileContainerMain.SetID(this.docTilData, 1);
             this.docTilData.Name = "docTilData";
@@ -539,22 +586,22 @@
             // docTilDataCdAssetsCategory
             // 
             this.docTilDataCdAssetsCategory.Document = this.docDataCdAssetsCategory;
-            tileItemElement19.Image = global::FixedAssets.Properties.Resources.EditData64;
-            tileItemElement19.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemElement19.Text = "فئات  الاصول";
-            tileItemElement19.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
-            tileItemFrame13.Elements.Add(tileItemElement19);
-            tileItemFrame13.Image = global::FixedAssets.Properties.Resources.EditData64;
-            tileItemElement20.Image = global::FixedAssets.Properties.Resources.EditData32;
-            tileItemElement20.Text = "فئات  الاصول";
-            tileItemElement20.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
-            tileItemElement21.Text = "اضافة و تعديل فئات  الاصول";
-            tileItemElement21.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemFrame14.Elements.Add(tileItemElement20);
-            tileItemFrame14.Elements.Add(tileItemElement21);
-            tileItemFrame14.Image = global::FixedAssets.Properties.Resources.EditData32;
-            this.docTilDataCdAssetsCategory.Frames.Add(tileItemFrame13);
-            this.docTilDataCdAssetsCategory.Frames.Add(tileItemFrame14);
+            tileItemElement25.Image = global::FixedAssets.Properties.Resources.EditData64;
+            tileItemElement25.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemElement25.Text = "فئات  الاصول";
+            tileItemElement25.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
+            tileItemFrame17.Elements.Add(tileItemElement25);
+            tileItemFrame17.Image = global::FixedAssets.Properties.Resources.EditData64;
+            tileItemElement26.Image = global::FixedAssets.Properties.Resources.EditData32;
+            tileItemElement26.Text = "فئات  الاصول";
+            tileItemElement26.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
+            tileItemElement27.Text = "اضافة و تعديل فئات  الاصول";
+            tileItemElement27.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemFrame18.Elements.Add(tileItemElement26);
+            tileItemFrame18.Elements.Add(tileItemElement27);
+            tileItemFrame18.Image = global::FixedAssets.Properties.Resources.EditData32;
+            this.docTilDataCdAssetsCategory.Frames.Add(tileItemFrame17);
+            this.docTilDataCdAssetsCategory.Frames.Add(tileItemFrame18);
             this.docTilDataCdAssetsCategory.Name = "docTilDataCdAssetsCategory";
             // 
             // docDataCdAssetsCategory
@@ -565,22 +612,22 @@
             // docTilDataTblEmp
             // 
             this.docTilDataTblEmp.Document = this.docDataTblEmp;
-            tileItemElement22.Image = global::FixedAssets.Properties.Resources.EditData64;
-            tileItemElement22.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemElement22.Text = "العاملين";
-            tileItemElement22.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
-            tileItemFrame15.Elements.Add(tileItemElement22);
-            tileItemFrame15.Image = global::FixedAssets.Properties.Resources.EditData64;
-            tileItemElement23.Image = global::FixedAssets.Properties.Resources.EditData32;
-            tileItemElement23.Text = "العاملين";
-            tileItemElement23.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
-            tileItemElement24.Text = "اضافة و تعديل بيان العاملين";
-            tileItemElement24.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemFrame16.Elements.Add(tileItemElement23);
-            tileItemFrame16.Elements.Add(tileItemElement24);
-            tileItemFrame16.Image = global::FixedAssets.Properties.Resources.EditData32;
-            this.docTilDataTblEmp.Frames.Add(tileItemFrame15);
-            this.docTilDataTblEmp.Frames.Add(tileItemFrame16);
+            tileItemElement28.Image = global::FixedAssets.Properties.Resources.EditData64;
+            tileItemElement28.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemElement28.Text = "العاملين";
+            tileItemElement28.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
+            tileItemFrame19.Elements.Add(tileItemElement28);
+            tileItemFrame19.Image = global::FixedAssets.Properties.Resources.EditData64;
+            tileItemElement29.Image = global::FixedAssets.Properties.Resources.EditData32;
+            tileItemElement29.Text = "العاملين";
+            tileItemElement29.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
+            tileItemElement30.Text = "اضافة و تعديل بيان العاملين";
+            tileItemElement30.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemFrame20.Elements.Add(tileItemElement29);
+            tileItemFrame20.Elements.Add(tileItemElement30);
+            tileItemFrame20.Image = global::FixedAssets.Properties.Resources.EditData32;
+            this.docTilDataTblEmp.Frames.Add(tileItemFrame19);
+            this.docTilDataTblEmp.Frames.Add(tileItemFrame20);
             this.tileContainerData.SetID(this.docTilDataTblEmp, 1);
             this.docTilDataTblEmp.Name = "docTilDataTblEmp";
             // 
@@ -645,22 +692,22 @@
             this.docTilRuleUsers.Appearances.Normal.Options.UseBackColor = true;
             this.docTilRuleUsers.Appearances.Normal.Options.UseForeColor = true;
             this.docTilRuleUsers.Document = this.docRuleUsers;
-            tileItemElement28.Image = global::FixedAssets.Properties.Resources.Rule64;
-            tileItemElement28.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemElement28.Text = "المستخدمين";
-            tileItemElement28.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
-            tileItemFrame19.Elements.Add(tileItemElement28);
-            tileItemFrame19.Image = global::FixedAssets.Properties.Resources.Rule64;
-            tileItemElement29.Image = global::FixedAssets.Properties.Resources.Rule32;
-            tileItemElement29.Text = "المستخدمين";
-            tileItemElement29.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
-            tileItemElement30.Text = "اضاافة و تعديل المستخدمين والصلاحيات";
-            tileItemElement30.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemFrame20.Elements.Add(tileItemElement29);
-            tileItemFrame20.Elements.Add(tileItemElement30);
-            tileItemFrame20.Image = global::FixedAssets.Properties.Resources.Rule32;
-            this.docTilRuleUsers.Frames.Add(tileItemFrame19);
-            this.docTilRuleUsers.Frames.Add(tileItemFrame20);
+            tileItemElement34.Image = global::FixedAssets.Properties.Resources.Rule64;
+            tileItemElement34.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemElement34.Text = "المستخدمين";
+            tileItemElement34.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
+            tileItemFrame23.Elements.Add(tileItemElement34);
+            tileItemFrame23.Image = global::FixedAssets.Properties.Resources.Rule64;
+            tileItemElement35.Image = global::FixedAssets.Properties.Resources.Rule32;
+            tileItemElement35.Text = "المستخدمين";
+            tileItemElement35.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
+            tileItemElement36.Text = "اضاافة و تعديل المستخدمين والصلاحيات";
+            tileItemElement36.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemFrame24.Elements.Add(tileItemElement35);
+            tileItemFrame24.Elements.Add(tileItemElement36);
+            tileItemFrame24.Image = global::FixedAssets.Properties.Resources.Rule32;
+            this.docTilRuleUsers.Frames.Add(tileItemFrame23);
+            this.docTilRuleUsers.Frames.Add(tileItemFrame24);
             this.docTilRuleUsers.Name = "docTilRuleUsers";
             // 
             // docRuleUsers
@@ -677,22 +724,22 @@
             this.docTilRuleRule.Appearances.Normal.Options.UseFont = true;
             this.docTilRuleRule.Appearances.Normal.Options.UseForeColor = true;
             this.docTilRuleRule.Document = this.docRuleRule;
-            tileItemElement31.Image = global::FixedAssets.Properties.Resources.Rule64;
-            tileItemElement31.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemElement31.Text = "الصلاحيات";
-            tileItemElement31.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
-            tileItemFrame21.Elements.Add(tileItemElement31);
-            tileItemFrame21.Image = global::FixedAssets.Properties.Resources.Rule64;
-            tileItemElement32.Image = global::FixedAssets.Properties.Resources.Rule32;
-            tileItemElement32.Text = "الصلاحيات";
-            tileItemElement32.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
-            tileItemElement33.Text = "اضافة و تعديل الصلاحيات";
-            tileItemElement33.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemFrame22.Elements.Add(tileItemElement32);
-            tileItemFrame22.Elements.Add(tileItemElement33);
-            tileItemFrame22.Image = global::FixedAssets.Properties.Resources.Rule32;
-            this.docTilRuleRule.Frames.Add(tileItemFrame21);
-            this.docTilRuleRule.Frames.Add(tileItemFrame22);
+            tileItemElement37.Image = global::FixedAssets.Properties.Resources.Rule64;
+            tileItemElement37.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemElement37.Text = "الصلاحيات";
+            tileItemElement37.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
+            tileItemFrame25.Elements.Add(tileItemElement37);
+            tileItemFrame25.Image = global::FixedAssets.Properties.Resources.Rule64;
+            tileItemElement38.Image = global::FixedAssets.Properties.Resources.Rule32;
+            tileItemElement38.Text = "الصلاحيات";
+            tileItemElement38.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
+            tileItemElement39.Text = "اضافة و تعديل الصلاحيات";
+            tileItemElement39.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemFrame26.Elements.Add(tileItemElement38);
+            tileItemFrame26.Elements.Add(tileItemElement39);
+            tileItemFrame26.Image = global::FixedAssets.Properties.Resources.Rule32;
+            this.docTilRuleRule.Frames.Add(tileItemFrame25);
+            this.docTilRuleRule.Frames.Add(tileItemFrame26);
             this.tileContainerRule.SetID(this.docTilRuleRule, 1);
             this.docTilRuleRule.Name = "docTilRuleRule";
             // 
@@ -710,22 +757,22 @@
             this.docTilRuleUserRoles.Appearances.Normal.Options.UseFont = true;
             this.docTilRuleUserRoles.Appearances.Normal.Options.UseForeColor = true;
             this.docTilRuleUserRoles.Document = this.docRuleUserRoles;
-            tileItemElement34.Image = global::FixedAssets.Properties.Resources.Rule64;
-            tileItemElement34.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemElement34.Text = "صلاحيات المستخدمين";
-            tileItemElement34.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
-            tileItemFrame23.Elements.Add(tileItemElement34);
-            tileItemFrame23.Image = global::FixedAssets.Properties.Resources.Rule64;
-            tileItemElement35.Image = global::FixedAssets.Properties.Resources.Rule64;
-            tileItemElement35.Text = "صلاحيات المستخدمين";
-            tileItemElement35.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
-            tileItemElement36.Text = "تعديل صلاحيات المستخدمين";
-            tileItemElement36.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemFrame24.Elements.Add(tileItemElement35);
-            tileItemFrame24.Elements.Add(tileItemElement36);
-            tileItemFrame24.Image = global::FixedAssets.Properties.Resources.Rule64;
-            this.docTilRuleUserRoles.Frames.Add(tileItemFrame23);
-            this.docTilRuleUserRoles.Frames.Add(tileItemFrame24);
+            tileItemElement40.Image = global::FixedAssets.Properties.Resources.Rule64;
+            tileItemElement40.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemElement40.Text = "صلاحيات المستخدمين";
+            tileItemElement40.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
+            tileItemFrame27.Elements.Add(tileItemElement40);
+            tileItemFrame27.Image = global::FixedAssets.Properties.Resources.Rule64;
+            tileItemElement41.Image = global::FixedAssets.Properties.Resources.Rule64;
+            tileItemElement41.Text = "صلاحيات المستخدمين";
+            tileItemElement41.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
+            tileItemElement42.Text = "تعديل صلاحيات المستخدمين";
+            tileItemElement42.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemFrame28.Elements.Add(tileItemElement41);
+            tileItemFrame28.Elements.Add(tileItemElement42);
+            tileItemFrame28.Image = global::FixedAssets.Properties.Resources.Rule64;
+            this.docTilRuleUserRoles.Frames.Add(tileItemFrame27);
+            this.docTilRuleUserRoles.Frames.Add(tileItemFrame28);
             this.tileContainerRule.SetID(this.docTilRuleUserRoles, 2);
             this.docTilRuleUserRoles.Name = "docTilRuleUserRoles";
             // 
@@ -743,22 +790,22 @@
             this.docTilRuleRuleDetails.Appearances.Normal.Options.UseFont = true;
             this.docTilRuleRuleDetails.Appearances.Normal.Options.UseForeColor = true;
             this.docTilRuleRuleDetails.Document = this.docRuleRuleDetails;
-            tileItemElement37.Image = global::FixedAssets.Properties.Resources.Rule64;
-            tileItemElement37.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemElement37.Text = "تفاصيل الصلاحيات";
-            tileItemElement37.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
-            tileItemFrame25.Elements.Add(tileItemElement37);
-            tileItemFrame25.Image = global::FixedAssets.Properties.Resources.Rule64;
-            tileItemElement38.Image = global::FixedAssets.Properties.Resources.Rule32;
-            tileItemElement38.Text = "تفاصيل الصلاحيات";
-            tileItemElement38.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
-            tileItemElement39.Text = "تعديل تفاصيل الصلاحيات";
-            tileItemElement39.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemFrame26.Elements.Add(tileItemElement38);
-            tileItemFrame26.Elements.Add(tileItemElement39);
-            tileItemFrame26.Image = global::FixedAssets.Properties.Resources.Rule32;
-            this.docTilRuleRuleDetails.Frames.Add(tileItemFrame25);
-            this.docTilRuleRuleDetails.Frames.Add(tileItemFrame26);
+            tileItemElement43.Image = global::FixedAssets.Properties.Resources.Rule64;
+            tileItemElement43.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemElement43.Text = "تفاصيل الصلاحيات";
+            tileItemElement43.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
+            tileItemFrame29.Elements.Add(tileItemElement43);
+            tileItemFrame29.Image = global::FixedAssets.Properties.Resources.Rule64;
+            tileItemElement44.Image = global::FixedAssets.Properties.Resources.Rule32;
+            tileItemElement44.Text = "تفاصيل الصلاحيات";
+            tileItemElement44.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
+            tileItemElement45.Text = "تعديل تفاصيل الصلاحيات";
+            tileItemElement45.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemFrame30.Elements.Add(tileItemElement44);
+            tileItemFrame30.Elements.Add(tileItemElement45);
+            tileItemFrame30.Image = global::FixedAssets.Properties.Resources.Rule32;
+            this.docTilRuleRuleDetails.Frames.Add(tileItemFrame29);
+            this.docTilRuleRuleDetails.Frames.Add(tileItemFrame30);
             this.tileContainerRule.SetID(this.docTilRuleRuleDetails, 3);
             this.docTilRuleRuleDetails.Name = "docTilRuleRuleDetails";
             // 
@@ -802,24 +849,24 @@
             this.docTilQry.Appearances.Normal.Options.UseBackColor = true;
             this.docTilQry.Appearances.Normal.Options.UseForeColor = true;
             this.docTilQry.Document = this.docQry;
-            tileItemFrame27.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.SegmentedFade;
-            tileItemElement40.Image = global::FixedAssets.Properties.Resources.Qry64;
-            tileItemElement40.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemElement40.Text = "استعلامات";
-            tileItemElement40.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
-            tileItemFrame27.Elements.Add(tileItemElement40);
-            tileItemFrame27.Image = global::FixedAssets.Properties.Resources.Qry64;
-            tileItemFrame28.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.SegmentedFade;
-            tileItemElement41.Image = global::FixedAssets.Properties.Resources.Qry32;
-            tileItemElement41.Text = "الاستعلامات";
-            tileItemElement41.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
-            tileItemElement42.Text = "البحث و الاستعلام عن البيانات";
-            tileItemElement42.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemFrame28.Elements.Add(tileItemElement41);
-            tileItemFrame28.Elements.Add(tileItemElement42);
-            tileItemFrame28.Image = global::FixedAssets.Properties.Resources.Qry32;
-            this.docTilQry.Frames.Add(tileItemFrame27);
-            this.docTilQry.Frames.Add(tileItemFrame28);
+            tileItemFrame31.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.SegmentedFade;
+            tileItemElement46.Image = global::FixedAssets.Properties.Resources.Qry64;
+            tileItemElement46.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemElement46.Text = "استعلامات";
+            tileItemElement46.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
+            tileItemFrame31.Elements.Add(tileItemElement46);
+            tileItemFrame31.Image = global::FixedAssets.Properties.Resources.Qry64;
+            tileItemFrame32.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.SegmentedFade;
+            tileItemElement47.Image = global::FixedAssets.Properties.Resources.Qry32;
+            tileItemElement47.Text = "الاستعلامات";
+            tileItemElement47.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
+            tileItemElement48.Text = "البحث و الاستعلام عن البيانات";
+            tileItemElement48.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemFrame32.Elements.Add(tileItemElement47);
+            tileItemFrame32.Elements.Add(tileItemElement48);
+            tileItemFrame32.Image = global::FixedAssets.Properties.Resources.Qry32;
+            this.docTilQry.Frames.Add(tileItemFrame31);
+            this.docTilQry.Frames.Add(tileItemFrame32);
             this.docTilQry.Group = "استعلام و طباعة";
             this.docTilQry.Name = "docTilQry";
             this.docTilQry.Properties.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
@@ -833,24 +880,24 @@
             this.docTilReport.Appearances.Normal.Options.UseBackColor = true;
             this.docTilReport.Appearances.Normal.Options.UseForeColor = true;
             this.docTilReport.Document = this.docReport;
-            tileItemFrame29.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.ScrollLeft;
-            tileItemElement43.Image = global::FixedAssets.Properties.Resources.Report64;
-            tileItemElement43.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemElement43.Text = "تقارير";
-            tileItemElement43.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
-            tileItemFrame29.Elements.Add(tileItemElement43);
-            tileItemFrame29.Image = global::FixedAssets.Properties.Resources.Report64;
-            tileItemFrame30.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.ScrollLeft;
-            tileItemElement44.Image = global::FixedAssets.Properties.Resources.Report32;
-            tileItemElement44.Text = "تقارير";
-            tileItemElement44.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
-            tileItemElement45.Text = "طباعة و تصدير التقارير";
-            tileItemElement45.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemFrame30.Elements.Add(tileItemElement44);
-            tileItemFrame30.Elements.Add(tileItemElement45);
-            tileItemFrame30.Image = global::FixedAssets.Properties.Resources.Report32;
-            this.docTilReport.Frames.Add(tileItemFrame29);
-            this.docTilReport.Frames.Add(tileItemFrame30);
+            tileItemFrame33.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.ScrollLeft;
+            tileItemElement49.Image = global::FixedAssets.Properties.Resources.Report64;
+            tileItemElement49.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemElement49.Text = "تقارير";
+            tileItemElement49.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
+            tileItemFrame33.Elements.Add(tileItemElement49);
+            tileItemFrame33.Image = global::FixedAssets.Properties.Resources.Report64;
+            tileItemFrame34.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.ScrollLeft;
+            tileItemElement50.Image = global::FixedAssets.Properties.Resources.Report32;
+            tileItemElement50.Text = "تقارير";
+            tileItemElement50.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
+            tileItemElement51.Text = "طباعة و تصدير التقارير";
+            tileItemElement51.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemFrame34.Elements.Add(tileItemElement50);
+            tileItemFrame34.Elements.Add(tileItemElement51);
+            tileItemFrame34.Image = global::FixedAssets.Properties.Resources.Report32;
+            this.docTilReport.Frames.Add(tileItemFrame33);
+            this.docTilReport.Frames.Add(tileItemFrame34);
             this.docTilReport.Group = "استعلام و طباعة";
             this.docTilReport.Name = "docTilReport";
             this.docTilReport.Properties.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
@@ -864,24 +911,24 @@
             this.docTilRule.Appearances.Normal.Options.UseBackColor = true;
             this.docTilRule.Appearances.Normal.Options.UseForeColor = true;
             this.docTilRule.Document = this.docRules;
-            tileItemFrame31.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.Fade;
-            tileItemElement46.Image = global::FixedAssets.Properties.Resources.Rule64;
-            tileItemElement46.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemElement46.Text = "صلاحيات";
-            tileItemElement46.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
-            tileItemFrame31.Elements.Add(tileItemElement46);
-            tileItemFrame31.Image = global::FixedAssets.Properties.Resources.Rule64;
-            tileItemFrame32.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.Fade;
-            tileItemElement47.Image = global::FixedAssets.Properties.Resources.Rule32;
-            tileItemElement47.Text = "صلاحيات";
-            tileItemElement47.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
-            tileItemElement48.Text = "اضافة و تعديل المستخدمين و صلاحيات العرض و التعديل";
-            tileItemElement48.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemFrame32.Elements.Add(tileItemElement47);
-            tileItemFrame32.Elements.Add(tileItemElement48);
-            tileItemFrame32.Image = global::FixedAssets.Properties.Resources.Rule32;
-            this.docTilRule.Frames.Add(tileItemFrame31);
-            this.docTilRule.Frames.Add(tileItemFrame32);
+            tileItemFrame35.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.Fade;
+            tileItemElement52.Image = global::FixedAssets.Properties.Resources.Rule64;
+            tileItemElement52.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemElement52.Text = "صلاحيات";
+            tileItemElement52.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
+            tileItemFrame35.Elements.Add(tileItemElement52);
+            tileItemFrame35.Image = global::FixedAssets.Properties.Resources.Rule64;
+            tileItemFrame36.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.Fade;
+            tileItemElement53.Image = global::FixedAssets.Properties.Resources.Rule32;
+            tileItemElement53.Text = "صلاحيات";
+            tileItemElement53.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
+            tileItemElement54.Text = "اضافة و تعديل المستخدمين و صلاحيات العرض و التعديل";
+            tileItemElement54.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemFrame36.Elements.Add(tileItemElement53);
+            tileItemFrame36.Elements.Add(tileItemElement54);
+            tileItemFrame36.Image = global::FixedAssets.Properties.Resources.Rule32;
+            this.docTilRule.Frames.Add(tileItemFrame35);
+            this.docTilRule.Frames.Add(tileItemFrame36);
             this.docTilRule.Group = "المستخدمين و الصلاحيات";
             this.docTilRule.Name = "docTilRule";
             this.docTilRule.Properties.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
@@ -893,16 +940,36 @@
             this.docTilUserSetting.Name = "docTilUserSetting";
             this.docTilUserSetting.Tag = true;
             // 
-            // docCodeCDComponents
+            // docCodeCDInsuranceCo
             // 
-            this.docCodeCDComponents.Caption = "مكونات الاصول";
-            this.docCodeCDComponents.ControlName = "docCodeCDComponents";
+            this.docCodeCDInsuranceCo.Caption = "شركات التامين";
+            this.docCodeCDInsuranceCo.ControlName = "docCodeCDInsuranceCo";
             // 
-            // docTilCodeCDComponents
+            // docTillCodeCDInsuranceCo
             // 
-            this.docTilCodeCDComponents.Document = this.docCodeCDComponents;
-            this.tileContainerCode.SetID(this.docTilCodeCDComponents, 5);
-            this.docTilCodeCDComponents.Name = "docTilCodeCDComponents";
+            this.docTillCodeCDInsuranceCo.Appearances.Normal.BackColor = System.Drawing.Color.Yellow;
+            this.docTillCodeCDInsuranceCo.Appearances.Normal.ForeColor = System.Drawing.Color.Black;
+            this.docTillCodeCDInsuranceCo.Appearances.Normal.Options.UseBackColor = true;
+            this.docTillCodeCDInsuranceCo.Appearances.Normal.Options.UseForeColor = true;
+            this.docTillCodeCDInsuranceCo.Document = this.docCodeCDInsuranceCo;
+            tileItemElement19.Image = global::FixedAssets.Properties.Resources.EditData64;
+            tileItemElement19.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemElement19.Text = "شركات التامين";
+            tileItemElement19.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
+            tileItemFrame13.Elements.Add(tileItemElement19);
+            tileItemFrame13.Image = global::FixedAssets.Properties.Resources.EditData64;
+            tileItemElement20.Image = global::FixedAssets.Properties.Resources.EditData32;
+            tileItemElement20.Text = "شركات التامين";
+            tileItemElement20.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
+            tileItemElement21.Text = "اضافة و تعديل شركات التامين";
+            tileItemElement21.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemFrame14.Elements.Add(tileItemElement20);
+            tileItemFrame14.Elements.Add(tileItemElement21);
+            tileItemFrame14.Image = global::FixedAssets.Properties.Resources.EditData32;
+            this.docTillCodeCDInsuranceCo.Frames.Add(tileItemFrame13);
+            this.docTillCodeCDInsuranceCo.Frames.Add(tileItemFrame14);
+            this.tileContainerCode.SetID(this.docTillCodeCDInsuranceCo, 6);
+            this.docTillCodeCDInsuranceCo.Name = "docTillCodeCDInsuranceCo";
             // 
             // MainForm
             // 
@@ -930,6 +997,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.docCodeCdAssetPropertiy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.docTilCodeCdAssetState)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.docCodeCdAssetState)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.docTilCodeCDComponents)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.docCodeCDComponents)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.docCode)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.docTilData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tileContainerData)).EndInit();
@@ -962,8 +1031,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.docTilReport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.docTilRule)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.docTilUserSetting)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.docCodeCDComponents)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.docTilCodeCDComponents)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.docCodeCDInsuranceCo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.docTillCodeCDInsuranceCo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1019,6 +1088,8 @@
         private DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document docReportRep1;
         private DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile docTilCodeCDComponents;
         private DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document docCodeCDComponents;
+        private DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile docTillCodeCDInsuranceCo;
+        private DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document docCodeCDInsuranceCo;
     }
 }
 

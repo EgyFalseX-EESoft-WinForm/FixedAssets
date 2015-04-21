@@ -149,6 +149,12 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Log\L4N.cs" />
+    <Compile Include="Views\Code\CDInsuranceCoEditorUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Code\CDInsuranceCoEditorUC.designer.cs">
+      <DependentUpon>CDInsuranceCoEditorUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Code\CDComponentsEditorUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -166,6 +172,24 @@
     </Compile>
     <Compile Include="Views\Code\CdAssetStateEditorUC.designer.cs">
       <DependentUpon>CdAssetStateEditorUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Data\TBLAssetOhdaDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Data\TBLAssetOhdaDlg.Designer.cs">
+      <DependentUpon>TBLAssetOhdaDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Data\TBLDeleteAssetComponentDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Data\TBLDeleteAssetComponentDlg.Designer.cs">
+      <DependentUpon>TBLDeleteAssetComponentDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Data\TBLAddAssetComponentDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Data\TBLAddAssetComponentDlg.Designer.cs">
+      <DependentUpon>TBLAddAssetComponentDlg.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Data\TBLAssetComponentDlg.cs">
       <SubType>Form</SubType>
@@ -286,6 +310,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Code\CDInsuranceCoEditorUC.resx">
+      <DependentUpon>CDInsuranceCoEditorUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Code\CDComponentsEditorUC.resx">
       <DependentUpon>CDComponentsEditorUC.cs</DependentUpon>
     </EmbeddedResource>
@@ -294,6 +321,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Code\CdAssetStateEditorUC.resx">
       <DependentUpon>CdAssetStateEditorUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Data\TBLAssetOhdaDlg.resx">
+      <DependentUpon>TBLAssetOhdaDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Data\TBLDeleteAssetComponentDlg.resx">
+      <DependentUpon>TBLDeleteAssetComponentDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Data\TBLAddAssetComponentDlg.resx">
+      <DependentUpon>TBLAddAssetComponentDlg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Data\TBLAssetComponentDlg.resx">
       <DependentUpon>TBLAssetComponentDlg.cs</DependentUpon>
