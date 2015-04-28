@@ -57,6 +57,9 @@ namespace FixedAssets.Datasource.linq
     partial void InsertCDComponent(CDComponent instance);
     partial void UpdateCDComponent(CDComponent instance);
     partial void DeleteCDComponent(CDComponent instance);
+    partial void InsertCdAssetsCategory(CdAssetsCategory instance);
+    partial void UpdateCdAssetsCategory(CdAssetsCategory instance);
+    partial void DeleteCdAssetsCategory(CdAssetsCategory instance);
     #endregion
 		
 		public dsLinqDataDataContext() : 
@@ -158,6 +161,14 @@ namespace FixedAssets.Datasource.linq
 			get
 			{
 				return this.GetTable<CDComponent>();
+			}
+		}
+		
+		public System.Data.Linq.Table<CdAssetsCategory> CdAssetsCategories
+		{
+			get
+			{
+				return this.GetTable<CdAssetsCategory>();
 			}
 		}
 	}
@@ -1199,6 +1210,164 @@ namespace FixedAssets.Datasource.linq
 					this._ComponentDes = value;
 					this.SendPropertyChanged("ComponentDes");
 					this.OnComponentDesChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.CdAssetsCategory")]
+	public partial class CdAssetsCategory : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _AssetsCategoryID;
+		
+		private string _AssetsCategoryName;
+		
+		private int _parentID;
+		
+		private int _UserIn;
+		
+		private System.DateTime _dateIn;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnAssetsCategoryIDChanging(int value);
+    partial void OnAssetsCategoryIDChanged();
+    partial void OnAssetsCategoryNameChanging(string value);
+    partial void OnAssetsCategoryNameChanged();
+    partial void OnparentIDChanging(int value);
+    partial void OnparentIDChanged();
+    partial void OnUserInChanging(int value);
+    partial void OnUserInChanged();
+    partial void OndateInChanging(System.DateTime value);
+    partial void OndateInChanged();
+    #endregion
+		
+		public CdAssetsCategory()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AssetsCategoryID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int AssetsCategoryID
+		{
+			get
+			{
+				return this._AssetsCategoryID;
+			}
+			set
+			{
+				if ((this._AssetsCategoryID != value))
+				{
+					this.OnAssetsCategoryIDChanging(value);
+					this.SendPropertyChanging();
+					this._AssetsCategoryID = value;
+					this.SendPropertyChanged("AssetsCategoryID");
+					this.OnAssetsCategoryIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AssetsCategoryName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string AssetsCategoryName
+		{
+			get
+			{
+				return this._AssetsCategoryName;
+			}
+			set
+			{
+				if ((this._AssetsCategoryName != value))
+				{
+					this.OnAssetsCategoryNameChanging(value);
+					this.SendPropertyChanging();
+					this._AssetsCategoryName = value;
+					this.SendPropertyChanged("AssetsCategoryName");
+					this.OnAssetsCategoryNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_parentID", DbType="Int NOT NULL")]
+		public int parentID
+		{
+			get
+			{
+				return this._parentID;
+			}
+			set
+			{
+				if ((this._parentID != value))
+				{
+					this.OnparentIDChanging(value);
+					this.SendPropertyChanging();
+					this._parentID = value;
+					this.SendPropertyChanged("parentID");
+					this.OnparentIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserIn", DbType="Int NOT NULL")]
+		public int UserIn
+		{
+			get
+			{
+				return this._UserIn;
+			}
+			set
+			{
+				if ((this._UserIn != value))
+				{
+					this.OnUserInChanging(value);
+					this.SendPropertyChanging();
+					this._UserIn = value;
+					this.SendPropertyChanged("UserIn");
+					this.OnUserInChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dateIn", DbType="DateTime NOT NULL")]
+		public System.DateTime dateIn
+		{
+			get
+			{
+				return this._dateIn;
+			}
+			set
+			{
+				if ((this._dateIn != value))
+				{
+					this.OndateInChanging(value);
+					this.SendPropertyChanging();
+					this._dateIn = value;
+					this.SendPropertyChanged("dateIn");
+					this.OndateInChanged();
 				}
 			}
 		}

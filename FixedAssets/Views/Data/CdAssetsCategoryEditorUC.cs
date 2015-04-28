@@ -15,6 +15,7 @@ namespace FixedAssets.Views.Data
 {
     public partial class CdAssetsCategoryEditorUC : XtraUserControl
     {
+
         #region - Variables -
         private static readonly log4net.ILog Logger = log4net.LogManager.GetLogger(typeof(CdAssetsCategoryEditorUC));
         FixedAssets.Datasource.dsData.RoleDetialRow _elementRule = null;
@@ -41,14 +42,47 @@ namespace FixedAssets.Views.Data
         }
         public void ActivateRules()
         {
-            XPSCSCat.AllowNew = _elementRule.Inserting;
-            XPSCSCat.AllowRemove = _elementRule.Deleting;
-            XPSCSCat.AllowEdit = _elementRule.Updateing;
+            gridControlAsset.Visible = _elementRule.Selecting;
+            treeListMain.Visible = _elementRule.Selecting;
 
             if (!_elementRule.Inserting)
+            {
                 bbiAddNode.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+                XPSCSCat.AllowNew = _elementRule.Inserting;
+                btnAddAsset.Visible = false;
+                btnAddTBLAssetComponent.Visible = false;
+                btnAddTBLAssetPropertiy.Visible = false;
+                btnAddTBLReEvaluation.Visible = false;
+                btnAddTBLAssetPlace.Visible = false;
+                btnAddTBLAddAssetComponent.Visible = false;
+                btnAddTBLDeleteAssetComponent.Visible = false;
+                btnAddTBLAssetOhda.Visible = false;
+            }
+            if (!_elementRule.Updateing)
+            {
+                XPSCSCat.AllowEdit = _elementRule.Updateing;
+                btnEditAsset.Visible = false;
+                btnEditTBLAssetComponent.Visible = false;
+                btnEditTBLAssetPropertiy.Visible = false;
+                btnEditTBLReEvaluation.Visible = false;
+                btnEditTBLAssetPlace.Visible = false;
+                btnEditTBLAddAssetComponent.Visible = false;
+                btnEditTBLDeleteAssetComponent.Visible = false;
+                btnEditTBLAssetOhda.Visible = false;
+            }
             if (!_elementRule.Deleting)
+            {
                 bbiDeleteNode.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+                XPSCSCat.AllowRemove = _elementRule.Deleting;
+                btnDeleteAsset.Visible = false;
+                btnDeleteTBLAssetComponent.Visible = false;
+                btnDeleteTBLAssetPropertiy.Visible = false;
+                btnDeleteTBLReEvaluation.Visible = false;
+                btnDeleteTBLAssetPlace.Visible = false;
+                btnDeleteTBLAddAssetComponent.Visible = false;
+                btnDeleteTBLDeleteAssetComponent.Visible = false;
+                btnDeleteTBLAssetOhda.Visible = false;
+            }
         }
         #endregion
         #region - EventWhnd -
@@ -140,7 +174,7 @@ namespace FixedAssets.Views.Data
                 if (treeListMain.FocusedNode == null)
                     return;
                 id = treeListMain.FocusedNode.GetValue("AssetsCategoryID");
-                AssetEditorFrm frm = new AssetEditorFrm((int)id, true);
+                AssetEditorDlg frm = new AssetEditorDlg((int)id, true);
                 if (frm.ShowDialog() == DialogResult.OK)
                 {
                     sessionAsset.DropIdentityMap();
@@ -160,7 +194,7 @@ namespace FixedAssets.Views.Data
                 XPDataTableObject row = (XPDataTableObject)gridViewAsset.GetRow(gridViewAsset.FocusedRowHandle);
                 if (row == null)
                     return;
-                AssetEditorFrm frm = new AssetEditorFrm(Convert.ToInt32(row.GetMemberValue("AssetsID")), false);
+                AssetEditorDlg frm = new AssetEditorDlg(Convert.ToInt32(row.GetMemberValue("AssetsID")), false);
                 if (frm.ShowDialog() == DialogResult.OK)
                 {
                     sessionAsset.DropIdentityMap();
@@ -459,7 +493,7 @@ namespace FixedAssets.Views.Data
                     return;
                 if (row == null)
                     return;
-                TBLAddAssetComponentDlg frm = new TBLAddAssetComponentDlg(Convert.ToInt32(row.GetMemberValue("AssetsID")), true);
+                TBLAssetComponentDlg frm = new TBLAssetComponentDlg(Convert.ToInt32(row.GetMemberValue("AssetsID")), true);
                 if (frm.ShowDialog() == DialogResult.OK)
                 {
                     gridViewTBLAssetComponent.ShowLoadingPanel();
@@ -725,8 +759,5 @@ namespace FixedAssets.Views.Data
 
         #endregion
 
-        
-
-        
     }
 }

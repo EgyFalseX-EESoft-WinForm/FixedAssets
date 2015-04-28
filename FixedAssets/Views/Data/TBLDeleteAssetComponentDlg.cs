@@ -24,6 +24,9 @@ namespace FixedAssets.Views.Data
             {
                 if (New)
                 {
+                    //Load exist Quantity
+                    assetComponentQuantityTableAdapter.Fill(dsQry.AssetComponentQuantity, ID, -99);
+
                     Datasource.dsData.TBLDeleteAssetComponentRow row = dsData.TBLDeleteAssetComponent.NewTBLDeleteAssetComponentRow();
                     row.DeleteComponentezn = (int)adp.NewId();
                     row.AssetsID = ID;
@@ -37,7 +40,11 @@ namespace FixedAssets.Views.Data
                     dsData.TBLDeleteAssetComponent.AddTBLDeleteAssetComponentRow(row);
                 }
                 else
+                {
                     adp.FillByDeleteComponentezn(dsData.TBLDeleteAssetComponent, ID);
+                    //Load exist Quantity
+                    assetComponentQuantityTableAdapter.Fill(dsQry.AssetComponentQuantity, dsData.TBLDeleteAssetComponent[0].AssetsID, ID);
+                }
             }
             catch (Exception ex)
             {
@@ -51,6 +58,21 @@ namespace FixedAssets.Views.Data
             {
                 try
                 {
+                    Datasource.dsQry.AssetComponentQuantityRow qun = dsQry.AssetComponentQuantity.FindByComponentId(dsData.TBLDeleteAssetComponent[0].ComponentId);
+                    if (qun != null)
+                    {
+                        if (qun.Quantity - dsData.TBLDeleteAssetComponent[0].DelQuantity < 0)
+                        {
+                            MsgDlg.Show("الكمية المدخله اكبر من الكمية المتاحه", MsgDlg.MessageType.Error);
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        MsgDlg.Show("المكون غير مدرج", MsgDlg.MessageType.Error);
+                        return;
+                    }
+
                     dsData.TBLDeleteAssetComponent[0].UserIn = Classes.Managers.UserManager.defaultInstance.User.UserId;
                     dsData.TBLDeleteAssetComponent[0].dateIn = Classes.Managers.DataManager.GetServerDatetime;
                     DialogResult = System.Windows.Forms.DialogResult.OK;

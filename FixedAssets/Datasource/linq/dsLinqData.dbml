@@ -66,4 +66,13 @@
       <Column Name="ComponentDes" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.CdAssetsCategory" Member="CdAssetsCategories">
+    <Type Name="CdAssetsCategory">
+      <Column Name="AssetsCategoryID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AssetsCategoryName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="parentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserIn" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dateIn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
 </Database>

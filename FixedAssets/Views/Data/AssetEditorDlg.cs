@@ -10,11 +10,11 @@ using DevExpress.XtraEditors;
 
 namespace FixedAssets.Views.Data
 {
-    public partial class AssetEditorFrm : DevExpress.XtraEditors.XtraForm
+    public partial class AssetEditorDlg : DevExpress.XtraEditors.XtraForm
     {
-        private static readonly log4net.ILog Logger = log4net.LogManager.GetLogger(typeof(AssetEditorFrm));
+        private static readonly log4net.ILog Logger = log4net.LogManager.GetLogger(typeof(AssetEditorDlg));
         Datasource.linq.dsLinqDataDataContext dsLinq = new Datasource.linq.dsLinqDataDataContext();
-        public AssetEditorFrm(int AssetIdOrCatId, bool New)
+        public AssetEditorDlg(int AssetIdOrCatId, bool New)
         {
             InitializeComponent();
 

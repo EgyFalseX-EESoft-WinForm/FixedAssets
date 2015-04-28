@@ -24,7 +24,7 @@ namespace FixedAssets
 
             Log.L4N.Init();
 
-            if (FXFW.SqlDB.LoadSqlDBPath("FixedAssets"))
+            if (FXFW.SqlDB.LoadSqlDBPath("FixedAssets") && Authentication())
             {
                 Properties.Settings.Default["FixedAssetsConnectionString"] = FXFW.SqlDB.SqlConStr;
                 DevExpress.Xpo.XpoDefault.ConnectionString = FXFW.SqlDB.SqlConStr;
@@ -45,12 +45,43 @@ namespace FixedAssets
             // Init
             Init();
             // Login
-            //if (new Views.Main.LoginFrm().ShowDialog() == DialogResult.Cancel)
-            //    return;
-            FixedAssets.Classes.Managers.UserManager.defaultInstance.Login("admin", "admin");
+            if (new Views.Main.LoginFrm().ShowDialog() == DialogResult.Cancel)
+                return;
+            //FixedAssets.Classes.Managers.UserManager.defaultInstance.Login("admin", "admin");
 
             Application.Run(new Views.Main.MainForm());
             
+        }
+
+        private static bool Authentication()
+        {
+            string filePath = Application.StartupPath + "\\lnc.key";
+
+            if (!System.IO.File.Exists(filePath))
+            {
+                using (FXFW.License.LicenseKeyFrm dlg = new FXFW.License.LicenseKeyFrm(Application.ProductName))
+                {
+                    dlg.ShowDialog();
+                }
+            }
+
+            if (!System.IO.File.Exists(filePath))
+                return false;
+            else
+            {
+                System.IO.StreamReader sr = new System.IO.StreamReader(filePath);
+                string Key = sr.ReadToEnd();
+                sr.Close();
+                if (FXFW.License.LicenseKeyFrm.CompareBios(Key, Application.ProductName))
+                    return true;
+                else
+                {
+                    System.IO.File.Delete(filePath);
+                    Application.Restart();
+                    Application.Exit();
+                    return false;
+                }
+            }
         }
     }
 }

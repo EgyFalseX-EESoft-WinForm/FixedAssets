@@ -1,6 +1,6 @@
 ﻿namespace FixedAssets.Views.Data
 {
-    partial class AssetEditorFrm
+    partial class AssetEditorDlg
     {
         /// <summary>
         /// Required designer variable.
@@ -34,7 +34,7 @@
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule3 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule4 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule5 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AssetEditorFrm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AssetEditorDlg));
             this.tblAssetsTableAdapter = new FixedAssets.Datasource.dsDataTableAdapters.TblAssetsTableAdapter();
             this.dsData = new FixedAssets.Datasource.dsData();
             this.dataLayoutControlMain = new DevExpress.XtraDataLayout.DataLayoutControl();

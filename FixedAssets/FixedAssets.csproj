@@ -101,7 +101,7 @@
     <Reference Include="DevExpress.XtraTreeList.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="FXFW, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="FXFW, Version=1.0.0.2, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\FalseX\FXFW\Releases\FXFW.dll</HintPath>
     </Reference>
@@ -132,10 +132,19 @@
     <Compile Include="Classes\Managers\UserManager.cs" />
     <Compile Include="Classes\Misc.cs" />
     <Compile Include="Classes\Types.cs" />
+    <Compile Include="Datasource\dsData.cs">
+      <DependentUpon>dsData.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Datasource\dsData.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\dsQry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsQry.xsd</DependentUpon>
     </Compile>
     <Compile Include="Datasource\linq\dsLinqData.designer.cs">
       <AutoGen>True</AutoGen>
@@ -149,6 +158,18 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Log\L4N.cs" />
+    <Compile Include="Views\Code\CDBuyorderresonEditorUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Code\CDBuyorderresonEditorUC.designer.cs">
+      <DependentUpon>CDBuyorderresonEditorUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Code\CDUnitEditorUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Code\CDUnitEditorUC.designer.cs">
+      <DependentUpon>CDUnitEditorUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Code\CDInsuranceCoEditorUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -215,11 +236,11 @@
     <Compile Include="Views\Data\TBLAssetPropertiyDlg.Designer.cs">
       <DependentUpon>TBLAssetPropertiyDlg.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Data\AssetEditorFrm.cs">
+    <Compile Include="Views\Data\AssetEditorDlg.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Data\AssetEditorFrm.Designer.cs">
-      <DependentUpon>AssetEditorFrm.cs</DependentUpon>
+    <Compile Include="Views\Data\AssetEditorDlg.Designer.cs">
+      <DependentUpon>AssetEditorDlg.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Data\TblEmpEditorUC.cs">
       <SubType>UserControl</SubType>
@@ -307,8 +328,20 @@
     <Compile Include="Views\Permission\UsersUC.designer.cs">
       <DependentUpon>UsersUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Qry\Qry001UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Qry\Qry001UC.designer.cs">
+      <DependentUpon>Qry001UC.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Code\CDBuyorderresonEditorUC.resx">
+      <DependentUpon>CDBuyorderresonEditorUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Code\CDUnitEditorUC.resx">
+      <DependentUpon>CDUnitEditorUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Code\CDInsuranceCoEditorUC.resx">
       <DependentUpon>CDInsuranceCoEditorUC.cs</DependentUpon>
@@ -343,8 +376,8 @@
     <EmbeddedResource Include="Views\Data\TBLAssetPropertiyDlg.resx">
       <DependentUpon>TBLAssetPropertiyDlg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Data\AssetEditorFrm.resx">
-      <DependentUpon>AssetEditorFrm.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Data\AssetEditorDlg.resx">
+      <DependentUpon>AssetEditorDlg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Data\TblEmpEditorUC.resx">
       <DependentUpon>TblEmpEditorUC.cs</DependentUpon>
@@ -370,6 +403,9 @@
     <EmbeddedResource Include="Views\Permission\UsersUC.resx">
       <DependentUpon>UsersUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Qry\Qry001UC.resx">
+      <DependentUpon>Qry001UC.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Datasource\dsData.xsc">
       <DependentUpon>dsData.xsd</DependentUpon>
     </None>
@@ -380,6 +416,17 @@
     </None>
     <None Include="Datasource\dsData.xss">
       <DependentUpon>dsData.xsd</DependentUpon>
+    </None>
+    <None Include="Datasource\dsQry.xsc">
+      <DependentUpon>dsQry.xsd</DependentUpon>
+    </None>
+    <None Include="Datasource\dsQry.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsQry.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Datasource\dsQry.xss">
+      <DependentUpon>dsQry.xsd</DependentUpon>
     </None>
     <None Include="Datasource\linq\dsLinqData.dbml.layout">
       <DependentUpon>dsLinqData.dbml</DependentUpon>
@@ -435,7 +482,6 @@
     <EmbeddedResource Include="Assets\MediumGray.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Views\Qry\" />
     <Folder Include="XRep\" />
   </ItemGroup>
   <ItemGroup>

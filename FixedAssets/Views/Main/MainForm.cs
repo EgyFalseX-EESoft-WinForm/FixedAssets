@@ -6,6 +6,7 @@ using System.Drawing;
 using FixedAssets.Views.Code;
 using FixedAssets.Views.Permission;
 using FixedAssets.Views.Data;
+using FixedAssets.Views.Qry;
 
 namespace FixedAssets.Views.Main
 {
@@ -136,6 +137,14 @@ namespace FixedAssets.Views.Main
             {
                 e.Control = new CDInsuranceCoEditorUC(RuleElemet);
             }
+            else if (e.Document == docCodeCDUnit)
+            {
+                e.Control = new CDUnitEditorUC(RuleElemet);
+            }
+            else if (e.Document == docCodeCDBuyorderreson)
+            {
+                e.Control = new CDBuyorderresonEditorUC(RuleElemet);
+            }
 
             //---------Data
             else if (e.Document == docDataCdAssetsCategory)
@@ -162,6 +171,10 @@ namespace FixedAssets.Views.Main
             else if (e.Document == docRuleRuleDetails)
             {
                 e.Control = new RuleDetailsUC(RuleElemet);
+            }
+            else if (e.Document == docQryQry001)//Qry
+            {
+                e.Control = new Qry001UC();
             }
 
         }

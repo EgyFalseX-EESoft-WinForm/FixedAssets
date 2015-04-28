@@ -6,17 +6,16 @@ using DevExpress.XtraEditors;
 using DevExpress.XtraSplashScreen;
 using System.Data;
 
-namespace FixedAssets.Views.Permission
+namespace FixedAssets.Views.Code
 {
-    public partial class UsersUC : XtraUserControl
+    public partial class CDBuyorderresonEditorUC : XtraUserControl
     {
         #region - Var -
-        private static readonly log4net.ILog Logger = log4net.LogManager.GetLogger(typeof(UsersUC));
-        FixedAssets.Datasource.dsData.RoleDetialRow _elementRule = null;
-        int? NewId = null;
+        private static readonly log4net.ILog Logger = log4net.LogManager.GetLogger(typeof(CDBuyorderresonEditorUC));
+        Datasource.dsData.RoleDetialRow _elementRule = null;
         #endregion
         #region - Fun -
-        public UsersUC(FixedAssets.Datasource.dsData.RoleDetialRow RuleElement)
+        public CDBuyorderresonEditorUC(Datasource.dsData.RoleDetialRow RuleElement)
         {
             InitializeComponent();
             _elementRule = RuleElement;
@@ -26,7 +25,8 @@ namespace FixedAssets.Views.Permission
             SplashScreenManager.ShowForm(typeof(FixedAssets.Views.Main.WaitWindowFrm));
             System.Threading.ThreadPool.QueueUserWorkItem((o) => 
             {
-                Invoke(new MethodInvoker(() => {
+                Invoke(new MethodInvoker(() =>
+                {
                     XPSCS.Session.ConnectionString = Properties.Settings.Default.FixedAssetsConnectionString;
                     gridControlMain.DataSource = XPSCS;
                     gridViewMain.BestFitColumns();
@@ -36,6 +36,7 @@ namespace FixedAssets.Views.Permission
         }
         public void ActivateRules()
         {
+            
             XPSCS.AllowNew = _elementRule.Inserting;
             XPSCS.AllowRemove = _elementRule.Deleting;
             XPSCS.AllowEdit = _elementRule.Updateing;
@@ -51,25 +52,20 @@ namespace FixedAssets.Views.Permission
 
             if (!_elementRule.Deleting)
                 gridControlMain.EmbeddedNavigator.Buttons.Remove.Visible = false;
-
+            
         }
         #endregion
         #region -  EventWhnd - 
-        private void ProductEditorUC_Load(object sender, EventArgs e)
+        private void RouteEditorUC_Load(object sender, EventArgs e)
         {
             LoadData();
             ActivateRules();
-        }
-        private void gridViewMain_InitNewRow(object sender, DevExpress.XtraGrid.Views.Grid.InitNewRowEventArgs e)
-        {
-            DevExpress.Xpo.Metadata.XPDataTableObject row = ((DevExpress.Xpo.Metadata.XPDataTableObject)gridViewMain.GetRow(e.RowHandle));
-            //row.SetMemberValue("ModereaId", 0);
         }
         private void UOW_BeforeCommitTransaction(object sender, DevExpress.Xpo.SessionManipulationEventArgs e)
         {
             // Get NewId
             int id = 0;
-            object obj = Classes.Managers.DataManager.GetNewId("Users", "UserID");
+            object obj = Classes.Managers.DataManager.GetNewId("CDBuyorderreson", "BuyorderresonId");
             if (obj == null)
             {
                 MsgDlg.ShowAlert(Properties.Settings.Default.msg_SavingFailed, MsgDlg.MessageType.Error, (Form)Parent.Parent.Parent);
@@ -80,9 +76,9 @@ namespace FixedAssets.Views.Permission
             DevExpress.Xpo.Helpers.ObjectSet Rows = (DevExpress.Xpo.Helpers.ObjectSet)e.Session.GetObjectsToSave();
             foreach (DevExpress.Xpo.Metadata.XPDataTableObject item in Rows)
             {
-                if (item.GetMemberValue("UserID") == null)
+                if (item.GetMemberValue("BuyorderresonId") == null)
                 {
-                    item.SetMemberValue("UserID", id);
+                    item.SetMemberValue("BuyorderresonId", id);
                     id++;
                 }
             }
@@ -123,7 +119,7 @@ namespace FixedAssets.Views.Permission
         }
         private void bbiRefresh_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (MsgDlg.Show("Are You Sure ?", MsgDlg.MessageType.Question) == DialogResult.No)
+            if (MsgDlg.Show("هل انت متأكد ؟", MsgDlg.MessageType.Question) == DialogResult.No)
                 return;
             UOW.DropIdentityMap();
             UOW.DropChanges();
