@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 13.5" name="dsLinqData">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 13.75" name="dsLinqData">
   <DataContextMoniker Name="/dsLinqDataDataContext" />
   <nestedChildShapes>
     <classShape Id="f4f8f8ed-42d6-4790-be1d-688f2cc10f2d" absoluteBounds="1, 4.125, 2, 2.1554996744791666">
@@ -60,6 +60,12 @@
       <DataClassMoniker Name="/dsLinqDataDataContext/CdAssetsCategory" />
       <nestedChildShapes>
         <elementListCompartment Id="af51700f-90d7-4902-8766-3522a0d58115" absoluteBounds="2.64, 11.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ece62ff5-30b1-43d9-be96-8ed809617675" absoluteBounds="5.25, 12.25, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/dsLinqDataDataContext/CDUnit" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f468e17a-d8a3-40c9-b784-9da8c9796f6c" absoluteBounds="5.265, 12.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

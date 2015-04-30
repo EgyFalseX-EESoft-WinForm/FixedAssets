@@ -194,6 +194,18 @@
     <Compile Include="Views\Code\CdAssetStateEditorUC.designer.cs">
       <DependentUpon>CdAssetStateEditorUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Data\TblAsnafEditorDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Data\TblAsnafEditorDlg.Designer.cs">
+      <DependentUpon>TblAsnafEditorDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Data\CdAsnafCategoryEditorUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Data\CdAsnafCategoryEditorUC.designer.cs">
+      <DependentUpon>CdAsnafCategoryEditorUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Data\TBLAssetOhdaDlg.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -354,6 +366,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Code\CdAssetStateEditorUC.resx">
       <DependentUpon>CdAssetStateEditorUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Data\TblAsnafEditorDlg.resx">
+      <DependentUpon>TblAsnafEditorDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Data\CdAsnafCategoryEditorUC.resx">
+      <DependentUpon>CdAsnafCategoryEditorUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Data\TBLAssetOhdaDlg.resx">
       <DependentUpon>TBLAssetOhdaDlg.cs</DependentUpon>

@@ -60,6 +60,9 @@ namespace FixedAssets.Datasource.linq
     partial void InsertCdAssetsCategory(CdAssetsCategory instance);
     partial void UpdateCdAssetsCategory(CdAssetsCategory instance);
     partial void DeleteCdAssetsCategory(CdAssetsCategory instance);
+    partial void InsertCDUnit(CDUnit instance);
+    partial void UpdateCDUnit(CDUnit instance);
+    partial void DeleteCDUnit(CDUnit instance);
     #endregion
 		
 		public dsLinqDataDataContext() : 
@@ -169,6 +172,14 @@ namespace FixedAssets.Datasource.linq
 			get
 			{
 				return this.GetTable<CdAssetsCategory>();
+			}
+		}
+		
+		public System.Data.Linq.Table<CDUnit> CDUnits
+		{
+			get
+			{
+				return this.GetTable<CDUnit>();
 			}
 		}
 	}
@@ -1368,6 +1379,92 @@ namespace FixedAssets.Datasource.linq
 					this._dateIn = value;
 					this.SendPropertyChanged("dateIn");
 					this.OndateInChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.CDUnit")]
+	public partial class CDUnit : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _UnitId;
+		
+		private string _UnitName;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnUnitIdChanging(int value);
+    partial void OnUnitIdChanged();
+    partial void OnUnitNameChanging(string value);
+    partial void OnUnitNameChanged();
+    #endregion
+		
+		public CDUnit()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UnitId", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int UnitId
+		{
+			get
+			{
+				return this._UnitId;
+			}
+			set
+			{
+				if ((this._UnitId != value))
+				{
+					this.OnUnitIdChanging(value);
+					this.SendPropertyChanging();
+					this._UnitId = value;
+					this.SendPropertyChanged("UnitId");
+					this.OnUnitIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UnitName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string UnitName
+		{
+			get
+			{
+				return this._UnitName;
+			}
+			set
+			{
+				if ((this._UnitName != value))
+				{
+					this.OnUnitNameChanging(value);
+					this.SendPropertyChanging();
+					this._UnitName = value;
+					this.SendPropertyChanged("UnitName");
+					this.OnUnitNameChanged();
 				}
 			}
 		}

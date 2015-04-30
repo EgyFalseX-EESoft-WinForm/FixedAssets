@@ -75,4 +75,10 @@
       <Column Name="dateIn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
+  <Table Name="dbo.CDUnit" Member="CDUnits">
+    <Type Name="CDUnit">
+      <Column Name="UnitId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UnitName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
 </Database>

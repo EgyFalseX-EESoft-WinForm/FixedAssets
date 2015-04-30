@@ -72,6 +72,12 @@ namespace FixedAssets.Datasource {
         
         private CdAsnafCategoryDataTable tableCdAsnafCategory;
         
+        private TblAsnafDataTable tableTblAsnaf;
+        
+        private global::System.Data.DataRelation relationFK_TblAsnaf_CdAsnafCategory;
+        
+        private global::System.Data.DataRelation relationFK_TblAsnaf_CDUnit;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -171,6 +177,9 @@ namespace FixedAssets.Datasource {
                 }
                 if ((ds.Tables["CdAsnafCategory"] != null)) {
                     base.Tables.Add(new CdAsnafCategoryDataTable(ds.Tables["CdAsnafCategory"]));
+                }
+                if ((ds.Tables["TblAsnaf"] != null)) {
+                    base.Tables.Add(new TblAsnafDataTable(ds.Tables["TblAsnaf"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -432,6 +441,16 @@ namespace FixedAssets.Datasource {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public TblAsnafDataTable TblAsnaf {
+            get {
+                return this.tableTblAsnaf;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -568,6 +587,9 @@ namespace FixedAssets.Datasource {
                 }
                 if ((ds.Tables["CdAsnafCategory"] != null)) {
                     base.Tables.Add(new CdAsnafCategoryDataTable(ds.Tables["CdAsnafCategory"]));
+                }
+                if ((ds.Tables["TblAsnaf"] != null)) {
+                    base.Tables.Add(new TblAsnafDataTable(ds.Tables["TblAsnaf"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -746,6 +768,14 @@ namespace FixedAssets.Datasource {
                     this.tableCdAsnafCategory.InitVars();
                 }
             }
+            this.tableTblAsnaf = ((TblAsnafDataTable)(base.Tables["TblAsnaf"]));
+            if ((initTable == true)) {
+                if ((this.tableTblAsnaf != null)) {
+                    this.tableTblAsnaf.InitVars();
+                }
+            }
+            this.relationFK_TblAsnaf_CdAsnafCategory = this.Relations["FK_TblAsnaf_CdAsnafCategory"];
+            this.relationFK_TblAsnaf_CDUnit = this.Relations["FK_TblAsnaf_CDUnit"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -804,6 +834,16 @@ namespace FixedAssets.Datasource {
             base.Tables.Add(this.tableCDBuyorderreson);
             this.tableCdAsnafCategory = new CdAsnafCategoryDataTable();
             base.Tables.Add(this.tableCdAsnafCategory);
+            this.tableTblAsnaf = new TblAsnafDataTable();
+            base.Tables.Add(this.tableTblAsnaf);
+            this.relationFK_TblAsnaf_CdAsnafCategory = new global::System.Data.DataRelation("FK_TblAsnaf_CdAsnafCategory", new global::System.Data.DataColumn[] {
+                        this.tableCdAsnafCategory.SanfCategoryIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableTblAsnaf.SanfCategoryIDColumn}, false);
+            this.Relations.Add(this.relationFK_TblAsnaf_CdAsnafCategory);
+            this.relationFK_TblAsnaf_CDUnit = new global::System.Data.DataRelation("FK_TblAsnaf_CDUnit", new global::System.Data.DataColumn[] {
+                        this.tableCDUnit.UnitIdColumn}, new global::System.Data.DataColumn[] {
+                        this.tableTblAsnaf.UnitIdColumn}, false);
+            this.Relations.Add(this.relationFK_TblAsnaf_CDUnit);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -952,6 +992,12 @@ namespace FixedAssets.Datasource {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeTblAsnaf() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
             if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
                 this.InitVars();
@@ -1076,6 +1122,9 @@ namespace FixedAssets.Datasource {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void CdAsnafCategoryRowChangeEventHandler(object sender, CdAsnafCategoryRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void TblAsnafRowChangeEventHandler(object sender, TblAsnafRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -8788,6 +8837,391 @@ namespace FixedAssets.Datasource {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class TblAsnafDataTable : global::System.Data.TypedTableBase<TblAsnafRow> {
+            
+            private global::System.Data.DataColumn columnSanfID;
+            
+            private global::System.Data.DataColumn columnSanfCategoryID;
+            
+            private global::System.Data.DataColumn columnSanfName;
+            
+            private global::System.Data.DataColumn columnSanfbarcode;
+            
+            private global::System.Data.DataColumn columnReOrder;
+            
+            private global::System.Data.DataColumn columnUnitId;
+            
+            private global::System.Data.DataColumn columnsanfdes;
+            
+            private global::System.Data.DataColumn columnUserIn;
+            
+            private global::System.Data.DataColumn columndateIn;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TblAsnafDataTable() {
+                this.TableName = "TblAsnaf";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal TblAsnafDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected TblAsnafDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SanfIDColumn {
+                get {
+                    return this.columnSanfID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SanfCategoryIDColumn {
+                get {
+                    return this.columnSanfCategoryID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SanfNameColumn {
+                get {
+                    return this.columnSanfName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SanfbarcodeColumn {
+                get {
+                    return this.columnSanfbarcode;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ReOrderColumn {
+                get {
+                    return this.columnReOrder;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn UnitIdColumn {
+                get {
+                    return this.columnUnitId;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn sanfdesColumn {
+                get {
+                    return this.columnsanfdes;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn UserInColumn {
+                get {
+                    return this.columnUserIn;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn dateInColumn {
+                get {
+                    return this.columndateIn;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TblAsnafRow this[int index] {
+                get {
+                    return ((TblAsnafRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event TblAsnafRowChangeEventHandler TblAsnafRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event TblAsnafRowChangeEventHandler TblAsnafRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event TblAsnafRowChangeEventHandler TblAsnafRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event TblAsnafRowChangeEventHandler TblAsnafRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddTblAsnafRow(TblAsnafRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TblAsnafRow AddTblAsnafRow(int SanfID, CdAsnafCategoryRow parentCdAsnafCategoryRowByFK_TblAsnaf_CdAsnafCategory, string SanfName, string Sanfbarcode, double ReOrder, CDUnitRow parentCDUnitRowByFK_TblAsnaf_CDUnit, string sanfdes, int UserIn, System.DateTime dateIn) {
+                TblAsnafRow rowTblAsnafRow = ((TblAsnafRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        SanfID,
+                        null,
+                        SanfName,
+                        Sanfbarcode,
+                        ReOrder,
+                        null,
+                        sanfdes,
+                        UserIn,
+                        dateIn};
+                if ((parentCdAsnafCategoryRowByFK_TblAsnaf_CdAsnafCategory != null)) {
+                    columnValuesArray[1] = parentCdAsnafCategoryRowByFK_TblAsnaf_CdAsnafCategory[0];
+                }
+                if ((parentCDUnitRowByFK_TblAsnaf_CDUnit != null)) {
+                    columnValuesArray[5] = parentCDUnitRowByFK_TblAsnaf_CDUnit[0];
+                }
+                rowTblAsnafRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowTblAsnafRow);
+                return rowTblAsnafRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TblAsnafRow FindBySanfID(int SanfID) {
+                return ((TblAsnafRow)(this.Rows.Find(new object[] {
+                            SanfID})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                TblAsnafDataTable cln = ((TblAsnafDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new TblAsnafDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnSanfID = base.Columns["SanfID"];
+                this.columnSanfCategoryID = base.Columns["SanfCategoryID"];
+                this.columnSanfName = base.Columns["SanfName"];
+                this.columnSanfbarcode = base.Columns["Sanfbarcode"];
+                this.columnReOrder = base.Columns["ReOrder"];
+                this.columnUnitId = base.Columns["UnitId"];
+                this.columnsanfdes = base.Columns["sanfdes"];
+                this.columnUserIn = base.Columns["UserIn"];
+                this.columndateIn = base.Columns["dateIn"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnSanfID = new global::System.Data.DataColumn("SanfID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSanfID);
+                this.columnSanfCategoryID = new global::System.Data.DataColumn("SanfCategoryID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSanfCategoryID);
+                this.columnSanfName = new global::System.Data.DataColumn("SanfName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSanfName);
+                this.columnSanfbarcode = new global::System.Data.DataColumn("Sanfbarcode", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSanfbarcode);
+                this.columnReOrder = new global::System.Data.DataColumn("ReOrder", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnReOrder);
+                this.columnUnitId = new global::System.Data.DataColumn("UnitId", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUnitId);
+                this.columnsanfdes = new global::System.Data.DataColumn("sanfdes", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsanfdes);
+                this.columnUserIn = new global::System.Data.DataColumn("UserIn", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUserIn);
+                this.columndateIn = new global::System.Data.DataColumn("dateIn", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndateIn);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnSanfID}, true));
+                this.columnSanfID.AllowDBNull = false;
+                this.columnSanfID.Unique = true;
+                this.columnSanfCategoryID.AllowDBNull = false;
+                this.columnSanfName.AllowDBNull = false;
+                this.columnSanfName.MaxLength = 50;
+                this.columnSanfbarcode.MaxLength = 20;
+                this.columnReOrder.AllowDBNull = false;
+                this.columnUnitId.AllowDBNull = false;
+                this.columnsanfdes.MaxLength = 150;
+                this.columnUserIn.AllowDBNull = false;
+                this.columndateIn.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TblAsnafRow NewTblAsnafRow() {
+                return ((TblAsnafRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new TblAsnafRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(TblAsnafRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.TblAsnafRowChanged != null)) {
+                    this.TblAsnafRowChanged(this, new TblAsnafRowChangeEvent(((TblAsnafRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.TblAsnafRowChanging != null)) {
+                    this.TblAsnafRowChanging(this, new TblAsnafRowChangeEvent(((TblAsnafRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.TblAsnafRowDeleted != null)) {
+                    this.TblAsnafRowDeleted(this, new TblAsnafRowChangeEvent(((TblAsnafRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.TblAsnafRowDeleting != null)) {
+                    this.TblAsnafRowDeleting(this, new TblAsnafRowChangeEvent(((TblAsnafRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveTblAsnafRow(TblAsnafRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                dsData ds = new dsData();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "TblAsnafDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class CdAssetplaceRow : global::System.Data.DataRow {
@@ -11054,6 +11488,17 @@ namespace FixedAssets.Datasource {
                     this[this.tableCDUnit.UnitNameColumn] = value;
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TblAsnafRow[] GetTblAsnafRows() {
+                if ((this.Table.ChildRelations["FK_TblAsnaf_CDUnit"] == null)) {
+                    return new TblAsnafRow[0];
+                }
+                else {
+                    return ((TblAsnafRow[])(base.GetChildRows(this.Table.ChildRelations["FK_TblAsnaf_CDUnit"])));
+                }
+            }
         }
         
         /// <summary>
@@ -11160,6 +11605,187 @@ namespace FixedAssets.Datasource {
                 set {
                     this[this.tableCdAsnafCategory.dateInColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TblAsnafRow[] GetTblAsnafRows() {
+                if ((this.Table.ChildRelations["FK_TblAsnaf_CdAsnafCategory"] == null)) {
+                    return new TblAsnafRow[0];
+                }
+                else {
+                    return ((TblAsnafRow[])(base.GetChildRows(this.Table.ChildRelations["FK_TblAsnaf_CdAsnafCategory"])));
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class TblAsnafRow : global::System.Data.DataRow {
+            
+            private TblAsnafDataTable tableTblAsnaf;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal TblAsnafRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableTblAsnaf = ((TblAsnafDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int SanfID {
+                get {
+                    return ((int)(this[this.tableTblAsnaf.SanfIDColumn]));
+                }
+                set {
+                    this[this.tableTblAsnaf.SanfIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int SanfCategoryID {
+                get {
+                    return ((int)(this[this.tableTblAsnaf.SanfCategoryIDColumn]));
+                }
+                set {
+                    this[this.tableTblAsnaf.SanfCategoryIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string SanfName {
+                get {
+                    return ((string)(this[this.tableTblAsnaf.SanfNameColumn]));
+                }
+                set {
+                    this[this.tableTblAsnaf.SanfNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Sanfbarcode {
+                get {
+                    try {
+                        return ((string)(this[this.tableTblAsnaf.SanfbarcodeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Sanfbarcode\' in table \'TblAsnaf\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTblAsnaf.SanfbarcodeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double ReOrder {
+                get {
+                    return ((double)(this[this.tableTblAsnaf.ReOrderColumn]));
+                }
+                set {
+                    this[this.tableTblAsnaf.ReOrderColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int UnitId {
+                get {
+                    return ((int)(this[this.tableTblAsnaf.UnitIdColumn]));
+                }
+                set {
+                    this[this.tableTblAsnaf.UnitIdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string sanfdes {
+                get {
+                    try {
+                        return ((string)(this[this.tableTblAsnaf.sanfdesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'sanfdes\' in table \'TblAsnaf\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTblAsnaf.sanfdesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int UserIn {
+                get {
+                    return ((int)(this[this.tableTblAsnaf.UserInColumn]));
+                }
+                set {
+                    this[this.tableTblAsnaf.UserInColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime dateIn {
+                get {
+                    return ((global::System.DateTime)(this[this.tableTblAsnaf.dateInColumn]));
+                }
+                set {
+                    this[this.tableTblAsnaf.dateInColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public CdAsnafCategoryRow CdAsnafCategoryRow {
+                get {
+                    return ((CdAsnafCategoryRow)(this.GetParentRow(this.Table.ParentRelations["FK_TblAsnaf_CdAsnafCategory"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_TblAsnaf_CdAsnafCategory"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public CDUnitRow CDUnitRow {
+                get {
+                    return ((CDUnitRow)(this.GetParentRow(this.Table.ParentRelations["FK_TblAsnaf_CDUnit"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_TblAsnaf_CDUnit"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSanfbarcodeNull() {
+                return this.IsNull(this.tableTblAsnaf.SanfbarcodeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSanfbarcodeNull() {
+                this[this.tableTblAsnaf.SanfbarcodeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IssanfdesNull() {
+                return this.IsNull(this.tableTblAsnaf.sanfdesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetsanfdesNull() {
+                this[this.tableTblAsnaf.sanfdesColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -11965,6 +12591,40 @@ namespace FixedAssets.Datasource {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public CdAsnafCategoryRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class TblAsnafRowChangeEvent : global::System.EventArgs {
+            
+            private TblAsnafRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TblAsnafRowChangeEvent(TblAsnafRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TblAsnafRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -20791,12 +21451,16 @@ SELECT SanfCategoryID, SanfCategory, parentID, UserIn, dateIn FROM CdAsnafCatego
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT SanfCategoryID, SanfCategory, parentID, UserIn, dateIn FROM dbo.CdAsnafCat" +
                 "egory";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT ISNULL(MAX(SanfCategoryID) + 1, 1) FROM CdAsnafCategory";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -20943,6 +21607,458 @@ SELECT SanfCategoryID, SanfCategory, parentID, UserIn, dateIn FROM CdAsnafCatego
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(string SanfCategory, int parentID, int UserIn, System.DateTime dateIn, int Original_SanfCategoryID) {
             return this.Update(Original_SanfCategoryID, SanfCategory, parentID, UserIn, dateIn, Original_SanfCategoryID);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual global::System.Nullable<int> NewId() {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return new global::System.Nullable<int>();
+            }
+            else {
+                return new global::System.Nullable<int>(((int)(returnValue)));
+            }
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class TblAsnafTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public TblAsnafTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "TblAsnaf";
+            tableMapping.ColumnMappings.Add("SanfID", "SanfID");
+            tableMapping.ColumnMappings.Add("SanfCategoryID", "SanfCategoryID");
+            tableMapping.ColumnMappings.Add("SanfName", "SanfName");
+            tableMapping.ColumnMappings.Add("Sanfbarcode", "Sanfbarcode");
+            tableMapping.ColumnMappings.Add("ReOrder", "ReOrder");
+            tableMapping.ColumnMappings.Add("UnitId", "UnitId");
+            tableMapping.ColumnMappings.Add("sanfdes", "sanfdes");
+            tableMapping.ColumnMappings.Add("UserIn", "UserIn");
+            tableMapping.ColumnMappings.Add("dateIn", "dateIn");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[TblAsnaf] WHERE (([SanfID] = @Original_SanfID))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SanfID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SanfID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[TblAsnaf] ([SanfID], [SanfCategoryID], [SanfName], [Sanfbarcode], [ReOrder], [UnitId], [sanfdes], [UserIn], [dateIn]) VALUES (@SanfID, @SanfCategoryID, @SanfName, @Sanfbarcode, @ReOrder, @UnitId, @sanfdes, @UserIn, @dateIn);
+SELECT SanfID, SanfCategoryID, SanfName, Sanfbarcode, ReOrder, UnitId, sanfdes, UserIn, dateIn FROM TblAsnaf WHERE (SanfID = @SanfID)";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SanfID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SanfID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SanfCategoryID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SanfCategoryID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SanfName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SanfName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sanfbarcode", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sanfbarcode", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ReOrder", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ReOrder", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UnitId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnitId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sanfdes", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sanfdes", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserIn", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserIn", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dateIn", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dateIn", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[TblAsnaf] SET [SanfID] = @SanfID, [SanfCategoryID] = @SanfCategoryID, [SanfName] = @SanfName, [Sanfbarcode] = @Sanfbarcode, [ReOrder] = @ReOrder, [UnitId] = @UnitId, [sanfdes] = @sanfdes, [UserIn] = @UserIn, [dateIn] = @dateIn WHERE (([SanfID] = @Original_SanfID));
+SELECT SanfID, SanfCategoryID, SanfName, Sanfbarcode, ReOrder, UnitId, sanfdes, UserIn, dateIn FROM TblAsnaf WHERE (SanfID = @SanfID)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SanfID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SanfID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SanfCategoryID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SanfCategoryID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SanfName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SanfName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sanfbarcode", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sanfbarcode", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ReOrder", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ReOrder", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UnitId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnitId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sanfdes", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sanfdes", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserIn", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserIn", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dateIn", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dateIn", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SanfID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SanfID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::FixedAssets.Properties.Settings.Default.FixedAssetsConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT SanfID, SanfCategoryID, SanfName, Sanfbarcode, ReOrder, UnitId, sanfdes, U" +
+                "serIn, dateIn FROM dbo.TblAsnaf";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT SanfID, SanfCategoryID, SanfName, Sanfbarcode, ReOrder, UnitId, sanfdes, U" +
+                "serIn, dateIn FROM dbo.TblAsnaf\r\nWHERE SanfID = @SanfID";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SanfID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "SanfID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "SELECT ISNULL(MAX(SanfID) + 1, 1)\r\nFROM TblAsnaf";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(dsData.TblAsnafDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual dsData.TblAsnafDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            dsData.TblAsnafDataTable dataTable = new dsData.TblAsnafDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBySanfID(dsData.TblAsnafDataTable dataTable, int SanfID) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(SanfID));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual dsData.TblAsnafDataTable GetDataBySanfID(int SanfID) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(SanfID));
+            dsData.TblAsnafDataTable dataTable = new dsData.TblAsnafDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(dsData.TblAsnafDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(dsData dataSet) {
+            return this.Adapter.Update(dataSet, "TblAsnaf");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_SanfID) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_SanfID));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(int SanfID, int SanfCategoryID, string SanfName, string Sanfbarcode, double ReOrder, int UnitId, string sanfdes, int UserIn, System.DateTime dateIn) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(SanfID));
+            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(SanfCategoryID));
+            if ((SanfName == null)) {
+                throw new global::System.ArgumentNullException("SanfName");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(SanfName));
+            }
+            if ((Sanfbarcode == null)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Sanfbarcode));
+            }
+            this.Adapter.InsertCommand.Parameters[4].Value = ((double)(ReOrder));
+            this.Adapter.InsertCommand.Parameters[5].Value = ((int)(UnitId));
+            if ((sanfdes == null)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(sanfdes));
+            }
+            this.Adapter.InsertCommand.Parameters[7].Value = ((int)(UserIn));
+            this.Adapter.InsertCommand.Parameters[8].Value = ((System.DateTime)(dateIn));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(int SanfID, int SanfCategoryID, string SanfName, string Sanfbarcode, double ReOrder, int UnitId, string sanfdes, int UserIn, System.DateTime dateIn, int Original_SanfID) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(SanfID));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(SanfCategoryID));
+            if ((SanfName == null)) {
+                throw new global::System.ArgumentNullException("SanfName");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(SanfName));
+            }
+            if ((Sanfbarcode == null)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Sanfbarcode));
+            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((double)(ReOrder));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(UnitId));
+            if ((sanfdes == null)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(sanfdes));
+            }
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(UserIn));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((System.DateTime)(dateIn));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_SanfID));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(int SanfCategoryID, string SanfName, string Sanfbarcode, double ReOrder, int UnitId, string sanfdes, int UserIn, System.DateTime dateIn, int Original_SanfID) {
+            return this.Update(Original_SanfID, SanfCategoryID, SanfName, Sanfbarcode, ReOrder, UnitId, sanfdes, UserIn, dateIn, Original_SanfID);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual global::System.Nullable<int> NewId() {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return new global::System.Nullable<int>();
+            }
+            else {
+                return new global::System.Nullable<int>(((int)(returnValue)));
+            }
         }
     }
     
@@ -21154,6 +22270,8 @@ SELECT SanfCategoryID, SanfCategory, parentID, UserIn, dateIn FROM CdAsnafCatego
         private CDBuyorderresonTableAdapter _cDBuyorderresonTableAdapter;
         
         private CdAsnafCategoryTableAdapter _cdAsnafCategoryTableAdapter;
+        
+        private TblAsnafTableAdapter _tblAsnafTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -21508,6 +22626,20 @@ SELECT SanfCategoryID, SanfCategory, parentID, UserIn, dateIn FROM CdAsnafCatego
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public TblAsnafTableAdapter TblAsnafTableAdapter {
+            get {
+                return this._tblAsnafTableAdapter;
+            }
+            set {
+                this._tblAsnafTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public bool BackupDataSetBeforeUpdate {
             get {
                 return this._backupDataSetBeforeUpdate;
@@ -21621,6 +22753,10 @@ SELECT SanfCategoryID, SanfCategory, parentID, UserIn, dateIn FROM CdAsnafCatego
                             && (this._cdAsnafCategoryTableAdapter.Connection != null))) {
                     return this._cdAsnafCategoryTableAdapter.Connection;
                 }
+                if (((this._tblAsnafTableAdapter != null) 
+                            && (this._tblAsnafTableAdapter.Connection != null))) {
+                    return this._tblAsnafTableAdapter.Connection;
+                }
                 return null;
             }
             set {
@@ -21706,6 +22842,9 @@ SELECT SanfCategoryID, SanfCategory, parentID, UserIn, dateIn FROM CdAsnafCatego
                 if ((this._cdAsnafCategoryTableAdapter != null)) {
                     count = (count + 1);
                 }
+                if ((this._tblAsnafTableAdapter != null)) {
+                    count = (count + 1);
+                }
                 return count;
             }
         }
@@ -21717,6 +22856,24 @@ SELECT SanfCategoryID, SanfCategory, parentID, UserIn, dateIn FROM CdAsnafCatego
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateUpdatedRows(dsData dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._cDUnitTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.CDUnit.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._cDUnitTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._cdAsnafCategoryTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.CdAsnafCategory.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._cdAsnafCategoryTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._cdAssetplaceTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.CdAssetplace.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -21726,12 +22883,12 @@ SELECT SanfCategoryID, SanfCategory, parentID, UserIn, dateIn FROM CdAsnafCatego
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._cDUnitTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.CDUnit.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._cDBuyorderresonTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.CDBuyorderreson.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._cDUnitTableAdapter.Update(updatedRows));
+                    result = (result + this._cDBuyorderresonTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -21813,15 +22970,6 @@ SELECT SanfCategoryID, SanfCategory, parentID, UserIn, dateIn FROM CdAsnafCatego
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._tBLAssetPropertiyTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._tblAssetsTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.TblAssets.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._tblAssetsTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -21915,21 +23063,21 @@ SELECT SanfCategoryID, SanfCategory, parentID, UserIn, dateIn FROM CdAsnafCatego
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._cDBuyorderresonTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.CDBuyorderreson.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._tblAssetsTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.TblAssets.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._cDBuyorderresonTableAdapter.Update(updatedRows));
+                    result = (result + this._tblAssetsTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._cdAsnafCategoryTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.CdAsnafCategory.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._tblAsnafTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.TblAsnaf.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._cdAsnafCategoryTableAdapter.Update(updatedRows));
+                    result = (result + this._tblAsnafTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -21943,6 +23091,22 @@ SELECT SanfCategoryID, SanfCategory, parentID, UserIn, dateIn FROM CdAsnafCatego
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateInsertedRows(dsData dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._cDUnitTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.CDUnit.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._cDUnitTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._cdAsnafCategoryTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.CdAsnafCategory.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._cdAsnafCategoryTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._cdAssetplaceTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.CdAssetplace.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -21951,11 +23115,11 @@ SELECT SanfCategoryID, SanfCategory, parentID, UserIn, dateIn FROM CdAsnafCatego
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._cDUnitTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.CDUnit.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._cDBuyorderresonTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.CDBuyorderreson.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._cDUnitTableAdapter.Update(addedRows));
+                    result = (result + this._cDBuyorderresonTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -22028,14 +23192,6 @@ SELECT SanfCategoryID, SanfCategory, parentID, UserIn, dateIn FROM CdAsnafCatego
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._tBLAssetPropertiyTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._tblAssetsTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.TblAssets.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._tblAssetsTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -22119,19 +23275,19 @@ SELECT SanfCategoryID, SanfCategory, parentID, UserIn, dateIn FROM CdAsnafCatego
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._cDBuyorderresonTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.CDBuyorderreson.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._tblAssetsTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.TblAssets.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._cDBuyorderresonTableAdapter.Update(addedRows));
+                    result = (result + this._tblAssetsTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._cdAsnafCategoryTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.CdAsnafCategory.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._tblAsnafTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.TblAsnaf.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._cdAsnafCategoryTableAdapter.Update(addedRows));
+                    result = (result + this._tblAsnafTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -22145,19 +23301,19 @@ SELECT SanfCategoryID, SanfCategory, parentID, UserIn, dateIn FROM CdAsnafCatego
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateDeletedRows(dsData dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._cdAsnafCategoryTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.CdAsnafCategory.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._tblAsnafTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.TblAsnaf.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._cdAsnafCategoryTableAdapter.Update(deletedRows));
+                    result = (result + this._tblAsnafTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._cDBuyorderresonTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.CDBuyorderreson.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._tblAssetsTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.TblAssets.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._cDBuyorderresonTableAdapter.Update(deletedRows));
+                    result = (result + this._tblAssetsTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -22241,14 +23397,6 @@ SELECT SanfCategoryID, SanfCategory, parentID, UserIn, dateIn FROM CdAsnafCatego
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._tblAssetsTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.TblAssets.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._tblAssetsTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._tBLAssetPropertiyTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.TBLAssetPropertiy.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -22321,11 +23469,11 @@ SELECT SanfCategoryID, SanfCategory, parentID, UserIn, dateIn FROM CdAsnafCatego
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._cDUnitTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.CDUnit.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._cDBuyorderresonTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.CDBuyorderreson.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._cDUnitTableAdapter.Update(deletedRows));
+                    result = (result + this._cDBuyorderresonTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -22334,6 +23482,22 @@ SELECT SanfCategoryID, SanfCategory, parentID, UserIn, dateIn FROM CdAsnafCatego
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._cdAssetplaceTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._cdAsnafCategoryTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.CdAsnafCategory.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._cdAsnafCategoryTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._cDUnitTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.CDUnit.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._cDUnitTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -22493,6 +23657,11 @@ SELECT SanfCategoryID, SanfCategory, parentID, UserIn, dateIn FROM CdAsnafCatego
             }
             if (((this._cdAsnafCategoryTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._cdAsnafCategoryTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
+            if (((this._tblAsnafTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._tblAsnafTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -22744,6 +23913,15 @@ SELECT SanfCategoryID, SanfCategory, parentID, UserIn, dateIn FROM CdAsnafCatego
                         adaptersWithAcceptChangesDuringUpdate.Add(this._cdAsnafCategoryTableAdapter.Adapter);
                     }
                 }
+                if ((this._tblAsnafTableAdapter != null)) {
+                    revertConnections.Add(this._tblAsnafTableAdapter, this._tblAsnafTableAdapter.Connection);
+                    this._tblAsnafTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._tblAsnafTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._tblAsnafTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._tblAsnafTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._tblAsnafTableAdapter.Adapter);
+                    }
+                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -22897,6 +24075,10 @@ SELECT SanfCategoryID, SanfCategory, parentID, UserIn, dateIn FROM CdAsnafCatego
                 if ((this._cdAsnafCategoryTableAdapter != null)) {
                     this._cdAsnafCategoryTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._cdAsnafCategoryTableAdapter]));
                     this._cdAsnafCategoryTableAdapter.Transaction = null;
+                }
+                if ((this._tblAsnafTableAdapter != null)) {
+                    this._tblAsnafTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tblAsnafTableAdapter]));
+                    this._tblAsnafTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
