@@ -194,6 +194,12 @@
     <Compile Include="Views\Code\CdAssetStateEditorUC.designer.cs">
       <DependentUpon>CdAssetStateEditorUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Data\TBLTBBuyorderdetailsEditorDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Data\TBLTBBuyorderdetailsEditorDlg.Designer.cs">
+      <DependentUpon>TBLTBBuyorderdetailsEditorDlg.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Data\TblAsnafEditorDlg.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,6 +242,12 @@
     <Compile Include="Views\Data\TBLAssetPlaceDlg.Designer.cs">
       <DependentUpon>TBLAssetPlaceDlg.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Data\TblEmpEditorUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Data\TblEmpEditorUC.designer.cs">
+      <DependentUpon>TblEmpEditorUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Data\TBLReEvaluationDlg.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -254,11 +266,11 @@
     <Compile Include="Views\Data\AssetEditorDlg.Designer.cs">
       <DependentUpon>AssetEditorDlg.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Data\TblEmpEditorUC.cs">
+    <Compile Include="Views\Data\TBLBuyorderUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\Data\TblEmpEditorUC.designer.cs">
-      <DependentUpon>TblEmpEditorUC.cs</DependentUpon>
+    <Compile Include="Views\Data\TBLBuyorderUC.designer.cs">
+      <DependentUpon>TBLBuyorderUC.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Data\CdAssetsCategoryEditorUC.cs">
       <SubType>UserControl</SubType>
@@ -367,6 +379,9 @@
     <EmbeddedResource Include="Views\Code\CdAssetStateEditorUC.resx">
       <DependentUpon>CdAssetStateEditorUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Data\TBLTBBuyorderdetailsEditorDlg.resx">
+      <DependentUpon>TBLTBBuyorderdetailsEditorDlg.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Data\TblAsnafEditorDlg.resx">
       <DependentUpon>TblAsnafEditorDlg.cs</DependentUpon>
     </EmbeddedResource>
@@ -388,6 +403,9 @@
     <EmbeddedResource Include="Views\Data\TBLAssetPlaceDlg.resx">
       <DependentUpon>TBLAssetPlaceDlg.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Data\TblEmpEditorUC.resx">
+      <DependentUpon>TblEmpEditorUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Data\TBLReEvaluationDlg.resx">
       <DependentUpon>TBLReEvaluationDlg.cs</DependentUpon>
     </EmbeddedResource>
@@ -397,8 +415,8 @@
     <EmbeddedResource Include="Views\Data\AssetEditorDlg.resx">
       <DependentUpon>AssetEditorDlg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Data\TblEmpEditorUC.resx">
-      <DependentUpon>TblEmpEditorUC.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Data\TBLBuyorderUC.resx">
+      <DependentUpon>TBLBuyorderUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Data\CdAssetsCategoryEditorUC.resx">
       <DependentUpon>CdAssetsCategoryEditorUC.cs</DependentUpon>

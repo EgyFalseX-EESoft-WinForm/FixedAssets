@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 13.75" name="dsLinqData">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 16.5" name="dsLinqData">
   <DataContextMoniker Name="/dsLinqDataDataContext" />
   <nestedChildShapes>
     <classShape Id="f4f8f8ed-42d6-4790-be1d-688f2cc10f2d" absoluteBounds="1, 4.125, 2, 2.1554996744791666">
@@ -66,6 +66,25 @@
       <DataClassMoniker Name="/dsLinqDataDataContext/CDUnit" />
       <nestedChildShapes>
         <elementListCompartment Id="f468e17a-d8a3-40c9-b784-9da8c9796f6c" absoluteBounds="5.265, 12.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6c32e98b-34cb-4272-a976-191c5e8f2ba6" absoluteBounds="1.5, 13.75, 2, 2.5401025390625">
+      <DataClassMoniker Name="/dsLinqDataDataContext/TblAsnaf" />
+      <nestedChildShapes>
+        <elementListCompartment Id="24784fe0-efd4-452b-a6fe-874a0b381b4c" absoluteBounds="1.5150000000000001, 14.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.25 : 13.3886946614583); (2.03125 : 13.3886946614583); (2.03125 : 13.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dsLinqDataDataContext/CDUnit/CDUnit_TblAsnaf" />
+      <nodes>
+        <classShapeMoniker Id="ece62ff5-30b1-43d9-be96-8ed809617675" />
+        <classShapeMoniker Id="6c32e98b-34cb-4272-a976-191c5e8f2ba6" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="269d9fd8-5b34-4fb6-880d-240cd9503149" absoluteBounds="4.25, 14, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/dsLinqDataDataContext/CDBuyorderreson" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2db8cef4-37e1-40db-9a24-036251a3858e" absoluteBounds="4.265, 14.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

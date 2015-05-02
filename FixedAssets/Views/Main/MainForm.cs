@@ -159,6 +159,10 @@ namespace FixedAssets.Views.Main
             {
                 e.Control = new CdAsnafCategoryEditorUC(RuleElemet);
             }
+            else if (e.Document == docDataTBLBuyorder)
+            {
+                e.Control = new TBLBuyorderUC(RuleElemet);
+            }
             //---------Rules
             else if (e.Document == docRuleUsers)
             {

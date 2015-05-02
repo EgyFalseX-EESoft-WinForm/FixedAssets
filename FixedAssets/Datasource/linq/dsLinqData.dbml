@@ -79,6 +79,27 @@
     <Type Name="CDUnit">
       <Column Name="UnitId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="UnitName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="CDUnit_TblAsnaf" Member="TblAsnafs" ThisKey="UnitId" OtherKey="UnitId" Type="TblAsnaf" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TblAsnaf" Member="TblAsnafs">
+    <Type Name="TblAsnaf">
+      <Column Name="SanfID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SanfCategoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SanfName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Sanfbarcode" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="ReOrder" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="UnitId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sanfdes" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="UserIn" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dateIn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="CDUnit_TblAsnaf" Member="CDUnit" ThisKey="UnitId" OtherKey="UnitId" Type="CDUnit" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CDBuyorderreson" Member="CDBuyorderresons">
+    <Type Name="CDBuyorderreson">
+      <Column Name="BuyorderresonId" Type="System.Byte" DbType="TinyInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Buyorderreson" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
 </Database>
