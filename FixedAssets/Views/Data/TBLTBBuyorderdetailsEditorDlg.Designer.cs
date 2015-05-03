@@ -41,6 +41,7 @@
             this.LSMSBuyorderresonId = new DevExpress.Data.Linq.LinqServerModeSource();
             this.sumehlakSpinEdit = new DevExpress.XtraEditors.DateEdit();
             this.cecloseorder = new DevExpress.XtraEditors.CheckEdit();
+            this.dedateclose = new DevExpress.XtraEditors.DateEdit();
             this.layoutControlGroupMain = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.ItemForAssetName = new DevExpress.XtraLayout.LayoutControlItem();
@@ -52,7 +53,6 @@
             this.demoznadate = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForcontentnumber = new DevExpress.XtraLayout.LayoutControlItem();
             this.dxValidationProviderMain = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
-            this.dedateclose = new DevExpress.XtraEditors.DateEdit();
             ((System.ComponentModel.ISupportInitialize)(this.dsData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControlMain)).BeginInit();
             this.dataLayoutControlMain.SuspendLayout();
@@ -65,6 +65,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.sumehlakSpinEdit.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sumehlakSpinEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cecloseorder.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dedateclose.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dedateclose.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroupMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForAssetName)).BeginInit();
@@ -76,8 +78,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.demoznadate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForcontentnumber)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProviderMain)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dedateclose.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dedateclose.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // dsData
@@ -157,7 +157,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deBuyorderdate.Properties.Mask.EditMask = "";
             this.deBuyorderdate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.deBuyorderdate.Size = new System.Drawing.Size(177, 22);
+            this.deBuyorderdate.Size = new System.Drawing.Size(190, 22);
             this.deBuyorderdate.StyleController = this.dataLayoutControlMain;
             this.deBuyorderdate.TabIndex = 4;
             // 
@@ -177,7 +177,7 @@
             this.AssetsdateDateEdit.Properties.NullText = "";
             this.AssetsdateDateEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.AssetsdateDateEdit.Properties.ValueMember = "DepertmentId";
-            this.AssetsdateDateEdit.Size = new System.Drawing.Size(177, 22);
+            this.AssetsdateDateEdit.Size = new System.Drawing.Size(190, 22);
             this.AssetsdateDateEdit.StyleController = this.dataLayoutControlMain;
             this.AssetsdateDateEdit.TabIndex = 6;
             // 
@@ -204,7 +204,7 @@
             this.asasemonySpinEdit.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Buffered;
             this.asasemonySpinEdit.Properties.NullText = "";
             this.asasemonySpinEdit.Properties.ValueMember = "BuyorderresonId";
-            this.asasemonySpinEdit.Size = new System.Drawing.Size(177, 22);
+            this.asasemonySpinEdit.Size = new System.Drawing.Size(190, 22);
             this.asasemonySpinEdit.StyleController = this.dataLayoutControlMain;
             this.asasemonySpinEdit.TabIndex = 7;
             // 
@@ -228,7 +228,7 @@
             this.sumehlakSpinEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.sumehlakSpinEdit.Properties.Mask.EditMask = "";
-            this.sumehlakSpinEdit.Size = new System.Drawing.Size(177, 22);
+            this.sumehlakSpinEdit.Size = new System.Drawing.Size(190, 22);
             this.sumehlakSpinEdit.StyleController = this.dataLayoutControlMain;
             this.sumehlakSpinEdit.TabIndex = 8;
             // 
@@ -245,9 +245,27 @@
             this.cecloseorder.Properties.Caption = "closeorder";
             this.cecloseorder.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Buffered;
             this.cecloseorder.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.cecloseorder.Size = new System.Drawing.Size(177, 19);
+            this.cecloseorder.Size = new System.Drawing.Size(190, 19);
             this.cecloseorder.StyleController = this.dataLayoutControlMain;
             this.cecloseorder.TabIndex = 12;
+            // 
+            // dedateclose
+            // 
+            this.dedateclose.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.dsData, "TBLBuyorder.dateclose", true));
+            this.dedateclose.EditValue = "";
+            this.dedateclose.Location = new System.Drawing.Point(32, 84);
+            this.dedateclose.Name = "dedateclose";
+            this.dedateclose.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.dedateclose.Properties.Appearance.Options.UseFont = true;
+            this.dedateclose.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dedateclose.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dedateclose.Properties.Mask.EditMask = "";
+            this.dedateclose.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.dedateclose.Size = new System.Drawing.Size(190, 22);
+            this.dedateclose.StyleController = this.dataLayoutControlMain;
+            this.dedateclose.TabIndex = 9;
             // 
             // layoutControlGroupMain
             // 
@@ -288,9 +306,9 @@
             this.ItemForAssetName.Location = new System.Drawing.Point(278, 0);
             this.ItemForAssetName.Name = "ItemForAssetName";
             this.ItemForAssetName.Size = new System.Drawing.Size(278, 26);
-            this.ItemForAssetName.Text = "Buyorderdate";
+            this.ItemForAssetName.Text = "التاريخ";
             this.ItemForAssetName.TextLocation = DevExpress.Utils.Locations.Right;
-            this.ItemForAssetName.TextSize = new System.Drawing.Size(94, 16);
+            this.ItemForAssetName.TextSize = new System.Drawing.Size(81, 17);
             // 
             // lueBuyorderresonId
             // 
@@ -300,9 +318,9 @@
             this.lueBuyorderresonId.Location = new System.Drawing.Point(278, 26);
             this.lueBuyorderresonId.Name = "lueBuyorderresonId";
             this.lueBuyorderresonId.Size = new System.Drawing.Size(278, 26);
-            this.lueBuyorderresonId.Text = "BuyorderresonId";
+            this.lueBuyorderresonId.Text = "سبب الطلب";
             this.lueBuyorderresonId.TextLocation = DevExpress.Utils.Locations.Right;
-            this.lueBuyorderresonId.TextSize = new System.Drawing.Size(94, 16);
+            this.lueBuyorderresonId.TextSize = new System.Drawing.Size(81, 17);
             // 
             // layoutControlItem1
             // 
@@ -334,9 +352,9 @@
             this.blabla.Location = new System.Drawing.Point(278, 52);
             this.blabla.Name = "blabla";
             this.blabla.Size = new System.Drawing.Size(278, 26);
-            this.blabla.Text = "closeorder";
+            this.blabla.Text = "اغلاق الطلب";
             this.blabla.TextLocation = DevExpress.Utils.Locations.Right;
-            this.blabla.TextSize = new System.Drawing.Size(94, 16);
+            this.blabla.TextSize = new System.Drawing.Size(81, 17);
             // 
             // lueDepertmentId
             // 
@@ -346,9 +364,9 @@
             this.lueDepertmentId.Location = new System.Drawing.Point(0, 0);
             this.lueDepertmentId.Name = "lueDepertmentId";
             this.lueDepertmentId.Size = new System.Drawing.Size(278, 26);
-            this.lueDepertmentId.Text = "DepertmentId";
+            this.lueDepertmentId.Text = "القسم الطالب";
             this.lueDepertmentId.TextLocation = DevExpress.Utils.Locations.Right;
-            this.lueDepertmentId.TextSize = new System.Drawing.Size(94, 16);
+            this.lueDepertmentId.TextSize = new System.Drawing.Size(81, 17);
             // 
             // demoznadate
             // 
@@ -358,9 +376,9 @@
             this.demoznadate.Location = new System.Drawing.Point(0, 26);
             this.demoznadate.Name = "demoznadate";
             this.demoznadate.Size = new System.Drawing.Size(278, 26);
-            this.demoznadate.Text = "moznadate";
+            this.demoznadate.Text = "تاريخ الموازنة";
             this.demoznadate.TextLocation = DevExpress.Utils.Locations.Right;
-            this.demoznadate.TextSize = new System.Drawing.Size(94, 16);
+            this.demoznadate.TextSize = new System.Drawing.Size(81, 17);
             // 
             // ItemForcontentnumber
             // 
@@ -370,27 +388,9 @@
             this.ItemForcontentnumber.Location = new System.Drawing.Point(0, 52);
             this.ItemForcontentnumber.Name = "ItemForcontentnumber";
             this.ItemForcontentnumber.Size = new System.Drawing.Size(278, 26);
-            this.ItemForcontentnumber.Text = "dateclose";
+            this.ItemForcontentnumber.Text = "تاريخ الاغلاق";
             this.ItemForcontentnumber.TextLocation = DevExpress.Utils.Locations.Right;
-            this.ItemForcontentnumber.TextSize = new System.Drawing.Size(94, 16);
-            // 
-            // dedateclose
-            // 
-            this.dedateclose.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.dsData, "TBLBuyorder.dateclose", true));
-            this.dedateclose.EditValue = "";
-            this.dedateclose.Location = new System.Drawing.Point(32, 84);
-            this.dedateclose.Name = "dedateclose";
-            this.dedateclose.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.dedateclose.Properties.Appearance.Options.UseFont = true;
-            this.dedateclose.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dedateclose.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dedateclose.Properties.Mask.EditMask = "";
-            this.dedateclose.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.dedateclose.Size = new System.Drawing.Size(177, 22);
-            this.dedateclose.StyleController = this.dataLayoutControlMain;
-            this.dedateclose.TabIndex = 9;
+            this.ItemForcontentnumber.TextSize = new System.Drawing.Size(81, 17);
             // 
             // TBLTBBuyorderdetailsEditorDlg
             // 
@@ -415,6 +415,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.sumehlakSpinEdit.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sumehlakSpinEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cecloseorder.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dedateclose.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dedateclose.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroupMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForAssetName)).EndInit();
@@ -426,8 +428,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.demoznadate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForcontentnumber)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProviderMain)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dedateclose.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dedateclose.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

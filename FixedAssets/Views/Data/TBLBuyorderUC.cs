@@ -64,52 +64,6 @@ namespace FixedAssets.Views.Data
             LoadData();
             ActivateRules();
         }
-        private void ZZbbiSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            if (MsgDlg.Show("هل انت متأكد ؟", MsgDlg.MessageType.Question) == DialogResult.No)
-                return;
-
-            DevExpress.Xpo.AsyncCommitCallback CommitCallBack = (o) =>
-            {
-                SplashScreenManager.CloseForm();
-                if (o == null)
-                {
-                    MsgDlg.ShowAlert(Properties.Settings.Default.msg_SaveSuccess, MsgDlg.MessageType.Success, (Form)Parent.Parent.Parent);
-                    Logger.Info(Properties.Settings.Default.msg_SaveSuccess);
-                }
-                else
-                {
-                    MsgDlg.ShowAlert(String.Format("{0}, {1}, {2}", Properties.Settings.Default.msg_SavingFailed, Environment.NewLine, o.Message), MsgDlg.MessageType.Error, (Form)Parent.Parent.Parent);
-                    Classes.Core.LogException(Logger, o.InnerException, Classes.Core.ExceptionLevelEnum.General, Classes.Managers.UserManager.defaultInstance.User.UserId);
-                }
-            };
-
-            SplashScreenManager.ShowForm(typeof(FixedAssets.Views.Main.WaitWindowFrm)); SplashScreenManager.Default.SetWaitFormDescription(Properties.Settings.Default.msg_SavingInProgress);
-            UOWTBLBuyorder.CommitTransactionAsync(CommitCallBack);
-        }
-        private void ZZbbiExport_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            // Check whether the GridControl can be previewed.
-            if (!gridControlTBLBuyorder.IsPrintingAvailable)
-            {
-                MsgDlg.Show("The 'DevExpress.XtraPrinting' library is not found", MsgDlg.MessageType.Warn);
-                return;
-            }
-            // Open the Preview window.
-            gridControlTBLBuyorder.ShowRibbonPrintPreview();
-        }
-        private void ZZbbiRefresh_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            if (MsgDlg.Show("هل انت متأكد ؟", MsgDlg.MessageType.Question) == DialogResult.No)
-                return;
-            UOWTBLBuyorder.DropIdentityMap();
-            UOWTBLBuyorder.DropChanges();
-            XPSCSTBLBuyorder.Reload();
-            gridViewTBLBuyorder.RefreshData();
-        }
-        
-
-        #endregion
         private void gridViewTBLBuyorder_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
             try
@@ -221,9 +175,6 @@ namespace FixedAssets.Views.Data
         {
             try
             {
-                XPDataTableObject row = (XPDataTableObject)gridViewTBLTBBuyorderdetails.GetRow(gridViewTBLTBBuyorderdetails.FocusedRowHandle);
-                if (row == null)
-                    return;
                 if (MsgDlg.Show("هل انت متأكد ؟", MsgDlg.MessageType.Question) == DialogResult.Yes)
                 {
                     gridViewTBLTBBuyorderdetails.DeleteSelectedRows();
@@ -238,7 +189,11 @@ namespace FixedAssets.Views.Data
             }
 
         }
-       
+        private void btnShowAll_Click(object sender, EventArgs e)
+        {
+            XPSCSTBLBuyorder.FixedFilterString = string.Empty;
+        }
+        #endregion
 
     }
 }

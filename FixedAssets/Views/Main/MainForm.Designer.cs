@@ -817,7 +817,7 @@
             tileItemElement40.Image = global::FixedAssets.Properties.Resources.EditData64;
             tileItemElement40.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
             tileItemElement40.Text = "طلب الشراء";
-            tileItemElement40.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
+            tileItemElement40.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
             tileItemFrame27.Elements.Add(tileItemElement40);
             tileItemFrame27.Image = global::FixedAssets.Properties.Resources.EditData64;
             tileItemElement41.Image = global::FixedAssets.Properties.Resources.EditData32;

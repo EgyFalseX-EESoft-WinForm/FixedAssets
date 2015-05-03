@@ -53,6 +53,8 @@
             this.btnDeleteTBLBuyorder = new DevExpress.XtraEditors.SimpleButton();
             this.btnEditTBLBuyorder = new DevExpress.XtraEditors.SimpleButton();
             this.gridControlTBLTBBuyorderdetails = new DevExpress.XtraGrid.GridControl();
+            this.tBLTBBuyorderdetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsData = new FixedAssets.Datasource.dsData();
             this.gridViewTBLTBBuyorderdetails = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemLookUpEditSanfID = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
@@ -65,9 +67,8 @@
             this.panelControlTBLTBBuyorderdetails = new DevExpress.XtraEditors.PanelControl();
             this.btnSaveTBLTBBuyorderdetails = new DevExpress.XtraEditors.SimpleButton();
             this.btnDeleteTBLTBBuyorderdetails = new DevExpress.XtraEditors.SimpleButton();
-            this.dsData = new FixedAssets.Datasource.dsData();
-            this.tBLTBBuyorderdetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tBLTBBuyorderdetailsTableAdapter = new FixedAssets.Datasource.dsDataTableAdapters.TBLTBBuyorderdetailsTableAdapter();
+            this.btnShowAll = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.UOWTBLBuyorder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlTBLBuyorder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewTBLBuyorder)).BeginInit();
@@ -83,13 +84,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControlTblAsnaf)).BeginInit();
             this.panelControlTblAsnaf.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlTBLTBBuyorderdetails)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLTBBuyorderdetailsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewTBLTBBuyorderdetails)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditSanfID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditUserIn2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControlTBLTBBuyorderdetails)).BeginInit();
             this.panelControlTBLTBBuyorderdetails.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dsData)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tBLTBBuyorderdetailsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // UOWTBLBuyorder
@@ -114,7 +115,7 @@
             this.repositoryItemLookUpEditEmpDepertment,
             this.repositoryItemLookUpEditUserIn1,
             this.repositoryItemCheckEditClose});
-            this.gridControlTBLBuyorder.Size = new System.Drawing.Size(646, 166);
+            this.gridControlTBLBuyorder.Size = new System.Drawing.Size(944, 323);
             this.gridControlTBLBuyorder.TabIndex = 5;
             this.gridControlTBLBuyorder.UseEmbeddedNavigator = true;
             this.gridControlTBLBuyorder.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -135,6 +136,7 @@
             this.colUserIn});
             this.gridViewTBLBuyorder.GridControl = this.gridControlTBLBuyorder;
             this.gridViewTBLBuyorder.Name = "gridViewTBLBuyorder";
+            this.gridViewTBLBuyorder.OptionsBehavior.Editable = false;
             this.gridViewTBLBuyorder.OptionsBehavior.EditorShowMode = DevExpress.Utils.EditorShowMode.MouseDownFocused;
             this.gridViewTBLBuyorder.OptionsEditForm.EditFormColumnCount = 2;
             this.gridViewTBLBuyorder.OptionsSelection.InvertSelection = true;
@@ -146,6 +148,11 @@
             // 
             // colBuyorderdate
             // 
+            this.colBuyorderdate.AppearanceCell.Options.UseTextOptions = true;
+            this.colBuyorderdate.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colBuyorderdate.AppearanceHeader.Options.UseTextOptions = true;
+            this.colBuyorderdate.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colBuyorderdate.Caption = "التاريخ";
             this.colBuyorderdate.FieldName = "Buyorderdate";
             this.colBuyorderdate.Name = "colBuyorderdate";
             this.colBuyorderdate.Visible = true;
@@ -154,6 +161,11 @@
             // 
             // gridColumn2
             // 
+            this.gridColumn2.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn2.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn2.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn2.Caption = "القسم الطالب";
             this.gridColumn2.ColumnEdit = this.repositoryItemLookUpEditEmpDepertment;
             this.gridColumn2.FieldName = "DepertmentId!Key";
             this.gridColumn2.Name = "gridColumn2";
@@ -182,6 +194,11 @@
             // 
             // gridColumn4
             // 
+            this.gridColumn4.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn4.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn4.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn4.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn4.Caption = "سبب الطلب";
             this.gridColumn4.FieldName = "BuyorderresonId!Key";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
@@ -190,6 +207,11 @@
             // 
             // colmoznadate
             // 
+            this.colmoznadate.AppearanceCell.Options.UseTextOptions = true;
+            this.colmoznadate.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colmoznadate.AppearanceHeader.Options.UseTextOptions = true;
+            this.colmoznadate.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colmoznadate.Caption = "تاريخ الموازنة";
             this.colmoznadate.FieldName = "moznadate";
             this.colmoznadate.Name = "colmoznadate";
             this.colmoznadate.Visible = true;
@@ -197,6 +219,11 @@
             // 
             // colcloseorder
             // 
+            this.colcloseorder.AppearanceCell.Options.UseTextOptions = true;
+            this.colcloseorder.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colcloseorder.AppearanceHeader.Options.UseTextOptions = true;
+            this.colcloseorder.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colcloseorder.Caption = "اغلاق الطلب";
             this.colcloseorder.FieldName = "closeorder";
             this.colcloseorder.Name = "colcloseorder";
             this.colcloseorder.Visible = true;
@@ -204,6 +231,11 @@
             // 
             // coldateclose
             // 
+            this.coldateclose.AppearanceCell.Options.UseTextOptions = true;
+            this.coldateclose.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.coldateclose.AppearanceHeader.Options.UseTextOptions = true;
+            this.coldateclose.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.coldateclose.Caption = "تاريخ الاغلاق";
             this.coldateclose.ColumnEdit = this.repositoryItemCheckEditClose;
             this.coldateclose.FieldName = "dateclose";
             this.coldateclose.Name = "coldateclose";
@@ -217,11 +249,19 @@
             // 
             // coldateIn
             // 
+            this.coldateIn.AppearanceCell.Options.UseTextOptions = true;
+            this.coldateIn.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.coldateIn.AppearanceHeader.Options.UseTextOptions = true;
+            this.coldateIn.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.coldateIn.FieldName = "dateIn";
             this.coldateIn.Name = "coldateIn";
             // 
             // colUserIn
             // 
+            this.colUserIn.AppearanceCell.Options.UseTextOptions = true;
+            this.colUserIn.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colUserIn.AppearanceHeader.Options.UseTextOptions = true;
+            this.colUserIn.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colUserIn.ColumnEdit = this.repositoryItemLookUpEditUserIn1;
             this.colUserIn.FieldName = "UserIn";
             this.colUserIn.Name = "colUserIn";
@@ -261,6 +301,7 @@
             // splitContainerControl1
             // 
             this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainerControl1.FixedPanel = DevExpress.XtraEditors.SplitFixedPanel.Panel2;
             this.splitContainerControl1.Horizontal = false;
             this.splitContainerControl1.Location = new System.Drawing.Point(0, 0);
             this.splitContainerControl1.Name = "splitContainerControl1";
@@ -270,20 +311,21 @@
             this.splitContainerControl1.Panel2.Controls.Add(this.gridControlTBLTBBuyorderdetails);
             this.splitContainerControl1.Panel2.Controls.Add(this.panelControlTBLTBBuyorderdetails);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(652, 408);
-            this.splitContainerControl1.SplitterPosition = 206;
+            this.splitContainerControl1.Size = new System.Drawing.Size(950, 740);
+            this.splitContainerControl1.SplitterPosition = 372;
             this.splitContainerControl1.TabIndex = 10;
             this.splitContainerControl1.Text = "splitContainerControl1";
             // 
             // panelControlTblAsnaf
             // 
+            this.panelControlTblAsnaf.Controls.Add(this.btnShowAll);
             this.panelControlTblAsnaf.Controls.Add(this.btnAddTBLBuyorder);
             this.panelControlTblAsnaf.Controls.Add(this.btnDeleteTBLBuyorder);
             this.panelControlTblAsnaf.Controls.Add(this.btnEditTBLBuyorder);
             this.panelControlTblAsnaf.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControlTblAsnaf.Location = new System.Drawing.Point(0, 0);
             this.panelControlTblAsnaf.Name = "panelControlTblAsnaf";
-            this.panelControlTblAsnaf.Size = new System.Drawing.Size(652, 30);
+            this.panelControlTblAsnaf.Size = new System.Drawing.Size(950, 30);
             this.panelControlTblAsnaf.TabIndex = 6;
             // 
             // btnAddTBLBuyorder
@@ -328,11 +370,21 @@
             this.gridControlTBLTBBuyorderdetails.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemLookUpEditUserIn2,
             this.repositoryItemLookUpEditSanfID});
-            this.gridControlTBLTBBuyorderdetails.Size = new System.Drawing.Size(646, 158);
+            this.gridControlTBLTBBuyorderdetails.Size = new System.Drawing.Size(944, 333);
             this.gridControlTBLTBBuyorderdetails.TabIndex = 8;
             this.gridControlTBLTBBuyorderdetails.UseEmbeddedNavigator = true;
             this.gridControlTBLTBBuyorderdetails.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewTBLTBBuyorderdetails});
+            // 
+            // tBLTBBuyorderdetailsBindingSource
+            // 
+            this.tBLTBBuyorderdetailsBindingSource.DataMember = "TBLTBBuyorderdetails";
+            this.tBLTBBuyorderdetailsBindingSource.DataSource = this.dsData;
+            // 
+            // dsData
+            // 
+            this.dsData.DataSetName = "dsData";
+            this.dsData.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gridViewTBLTBBuyorderdetails
             // 
@@ -361,6 +413,11 @@
             // 
             // gridColumn8
             // 
+            this.gridColumn8.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn8.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn8.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn8.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn8.Caption = "الصنف";
             this.gridColumn8.ColumnEdit = this.repositoryItemLookUpEditSanfID;
             this.gridColumn8.FieldName = "SanfID";
             this.gridColumn8.Name = "gridColumn8";
@@ -384,6 +441,11 @@
             // 
             // colorderproperty
             // 
+            this.colorderproperty.AppearanceCell.Options.UseTextOptions = true;
+            this.colorderproperty.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colorderproperty.AppearanceHeader.Options.UseTextOptions = true;
+            this.colorderproperty.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colorderproperty.Caption = "المواصفات";
             this.colorderproperty.FieldName = "orderproperty";
             this.colorderproperty.Name = "colorderproperty";
             this.colorderproperty.Visible = true;
@@ -392,6 +454,11 @@
             // 
             // colorderquntity
             // 
+            this.colorderquntity.AppearanceCell.Options.UseTextOptions = true;
+            this.colorderquntity.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colorderquntity.AppearanceHeader.Options.UseTextOptions = true;
+            this.colorderquntity.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colorderquntity.Caption = "الكمية ";
             this.colorderquntity.FieldName = "orderquntity";
             this.colorderquntity.Name = "colorderquntity";
             this.colorderquntity.Visible = true;
@@ -400,6 +467,11 @@
             // 
             // colorderdes
             // 
+            this.colorderdes.AppearanceCell.Options.UseTextOptions = true;
+            this.colorderdes.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colorderdes.AppearanceHeader.Options.UseTextOptions = true;
+            this.colorderdes.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colorderdes.Caption = "ملاحظات";
             this.colorderdes.FieldName = "orderdes";
             this.colorderdes.Name = "colorderdes";
             this.colorderdes.Visible = true;
@@ -407,11 +479,19 @@
             // 
             // coldateIn1
             // 
+            this.coldateIn1.AppearanceCell.Options.UseTextOptions = true;
+            this.coldateIn1.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.coldateIn1.AppearanceHeader.Options.UseTextOptions = true;
+            this.coldateIn1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.coldateIn1.FieldName = "dateIn";
             this.coldateIn1.Name = "coldateIn1";
             // 
             // colUserIn1
             // 
+            this.colUserIn1.AppearanceCell.Options.UseTextOptions = true;
+            this.colUserIn1.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colUserIn1.AppearanceHeader.Options.UseTextOptions = true;
+            this.colUserIn1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colUserIn1.ColumnEdit = this.repositoryItemLookUpEditUserIn2;
             this.colUserIn1.FieldName = "UserIn";
             this.colUserIn1.Name = "colUserIn1";
@@ -437,7 +517,7 @@
             this.panelControlTBLTBBuyorderdetails.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControlTBLTBBuyorderdetails.Location = new System.Drawing.Point(0, 0);
             this.panelControlTBLTBBuyorderdetails.Name = "panelControlTBLTBBuyorderdetails";
-            this.panelControlTBLTBBuyorderdetails.Size = new System.Drawing.Size(652, 30);
+            this.panelControlTBLTBBuyorderdetails.Size = new System.Drawing.Size(950, 30);
             this.panelControlTBLTBBuyorderdetails.TabIndex = 7;
             // 
             // btnSaveTBLTBBuyorderdetails
@@ -460,19 +540,20 @@
             this.btnDeleteTBLTBBuyorderdetails.Text = "حذف";
             this.btnDeleteTBLTBBuyorderdetails.Click += new System.EventHandler(this.btnDeleteTBLTBBuyorderdetails_Click);
             // 
-            // dsData
-            // 
-            this.dsData.DataSetName = "dsData";
-            this.dsData.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tBLTBBuyorderdetailsBindingSource
-            // 
-            this.tBLTBBuyorderdetailsBindingSource.DataMember = "TBLTBBuyorderdetails";
-            this.tBLTBBuyorderdetailsBindingSource.DataSource = this.dsData;
-            // 
             // tBLTBBuyorderdetailsTableAdapter
             // 
             this.tBLTBBuyorderdetailsTableAdapter.ClearBeforeFill = true;
+            // 
+            // btnShowAll
+            // 
+            this.btnShowAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnShowAll.Image = global::FixedAssets.Properties.Resources.refresh2_16x16;
+            this.btnShowAll.Location = new System.Drawing.Point(861, 4);
+            this.btnShowAll.Name = "btnShowAll";
+            this.btnShowAll.Size = new System.Drawing.Size(84, 23);
+            this.btnShowAll.TabIndex = 3;
+            this.btnShowAll.Text = "اظهار الكل";
+            this.btnShowAll.Click += new System.EventHandler(this.btnShowAll_Click);
             // 
             // TBLBuyorderUC
             // 
@@ -480,7 +561,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.splitContainerControl1);
             this.Name = "TBLBuyorderUC";
-            this.Size = new System.Drawing.Size(652, 408);
+            this.Size = new System.Drawing.Size(950, 740);
             this.Load += new System.EventHandler(this.RouteEditorUC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.UOWTBLBuyorder)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlTBLBuyorder)).EndInit();
@@ -497,13 +578,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControlTblAsnaf)).EndInit();
             this.panelControlTblAsnaf.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControlTBLTBBuyorderdetails)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLTBBuyorderdetailsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewTBLTBBuyorderdetails)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditSanfID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditUserIn2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControlTBLTBBuyorderdetails)).EndInit();
             this.panelControlTBLTBBuyorderdetails.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dsData)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tBLTBBuyorderdetailsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -549,5 +630,6 @@
         private System.Windows.Forms.BindingSource tBLTBBuyorderdetailsBindingSource;
         private Datasource.dsData dsData;
         private Datasource.dsDataTableAdapters.TBLTBBuyorderdetailsTableAdapter tBLTBBuyorderdetailsTableAdapter;
+        private DevExpress.XtraEditors.SimpleButton btnShowAll;
     }
 }
