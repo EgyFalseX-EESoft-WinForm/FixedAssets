@@ -28,14 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CdAsnafCategoryEditorUC));
             this.repositoryItemLookUpEditAssetplaceId1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.repositoryItemLookUpEditEmp = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.repositoryItemLookUpEditAssetStateId = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.repositoryItemButtonEditParamDel = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.barManagerMain = new DevExpress.XtraBars.BarManager(this.components);
+            this.barManagerMain = new DevExpress.XtraBars.BarManager();
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.bbiAddNode = new DevExpress.XtraBars.BarButtonItem();
             this.bbiDeleteNode = new DevExpress.XtraBars.BarButtonItem();
@@ -45,35 +44,36 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.XPSCSCat = new DevExpress.Xpo.XPServerCollectionSource(this.components);
-            this.sessionCat = new DevExpress.Xpo.Session(this.components);
-            this.popupMenuMain = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.XPSCSCat = new DevExpress.Xpo.XPServerCollectionSource();
+            this.sessionCat = new DevExpress.Xpo.Session();
+            this.popupMenuMain = new DevExpress.XtraBars.PopupMenu();
             this.treeListMain = new DevExpress.XtraTreeList.TreeList();
             this.colAssetsCategoryName = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.imageCollectionNormal = new DevExpress.Utils.ImageCollection(this.components);
+            this.imageCollectionNormal = new DevExpress.Utils.ImageCollection();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.gridControlItem = new DevExpress.XtraGrid.GridControl();
-            this.XPCSItem = new DevExpress.Xpo.XPServerCollectionSource(this.components);
-            this.sessionItem = new DevExpress.Xpo.Session(this.components);
+            this.XPCSItem = new DevExpress.Xpo.XPServerCollectionSource();
+            this.sessionItem = new DevExpress.Xpo.Session();
             this.gridViewItem = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colSanfName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSanfbarcode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colReOrder = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colsanfdes = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemLookUpEditAssetplaceId = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.repositoryItemLookUpEditEmpData = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.repositoryItemLookUpEditAssetStateId2 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.repositoryItemLookUpEditUnitId = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.LSMSUnitId = new DevExpress.Data.Linq.LinqServerModeSource();
+            this.colsanfdes = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemLookUpEditSanfCategoryID = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.panelControlAsset = new DevExpress.XtraEditors.PanelControl();
             this.btnAddAsset = new DevExpress.XtraEditors.SimpleButton();
             this.btnDeleteAsset = new DevExpress.XtraEditors.SimpleButton();
             this.btnEditAsset = new DevExpress.XtraEditors.SimpleButton();
-            this.tBLDeleteAssetComponentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tBLAssetOhdaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tBLDeleteAssetComponentBindingSource = new System.Windows.Forms.BindingSource();
+            this.tBLAssetOhdaBindingSource = new System.Windows.Forms.BindingSource();
             this.tBLAddAssetComponentTableAdapter = new FixedAssets.Datasource.dsDataTableAdapters.TBLAddAssetComponentTableAdapter();
             this.tBLDeleteAssetComponentTableAdapter = new FixedAssets.Datasource.dsDataTableAdapters.TBLDeleteAssetComponentTableAdapter();
             this.tBLAssetOhdaTableAdapter = new FixedAssets.Datasource.dsDataTableAdapters.TBLAssetOhdaTableAdapter();
+            this.LSMSAsnaftypeId = new DevExpress.Data.Linq.LinqServerModeSource();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditAssetplaceId1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditEmp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditAssetStateId)).BeginInit();
@@ -90,14 +90,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.XPCSItem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sessionItem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewItem)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditAssetplaceId)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditEmpData)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditAssetStateId2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditUnitId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LSMSUnitId)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditSanfCategoryID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControlAsset)).BeginInit();
             this.panelControlAsset.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tBLDeleteAssetComponentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLAssetOhdaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LSMSAsnaftypeId)).BeginInit();
             this.SuspendLayout();
             // 
             // repositoryItemLookUpEditAssetplaceId1
@@ -143,7 +143,7 @@
             // 
             this.repositoryItemButtonEditParamDel.AutoHeight = false;
             this.repositoryItemButtonEditParamDel.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Delete", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Delete, "Delete", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
             this.repositoryItemButtonEditParamDel.Name = "repositoryItemButtonEditParamDel";
             this.repositoryItemButtonEditParamDel.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -328,9 +328,8 @@
             this.gridControlItem.MenuManager = this.barManagerMain;
             this.gridControlItem.Name = "gridControlItem";
             this.gridControlItem.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repositoryItemLookUpEditAssetplaceId,
-            this.repositoryItemLookUpEditEmpData,
-            this.repositoryItemLookUpEditAssetStateId2});
+            this.repositoryItemLookUpEditSanfCategoryID,
+            this.repositoryItemLookUpEditUnitId});
             this.gridControlItem.Size = new System.Drawing.Size(630, 389);
             this.gridControlItem.TabIndex = 1;
             this.gridControlItem.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -357,7 +356,8 @@
             this.colSanfbarcode,
             this.colReOrder,
             this.gridColumn4,
-            this.colsanfdes});
+            this.colsanfdes,
+            this.gridColumn1});
             this.gridViewItem.GridControl = this.gridControlItem;
             this.gridViewItem.Name = "gridViewItem";
             this.gridViewItem.OptionsBehavior.Editable = false;
@@ -409,10 +409,30 @@
             this.gridColumn4.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn4.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn4.Caption = "الوحدة";
+            this.gridColumn4.ColumnEdit = this.repositoryItemLookUpEditUnitId;
             this.gridColumn4.FieldName = "UnitId!Key";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
+            // 
+            // repositoryItemLookUpEditUnitId
+            // 
+            this.repositoryItemLookUpEditUnitId.AutoHeight = false;
+            this.repositoryItemLookUpEditUnitId.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemLookUpEditUnitId.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("UnitName", "الاسم", 59, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
+            this.repositoryItemLookUpEditUnitId.DataSource = this.LSMSUnitId;
+            this.repositoryItemLookUpEditUnitId.DisplayMember = "UnitName";
+            this.repositoryItemLookUpEditUnitId.Name = "repositoryItemLookUpEditUnitId";
+            this.repositoryItemLookUpEditUnitId.NullText = "";
+            this.repositoryItemLookUpEditUnitId.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.repositoryItemLookUpEditUnitId.ValueMember = "UnitId";
+            // 
+            // LSMSUnitId
+            // 
+            this.LSMSUnitId.ElementType = typeof(FixedAssets.Datasource.linq.CDUnit);
+            this.LSMSUnitId.KeyExpression = "[UnitId]";
             // 
             // colsanfdes
             // 
@@ -424,52 +444,34 @@
             this.colsanfdes.FieldName = "sanfdes";
             this.colsanfdes.Name = "colsanfdes";
             this.colsanfdes.Visible = true;
-            this.colsanfdes.VisibleIndex = 4;
+            this.colsanfdes.VisibleIndex = 5;
             // 
-            // repositoryItemLookUpEditAssetplaceId
+            // gridColumn1
             // 
-            this.repositoryItemLookUpEditAssetplaceId.AutoHeight = false;
-            this.repositoryItemLookUpEditAssetplaceId.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.gridColumn1.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn1.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn1.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn1.Caption = "نوع الصنف";
+            this.gridColumn1.ColumnEdit = this.repositoryItemLookUpEditSanfCategoryID;
+            this.gridColumn1.FieldName = "SanfCategoryID!Key";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 4;
+            // 
+            // repositoryItemLookUpEditSanfCategoryID
+            // 
+            this.repositoryItemLookUpEditSanfCategoryID.AutoHeight = false;
+            this.repositoryItemLookUpEditSanfCategoryID.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemLookUpEditAssetplaceId.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Assetplace", "الاسم", 62, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
-            this.repositoryItemLookUpEditAssetplaceId.DisplayMember = "Assetplace";
-            this.repositoryItemLookUpEditAssetplaceId.Name = "repositoryItemLookUpEditAssetplaceId";
-            this.repositoryItemLookUpEditAssetplaceId.NullText = "";
-            this.repositoryItemLookUpEditAssetplaceId.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.repositoryItemLookUpEditAssetplaceId.ValueMember = "AssetplaceId";
-            // 
-            // repositoryItemLookUpEditEmpData
-            // 
-            this.repositoryItemLookUpEditEmpData.AutoHeight = false;
-            this.repositoryItemLookUpEditEmpData.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemLookUpEditEmpData.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("EmpName", "الاسم", 60, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
-            this.repositoryItemLookUpEditEmpData.DisplayMember = "EmpName";
-            this.repositoryItemLookUpEditEmpData.Name = "repositoryItemLookUpEditEmpData";
-            this.repositoryItemLookUpEditEmpData.NullText = "";
-            this.repositoryItemLookUpEditEmpData.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.repositoryItemLookUpEditEmpData.ValueMember = "EmpId";
-            // 
-            // repositoryItemLookUpEditAssetStateId2
-            // 
-            this.repositoryItemLookUpEditAssetStateId2.AutoHeight = false;
-            this.repositoryItemLookUpEditAssetStateId2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemLookUpEditAssetStateId2.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("AssetState", "الاسم", 66, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
-            this.repositoryItemLookUpEditAssetStateId2.DataSource = this.LSMSUnitId;
-            this.repositoryItemLookUpEditAssetStateId2.DisplayMember = "AssetState";
-            this.repositoryItemLookUpEditAssetStateId2.Name = "repositoryItemLookUpEditAssetStateId2";
-            this.repositoryItemLookUpEditAssetStateId2.NullText = "";
-            this.repositoryItemLookUpEditAssetStateId2.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.repositoryItemLookUpEditAssetStateId2.ValueMember = "AssetStateId";
-            // 
-            // LSMSUnitId
-            // 
-            this.LSMSUnitId.ElementType = typeof(FixedAssets.Datasource.linq.CDUnit);
-            this.LSMSUnitId.KeyExpression = "[UnitId]";
+            this.repositoryItemLookUpEditSanfCategoryID.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Asnaftype", "الاسم", 60, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
+            this.repositoryItemLookUpEditSanfCategoryID.DataSource = this.LSMSAsnaftypeId;
+            this.repositoryItemLookUpEditSanfCategoryID.DisplayMember = "Asnaftype";
+            this.repositoryItemLookUpEditSanfCategoryID.Name = "repositoryItemLookUpEditSanfCategoryID";
+            this.repositoryItemLookUpEditSanfCategoryID.NullText = "";
+            this.repositoryItemLookUpEditSanfCategoryID.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.repositoryItemLookUpEditSanfCategoryID.ValueMember = "AsnaftypeId";
             // 
             // panelControlAsset
             // 
@@ -524,6 +526,11 @@
             // 
             this.tBLAssetOhdaTableAdapter.ClearBeforeFill = true;
             // 
+            // LSMSAsnaftypeId
+            // 
+            this.LSMSAsnaftypeId.ElementType = typeof(FixedAssets.Datasource.linq.CDAsnaftype);
+            this.LSMSAsnaftypeId.KeyExpression = "[AsnaftypeId]";
+            // 
             // CdAsnafCategoryEditorUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -552,14 +559,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.XPCSItem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sessionItem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewItem)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditAssetplaceId)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditEmpData)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditAssetStateId2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditUnitId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LSMSUnitId)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditSanfCategoryID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControlAsset)).EndInit();
             this.panelControlAsset.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tBLDeleteAssetComponentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLAssetOhdaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LSMSAsnaftypeId)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -596,9 +603,7 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEditAssetplaceId1;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEditEmp;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEditAssetStateId;
-        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEditAssetplaceId;
-        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEditEmpData;
-        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEditAssetStateId2;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEditSanfCategoryID;
         private Datasource.dsDataTableAdapters.TBLAddAssetComponentTableAdapter tBLAddAssetComponentTableAdapter;
         private System.Windows.Forms.BindingSource tBLDeleteAssetComponentBindingSource;
         private Datasource.dsDataTableAdapters.TBLDeleteAssetComponentTableAdapter tBLDeleteAssetComponentTableAdapter;
@@ -609,5 +614,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn colReOrder;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraGrid.Columns.GridColumn colsanfdes;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEditUnitId;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.Data.Linq.LinqServerModeSource LSMSAsnaftypeId;
     }
 }

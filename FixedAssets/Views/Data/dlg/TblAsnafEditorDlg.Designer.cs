@@ -29,16 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule2 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TblAsnafEditorDlg));
             this.LSMSUnitId = new DevExpress.Data.Linq.LinqServerModeSource();
             this.dxValidationProviderMain = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
-            this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
-            this.dataLayoutControlMain = new DevExpress.XtraDataLayout.DataLayoutControl();
-            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.tbSanfName = new DevExpress.XtraEditors.TextEdit();
             this.dsData = new FixedAssets.Datasource.dsData();
+            this.dataLayoutControlMain = new DevExpress.XtraDataLayout.DataLayoutControl();
+            this.lueAsnaftypeId = new DevExpress.XtraEditors.LookUpEdit();
+            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
+            this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.luesanfdes = new DevExpress.XtraEditors.LookUpEdit();
             this.tbSanfbarcode = new DevExpress.XtraEditors.TextEdit();
             this.sumehlakSpinEdit = new DevExpress.XtraEditors.TextEdit();
@@ -52,13 +53,16 @@
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForAssetStateId = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.tblAsnafTableAdapter = new FixedAssets.Datasource.dsDataTableAdapters.TblAsnafTableAdapter();
+            this.LSMSAsnaftypeId = new DevExpress.Data.Linq.LinqServerModeSource();
             ((System.ComponentModel.ISupportInitialize)(this.LSMSUnitId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProviderMain)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControlMain)).BeginInit();
-            this.dataLayoutControlMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbSanfName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControlMain)).BeginInit();
+            this.dataLayoutControlMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lueAsnaftypeId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.luesanfdes.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbSanfbarcode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sumehlakSpinEdit.Properties)).BeginInit();
@@ -72,6 +76,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForAssetStateId)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LSMSAsnaftypeId)).BeginInit();
             this.SuspendLayout();
             // 
             // LSMSUnitId
@@ -79,21 +85,29 @@
             this.LSMSUnitId.ElementType = typeof(FixedAssets.Datasource.linq.CDUnit);
             this.LSMSUnitId.KeyExpression = "[UnitId]";
             // 
-            // btnCancel
+            // tbSanfName
             // 
-            this.btnCancel.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.btnCancel.Appearance.Options.UseFont = true;
-            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Image = global::FixedAssets.Properties.Resources.cancel_16x16;
-            this.btnCancel.Location = new System.Drawing.Point(12, 205);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(84, 24);
-            this.btnCancel.StyleController = this.dataLayoutControlMain;
-            this.btnCancel.TabIndex = 16;
-            this.btnCancel.Text = "الغاء";
+            this.tbSanfName.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.dsData, "TblAsnaf.SanfName", true));
+            this.tbSanfName.EditValue = "";
+            this.tbSanfName.Location = new System.Drawing.Point(12, 12);
+            this.tbSanfName.Name = "tbSanfName";
+            this.tbSanfName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.tbSanfName.Properties.Appearance.Options.UseFont = true;
+            this.tbSanfName.Size = new System.Drawing.Size(333, 22);
+            this.tbSanfName.StyleController = this.dataLayoutControlMain;
+            this.tbSanfName.TabIndex = 4;
+            conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule2.ErrorText = "This value is not valid";
+            this.dxValidationProviderMain.SetValidationRule(this.tbSanfName, conditionValidationRule2);
+            // 
+            // dsData
+            // 
+            this.dsData.DataSetName = "dsData";
+            this.dsData.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataLayoutControlMain
             // 
+            this.dataLayoutControlMain.Controls.Add(this.lueAsnaftypeId);
             this.dataLayoutControlMain.Controls.Add(this.btnSave);
             this.dataLayoutControlMain.Controls.Add(this.btnCancel);
             this.dataLayoutControlMain.Controls.Add(this.tbSanfName);
@@ -123,6 +137,24 @@
             this.dataLayoutControlMain.TabIndex = 0;
             this.dataLayoutControlMain.Text = "dataLayoutControl1";
             // 
+            // lueAsnaftypeId
+            // 
+            this.lueAsnaftypeId.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.dsData, "TblAsnaf.AsnaftypeId", true));
+            this.lueAsnaftypeId.Location = new System.Drawing.Point(12, 116);
+            this.lueAsnaftypeId.Name = "lueAsnaftypeId";
+            this.lueAsnaftypeId.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueAsnaftypeId.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Asnaftype", "الاسم", 60, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
+            this.lueAsnaftypeId.Properties.DataSource = this.LSMSAsnaftypeId;
+            this.lueAsnaftypeId.Properties.DisplayMember = "Asnaftype";
+            this.lueAsnaftypeId.Properties.NullText = "";
+            this.lueAsnaftypeId.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.lueAsnaftypeId.Properties.ValueMember = "AsnaftypeId";
+            this.lueAsnaftypeId.Size = new System.Drawing.Size(333, 20);
+            this.lueAsnaftypeId.StyleController = this.dataLayoutControlMain;
+            this.lueAsnaftypeId.TabIndex = 18;
+            // 
             // btnSave
             // 
             this.btnSave.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
@@ -136,25 +168,18 @@
             this.btnSave.Text = "حفظ";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // tbSanfName
+            // btnCancel
             // 
-            this.tbSanfName.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.dsData, "TblAsnaf.SanfName", true));
-            this.tbSanfName.EditValue = "";
-            this.tbSanfName.Location = new System.Drawing.Point(12, 12);
-            this.tbSanfName.Name = "tbSanfName";
-            this.tbSanfName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.tbSanfName.Properties.Appearance.Options.UseFont = true;
-            this.tbSanfName.Size = new System.Drawing.Size(333, 22);
-            this.tbSanfName.StyleController = this.dataLayoutControlMain;
-            this.tbSanfName.TabIndex = 4;
-            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule1.ErrorText = "This value is not valid";
-            this.dxValidationProviderMain.SetValidationRule(this.tbSanfName, conditionValidationRule1);
-            // 
-            // dsData
-            // 
-            this.dsData.DataSetName = "dsData";
-            this.dsData.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.btnCancel.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.btnCancel.Appearance.Options.UseFont = true;
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancel.Image = global::FixedAssets.Properties.Resources.cancel_16x16;
+            this.btnCancel.Location = new System.Drawing.Point(12, 205);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(84, 24);
+            this.btnCancel.StyleController = this.dataLayoutControlMain;
+            this.btnCancel.TabIndex = 16;
+            this.btnCancel.Text = "الغاء";
             // 
             // luesanfdes
             // 
@@ -177,9 +202,9 @@
             this.luesanfdes.Size = new System.Drawing.Size(333, 22);
             this.luesanfdes.StyleController = this.dataLayoutControlMain;
             this.luesanfdes.TabIndex = 15;
-            conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule2.ErrorText = "This value is not valid";
-            this.dxValidationProviderMain.SetValidationRule(this.luesanfdes, conditionValidationRule2);
+            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule1.ErrorText = "This value is not valid";
+            this.dxValidationProviderMain.SetValidationRule(this.luesanfdes, conditionValidationRule1);
             // 
             // tbSanfbarcode
             // 
@@ -219,13 +244,13 @@
             // 
             this.tbsanfdes.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.dsData, "TblAsnaf.sanfdes", true));
             this.tbsanfdes.EditValue = "";
-            this.tbsanfdes.Location = new System.Drawing.Point(12, 116);
+            this.tbsanfdes.Location = new System.Drawing.Point(12, 140);
             this.tbsanfdes.Name = "tbsanfdes";
             this.tbsanfdes.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.tbsanfdes.Properties.Appearance.Options.UseFont = true;
             this.tbsanfdes.Properties.Appearance.Options.UseTextOptions = true;
             this.tbsanfdes.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
-            this.tbsanfdes.Size = new System.Drawing.Size(333, 85);
+            this.tbsanfdes.Size = new System.Drawing.Size(333, 61);
             this.tbsanfdes.StyleController = this.dataLayoutControlMain;
             this.tbsanfdes.TabIndex = 10;
             // 
@@ -251,7 +276,8 @@
             this.ItemFormostandnumber,
             this.layoutControlItem1,
             this.layoutControlItem2,
-            this.ItemForAssetStateId});
+            this.ItemForAssetStateId,
+            this.layoutControlItem3});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "autoGeneratedGroup0";
             this.layoutControlGroup2.Size = new System.Drawing.Size(394, 221);
@@ -298,9 +324,9 @@
             this.ItemFormostandnumber.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.ItemFormostandnumber.AppearanceItemCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top;
             this.ItemFormostandnumber.Control = this.tbsanfdes;
-            this.ItemFormostandnumber.Location = new System.Drawing.Point(0, 104);
+            this.ItemFormostandnumber.Location = new System.Drawing.Point(0, 128);
             this.ItemFormostandnumber.Name = "ItemFormostandnumber";
-            this.ItemFormostandnumber.Size = new System.Drawing.Size(394, 89);
+            this.ItemFormostandnumber.Size = new System.Drawing.Size(394, 65);
             this.ItemFormostandnumber.Text = "الوصف";
             this.ItemFormostandnumber.TextLocation = DevExpress.Utils.Locations.Right;
             this.ItemFormostandnumber.TextSize = new System.Drawing.Size(54, 13);
@@ -339,9 +365,26 @@
             this.ItemForAssetStateId.TextLocation = DevExpress.Utils.Locations.Right;
             this.ItemForAssetStateId.TextSize = new System.Drawing.Size(54, 13);
             // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.AppearanceItemCaption.Options.UseTextOptions = true;
+            this.layoutControlItem3.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.layoutControlItem3.Control = this.lueAsnaftypeId;
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 104);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(394, 24);
+            this.layoutControlItem3.Text = "نوع الصنف";
+            this.layoutControlItem3.TextLocation = DevExpress.Utils.Locations.Right;
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(54, 13);
+            // 
             // tblAsnafTableAdapter
             // 
             this.tblAsnafTableAdapter.ClearBeforeFill = true;
+            // 
+            // LSMSAsnaftypeId
+            // 
+            this.LSMSAsnaftypeId.ElementType = typeof(FixedAssets.Datasource.linq.CDAsnaftype);
+            this.LSMSAsnaftypeId.KeyExpression = "[AsnaftypeId]";
             // 
             // TblAsnafEditorDlg
             // 
@@ -356,10 +399,11 @@
             this.Text = "محرر";
             ((System.ComponentModel.ISupportInitialize)(this.LSMSUnitId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProviderMain)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControlMain)).EndInit();
-            this.dataLayoutControlMain.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tbSanfName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControlMain)).EndInit();
+            this.dataLayoutControlMain.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.lueAsnaftypeId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.luesanfdes.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbSanfbarcode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sumehlakSpinEdit.Properties)).EndInit();
@@ -373,6 +417,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForAssetStateId)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LSMSAsnaftypeId)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -400,5 +446,8 @@
         private DevExpress.XtraEditors.TextEdit sumehlakSpinEdit;
         private DevExpress.XtraEditors.MemoEdit tbsanfdes;
         private Datasource.dsDataTableAdapters.TblAsnafTableAdapter tblAsnafTableAdapter;
+        private DevExpress.Data.Linq.LinqServerModeSource LSMSAsnaftypeId;
+        private DevExpress.XtraEditors.LookUpEdit lueAsnaftypeId;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
     }
 }

@@ -30,6 +30,7 @@ namespace FixedAssets.Views.Qry
                     LSMSAssetState.QueryableSource = from q in dsLinq.CdAssetStates select q;
                     LSMSCat.QueryableSource = from q in dsLinq.CdAssetsCategories select q;
                     LSMSAssetplace.QueryableSource = from q in dsLinq.CdAssetplaces select q;
+                    LSMSUsers.QueryableSource = from q in dsLinq.Users select q;
                     XPSCS.Session.ConnectionString = Properties.Settings.Default.FixedAssetsConnectionString;
                     gridControlMain.DataSource = XPSCS;
                     gridViewMain.BestFitColumns();

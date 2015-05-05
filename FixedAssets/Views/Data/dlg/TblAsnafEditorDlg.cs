@@ -19,6 +19,7 @@ namespace FixedAssets.Views.Data
             InitializeComponent();
 
             LSMSUnitId.QueryableSource = from q in dsLinq.CDUnits select q;
+            LSMSAsnaftypeId.QueryableSource = from q in dsLinq.CDAsnaftypes select q;
 
             if (New)
             {
@@ -29,6 +30,7 @@ namespace FixedAssets.Views.Data
                 row.Sanfbarcode = string.Empty;
                 row.ReOrder = 0;
                 row.UnitId = -1;
+                row.AsnaftypeId = 0;
                 row.sanfdes = string.Empty;
                 row.UserIn = Classes.Managers.UserManager.defaultInstance.User.UserId;
                 row.dateIn = Classes.Managers.DataManager.GetServerDatetime;

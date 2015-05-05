@@ -102,4 +102,10 @@
       <Column Name="Buyorderreson" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
+  <Table Name="dbo.CDAsnaftype" Member="CDAsnaftypes">
+    <Type Name="CDAsnaftype">
+      <Column Name="AsnaftypeId" Type="System.Byte" DbType="TinyInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Asnaftype" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
 </Database>

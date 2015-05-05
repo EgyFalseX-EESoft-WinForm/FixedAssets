@@ -65,6 +65,8 @@
             this.colUserIn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.coldateIn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.XPSCS = new DevExpress.Xpo.XPServerCollectionSource(this.components);
+            this.LSMSUsers = new DevExpress.Data.Linq.LinqServerModeSource();
+            this.repositoryItemLookUpEditUserIn = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.UOW)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenuMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManagerMain)).BeginInit();
@@ -79,6 +81,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditAssetStateId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LSMSAssetState)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.XPSCS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LSMSUsers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditUserIn)).BeginInit();
             this.SuspendLayout();
             // 
             // UOW
@@ -176,7 +180,8 @@
             this.repositoryItemLookUpEditAssetplaceId,
             this.repositoryItemLookUpEditAssetsCategoryID,
             this.repositoryItemLookUpEditEmpOhda,
-            this.repositoryItemLookUpEditAssetStateId});
+            this.repositoryItemLookUpEditAssetStateId,
+            this.repositoryItemLookUpEditUserIn});
             this.gridControlMain.Size = new System.Drawing.Size(1024, 377);
             this.gridControlMain.TabIndex = 5;
             this.gridControlMain.UseEmbeddedNavigator = true;
@@ -473,6 +478,7 @@
             this.colUserIn.AppearanceHeader.Options.UseTextOptions = true;
             this.colUserIn.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colUserIn.Caption = "مدخل البيان";
+            this.colUserIn.ColumnEdit = this.repositoryItemLookUpEditUserIn;
             this.colUserIn.FieldName = "UserIn";
             this.colUserIn.Name = "colUserIn";
             // 
@@ -488,8 +494,27 @@
             // 
             // XPSCS
             // 
-            this.XPSCS.ObjectType = typeof(FixedAssets.Datasource.dsData.TblAssetsDataTable);
+            this.XPSCS.ObjectType = typeof(FixedAssets.Datasource.dsQry.TblAssetsDataTable);
             this.XPSCS.Session = this.UOW;
+            // 
+            // LSMSUsers
+            // 
+            this.LSMSUsers.ElementType = typeof(FixedAssets.Datasource.linq.User);
+            this.LSMSUsers.KeyExpression = "[UserID]";
+            // 
+            // repositoryItemLookUpEditUserIn
+            // 
+            this.repositoryItemLookUpEditUserIn.AutoHeight = false;
+            this.repositoryItemLookUpEditUserIn.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemLookUpEditUserIn.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("UserName", "الاسم", 62, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
+            this.repositoryItemLookUpEditUserIn.DataSource = this.LSMSUsers;
+            this.repositoryItemLookUpEditUserIn.DisplayMember = "UserName";
+            this.repositoryItemLookUpEditUserIn.Name = "repositoryItemLookUpEditUserIn";
+            this.repositoryItemLookUpEditUserIn.NullText = "";
+            this.repositoryItemLookUpEditUserIn.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.repositoryItemLookUpEditUserIn.ValueMember = "UserID";
             // 
             // Qry001UC
             // 
@@ -517,6 +542,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditAssetStateId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LSMSAssetState)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.XPSCS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LSMSUsers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditUserIn)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -559,5 +586,7 @@
         private DevExpress.Data.Linq.LinqServerModeSource LSMSCat;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEditEmpOhda;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEditAssetStateId;
+        private DevExpress.Data.Linq.LinqServerModeSource LSMSUsers;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEditUserIn;
     }
 }

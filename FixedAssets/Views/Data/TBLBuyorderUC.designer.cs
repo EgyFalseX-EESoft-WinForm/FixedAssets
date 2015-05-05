@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             this.UOWTBLBuyorder = new DevExpress.Xpo.UnitOfWork(this.components);
             this.gridControlTBLBuyorder = new DevExpress.XtraGrid.GridControl();
             this.gridViewTBLBuyorder = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -37,18 +38,24 @@
             this.repositoryItemLookUpEditEmpDepertment = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.LSMSCdDepertment = new DevExpress.Data.Linq.LinqServerModeSource();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemLookUpEditBuyorderresonId = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.LSMSBuyorderresonId = new DevExpress.Data.Linq.LinqServerModeSource();
             this.colmoznadate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colcloseorder = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.coldateclose = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEditClose = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.coldateclose = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemDateEditDMY = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.coldateIn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colUserIn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemLookUpEditUserIn1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.LSMSUsers = new DevExpress.Data.Linq.LinqServerModeSource();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemButtonEditPrint = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.XPSCSTBLBuyorder = new DevExpress.Xpo.XPServerCollectionSource(this.components);
             this.LSMSTblAsnaf = new DevExpress.Data.Linq.LinqServerModeSource();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.panelControlTblAsnaf = new DevExpress.XtraEditors.PanelControl();
+            this.btnShowAll = new DevExpress.XtraEditors.SimpleButton();
             this.btnAddTBLBuyorder = new DevExpress.XtraEditors.SimpleButton();
             this.btnDeleteTBLBuyorder = new DevExpress.XtraEditors.SimpleButton();
             this.btnEditTBLBuyorder = new DevExpress.XtraEditors.SimpleButton();
@@ -68,15 +75,20 @@
             this.btnSaveTBLTBBuyorderdetails = new DevExpress.XtraEditors.SimpleButton();
             this.btnDeleteTBLTBBuyorderdetails = new DevExpress.XtraEditors.SimpleButton();
             this.tBLTBBuyorderdetailsTableAdapter = new FixedAssets.Datasource.dsDataTableAdapters.TBLTBBuyorderdetailsTableAdapter();
-            this.btnShowAll = new DevExpress.XtraEditors.SimpleButton();
+            this.btnRefreashTBLTBBuyorderdetails = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.UOWTBLBuyorder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlTBLBuyorder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewTBLBuyorder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditEmpDepertment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LSMSCdDepertment)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditBuyorderresonId)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LSMSBuyorderresonId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEditClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEditDMY)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEditDMY.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditUserIn1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LSMSUsers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEditPrint)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.XPSCSTBLBuyorder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LSMSTblAsnaf)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
@@ -114,7 +126,10 @@
             this.gridControlTBLBuyorder.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemLookUpEditEmpDepertment,
             this.repositoryItemLookUpEditUserIn1,
-            this.repositoryItemCheckEditClose});
+            this.repositoryItemCheckEditClose,
+            this.repositoryItemButtonEditPrint,
+            this.repositoryItemDateEditDMY,
+            this.repositoryItemLookUpEditBuyorderresonId});
             this.gridControlTBLBuyorder.Size = new System.Drawing.Size(944, 323);
             this.gridControlTBLBuyorder.TabIndex = 5;
             this.gridControlTBLBuyorder.UseEmbeddedNavigator = true;
@@ -133,10 +148,10 @@
             this.colcloseorder,
             this.coldateclose,
             this.coldateIn,
-            this.colUserIn});
+            this.colUserIn,
+            this.gridColumn1});
             this.gridViewTBLBuyorder.GridControl = this.gridControlTBLBuyorder;
             this.gridViewTBLBuyorder.Name = "gridViewTBLBuyorder";
-            this.gridViewTBLBuyorder.OptionsBehavior.Editable = false;
             this.gridViewTBLBuyorder.OptionsBehavior.EditorShowMode = DevExpress.Utils.EditorShowMode.MouseDownFocused;
             this.gridViewTBLBuyorder.OptionsEditForm.EditFormColumnCount = 2;
             this.gridViewTBLBuyorder.OptionsSelection.InvertSelection = true;
@@ -199,11 +214,31 @@
             this.gridColumn4.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn4.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn4.Caption = "سبب الطلب";
+            this.gridColumn4.ColumnEdit = this.repositoryItemLookUpEditBuyorderresonId;
             this.gridColumn4.FieldName = "BuyorderresonId!Key";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 2;
             this.gridColumn4.Width = 101;
+            // 
+            // repositoryItemLookUpEditBuyorderresonId
+            // 
+            this.repositoryItemLookUpEditBuyorderresonId.AutoHeight = false;
+            this.repositoryItemLookUpEditBuyorderresonId.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemLookUpEditBuyorderresonId.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Buyorderreson", "الاسم", 81, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near)});
+            this.repositoryItemLookUpEditBuyorderresonId.DataSource = this.LSMSBuyorderresonId;
+            this.repositoryItemLookUpEditBuyorderresonId.DisplayMember = "Buyorderreson";
+            this.repositoryItemLookUpEditBuyorderresonId.Name = "repositoryItemLookUpEditBuyorderresonId";
+            this.repositoryItemLookUpEditBuyorderresonId.NullText = "";
+            this.repositoryItemLookUpEditBuyorderresonId.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.repositoryItemLookUpEditBuyorderresonId.ValueMember = "BuyorderresonId";
+            // 
+            // LSMSBuyorderresonId
+            // 
+            this.LSMSBuyorderresonId.ElementType = typeof(FixedAssets.Datasource.linq.CDBuyorderreson);
+            this.LSMSBuyorderresonId.KeyExpression = "[BuyorderresonId]";
             // 
             // colmoznadate
             // 
@@ -224,10 +259,16 @@
             this.colcloseorder.AppearanceHeader.Options.UseTextOptions = true;
             this.colcloseorder.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colcloseorder.Caption = "اغلاق الطلب";
+            this.colcloseorder.ColumnEdit = this.repositoryItemCheckEditClose;
             this.colcloseorder.FieldName = "closeorder";
             this.colcloseorder.Name = "colcloseorder";
             this.colcloseorder.Visible = true;
             this.colcloseorder.VisibleIndex = 4;
+            // 
+            // repositoryItemCheckEditClose
+            // 
+            this.repositoryItemCheckEditClose.AutoHeight = false;
+            this.repositoryItemCheckEditClose.Name = "repositoryItemCheckEditClose";
             // 
             // coldateclose
             // 
@@ -236,16 +277,24 @@
             this.coldateclose.AppearanceHeader.Options.UseTextOptions = true;
             this.coldateclose.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.coldateclose.Caption = "تاريخ الاغلاق";
-            this.coldateclose.ColumnEdit = this.repositoryItemCheckEditClose;
+            this.coldateclose.ColumnEdit = this.repositoryItemDateEditDMY;
             this.coldateclose.FieldName = "dateclose";
             this.coldateclose.Name = "coldateclose";
             this.coldateclose.Visible = true;
             this.coldateclose.VisibleIndex = 5;
             // 
-            // repositoryItemCheckEditClose
+            // repositoryItemDateEditDMY
             // 
-            this.repositoryItemCheckEditClose.AutoHeight = false;
-            this.repositoryItemCheckEditClose.Name = "repositoryItemCheckEditClose";
+            this.repositoryItemDateEditDMY.AutoHeight = false;
+            this.repositoryItemDateEditDMY.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemDateEditDMY.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemDateEditDMY.DisplayFormat.FormatString = "d/M/yyyy";
+            this.repositoryItemDateEditDMY.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.repositoryItemDateEditDMY.EditFormat.FormatString = "d/M/yyyy";
+            this.repositoryItemDateEditDMY.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.repositoryItemDateEditDMY.Name = "repositoryItemDateEditDMY";
             // 
             // coldateIn
             // 
@@ -283,6 +332,23 @@
             // 
             this.LSMSUsers.ElementType = typeof(FixedAssets.Datasource.linq.User);
             this.LSMSUsers.KeyExpression = "[UserID]";
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "طباعة";
+            this.gridColumn1.ColumnEdit = this.repositoryItemButtonEditPrint;
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 6;
+            // 
+            // repositoryItemButtonEditPrint
+            // 
+            this.repositoryItemButtonEditPrint.AutoHeight = false;
+            this.repositoryItemButtonEditPrint.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::FixedAssets.Properties.Resources.print_16x16, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            this.repositoryItemButtonEditPrint.Name = "repositoryItemButtonEditPrint";
+            this.repositoryItemButtonEditPrint.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.repositoryItemButtonEditPrint.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.repositoryItemButtonEditPrint_ButtonClick);
             // 
             // XPSCSTBLBuyorder
             // 
@@ -327,6 +393,17 @@
             this.panelControlTblAsnaf.Name = "panelControlTblAsnaf";
             this.panelControlTblAsnaf.Size = new System.Drawing.Size(950, 30);
             this.panelControlTblAsnaf.TabIndex = 6;
+            // 
+            // btnShowAll
+            // 
+            this.btnShowAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnShowAll.Image = global::FixedAssets.Properties.Resources.refresh2_16x16;
+            this.btnShowAll.Location = new System.Drawing.Point(861, 4);
+            this.btnShowAll.Name = "btnShowAll";
+            this.btnShowAll.Size = new System.Drawing.Size(84, 23);
+            this.btnShowAll.TabIndex = 3;
+            this.btnShowAll.Text = "اظهار الكل";
+            this.btnShowAll.Click += new System.EventHandler(this.btnShowAll_Click);
             // 
             // btnAddTBLBuyorder
             // 
@@ -513,6 +590,7 @@
             // panelControlTBLTBBuyorderdetails
             // 
             this.panelControlTBLTBBuyorderdetails.Controls.Add(this.btnSaveTBLTBBuyorderdetails);
+            this.panelControlTBLTBBuyorderdetails.Controls.Add(this.btnRefreashTBLTBBuyorderdetails);
             this.panelControlTBLTBBuyorderdetails.Controls.Add(this.btnDeleteTBLTBBuyorderdetails);
             this.panelControlTBLTBBuyorderdetails.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControlTBLTBBuyorderdetails.Location = new System.Drawing.Point(0, 0);
@@ -544,16 +622,15 @@
             // 
             this.tBLTBBuyorderdetailsTableAdapter.ClearBeforeFill = true;
             // 
-            // btnShowAll
+            // btnRefreashTBLTBBuyorderdetails
             // 
-            this.btnShowAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnShowAll.Image = global::FixedAssets.Properties.Resources.refresh2_16x16;
-            this.btnShowAll.Location = new System.Drawing.Point(861, 4);
-            this.btnShowAll.Name = "btnShowAll";
-            this.btnShowAll.Size = new System.Drawing.Size(84, 23);
-            this.btnShowAll.TabIndex = 3;
-            this.btnShowAll.Text = "اظهار الكل";
-            this.btnShowAll.Click += new System.EventHandler(this.btnShowAll_Click);
+            this.btnRefreashTBLTBBuyorderdetails.Image = global::FixedAssets.Properties.Resources.refresh2_16x16;
+            this.btnRefreashTBLTBBuyorderdetails.Location = new System.Drawing.Point(137, 3);
+            this.btnRefreashTBLTBBuyorderdetails.Name = "btnRefreashTBLTBBuyorderdetails";
+            this.btnRefreashTBLTBBuyorderdetails.Size = new System.Drawing.Size(60, 23);
+            this.btnRefreashTBLTBBuyorderdetails.TabIndex = 3;
+            this.btnRefreashTBLTBBuyorderdetails.Text = "تحديث";
+            this.btnRefreashTBLTBBuyorderdetails.Click += new System.EventHandler(this.btnRefreashTBLTBBuyorderdetails_Click);
             // 
             // TBLBuyorderUC
             // 
@@ -568,9 +645,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridViewTBLBuyorder)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditEmpDepertment)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LSMSCdDepertment)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditBuyorderresonId)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LSMSBuyorderresonId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEditClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEditDMY.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEditDMY)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditUserIn1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LSMSUsers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEditPrint)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.XPSCSTBLBuyorder)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LSMSTblAsnaf)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
@@ -631,5 +713,11 @@
         private Datasource.dsData dsData;
         private Datasource.dsDataTableAdapters.TBLTBBuyorderdetailsTableAdapter tBLTBBuyorderdetailsTableAdapter;
         private DevExpress.XtraEditors.SimpleButton btnShowAll;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEditPrint;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEditBuyorderresonId;
+        private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit repositoryItemDateEditDMY;
+        private DevExpress.Data.Linq.LinqServerModeSource LSMSBuyorderresonId;
+        private DevExpress.XtraEditors.SimpleButton btnRefreashTBLTBBuyorderdetails;
     }
 }

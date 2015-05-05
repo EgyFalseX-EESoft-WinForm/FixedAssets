@@ -74,7 +74,7 @@
         <elementListCompartment Id="24784fe0-efd4-452b-a6fe-874a0b381b4c" absoluteBounds="1.5150000000000001, 14.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(5.25 : 13.3886946614583); (2.03125 : 13.3886946614583); (2.03125 : 13.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.25 : 13.3886946614583); (2.03125 : 13.3886946614583); (2.03125 : 13.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/dsLinqDataDataContext/CDUnit/CDUnit_TblAsnaf" />
       <nodes>
         <classShapeMoniker Id="ece62ff5-30b1-43d9-be96-8ed809617675" />
@@ -85,6 +85,12 @@
       <DataClassMoniker Name="/dsLinqDataDataContext/CDBuyorderreson" />
       <nestedChildShapes>
         <elementListCompartment Id="2db8cef4-37e1-40db-9a24-036251a3858e" absoluteBounds="4.265, 14.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6e91ea76-f7d0-464b-b187-b5dc59fa8fbb" absoluteBounds="4.625, 4.5, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/dsLinqDataDataContext/CDAsnaftype" />
+      <nestedChildShapes>
+        <elementListCompartment Id="832c82d8-1838-408c-894a-df4ebab0025b" absoluteBounds="4.64, 4.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

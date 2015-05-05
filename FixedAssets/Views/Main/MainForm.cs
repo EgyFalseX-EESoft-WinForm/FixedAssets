@@ -145,6 +145,10 @@ namespace FixedAssets.Views.Main
             {
                 e.Control = new CDBuyorderresonEditorUC(RuleElemet);
             }
+            else if (e.Document == docCodeTBLCompany)
+            {
+                e.Control = new CompanyUC(RuleElemet);
+            }
 
             //---------Data
             else if (e.Document == docDataCdAssetsCategory)
@@ -162,6 +166,10 @@ namespace FixedAssets.Views.Main
             else if (e.Document == docDataTBLBuyorder)
             {
                 e.Control = new TBLBuyorderUC(RuleElemet);
+            }
+            else if (e.Document == docDataTBLSuppliers)
+            {
+                e.Control = new TBLSuppliersEditorUC(RuleElemet);
             }
             //---------Rules
             else if (e.Document == docRuleUsers)

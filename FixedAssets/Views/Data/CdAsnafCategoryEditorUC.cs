@@ -35,6 +35,7 @@ namespace FixedAssets.Views.Data
             XPSCSCat.Session.ConnectionString = Properties.Settings.Default.FixedAssetsConnectionString;
             treeListMain.DataSource = XPSCSCat;
             LSMSUnitId.QueryableSource = from q in dsLinq.CDUnits select q;
+            LSMSAsnaftypeId.QueryableSource = from q in dsLinq.CDAsnaftypes select q;
         }
         public void ActivateRules()
         {

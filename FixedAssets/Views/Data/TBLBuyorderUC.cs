@@ -32,6 +32,7 @@ namespace FixedAssets.Views.Data
                     LSMSTblAsnaf.QueryableSource = from q in dsLinq.TblAsnafs select q;
                     LSMSCdDepertment.QueryableSource = from q in dsLinq.CdDepertments select q;
                     LSMSUsers.QueryableSource = from q in dsLinq.Users select q;
+                    LSMSBuyorderresonId.QueryableSource = from q in dsLinq.CDBuyorderresons select q;
                     XPSCSTBLBuyorder.Session.ConnectionString = Properties.Settings.Default.FixedAssetsConnectionString;
                     gridControlTBLBuyorder.DataSource = XPSCSTBLBuyorder;
                     gridViewTBLBuyorder.BestFitColumns();
@@ -193,7 +194,30 @@ namespace FixedAssets.Views.Data
         {
             XPSCSTBLBuyorder.FixedFilterString = string.Empty;
         }
+        private void repositoryItemButtonEditPrint_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            XPDataTableObject row = ((XPDataTableObject)gridViewTBLBuyorder.GetRow(gridViewTBLBuyorder.FocusedRowHandle));
+            if (row.GetMemberValue("BuyorderId") == null)
+            {
+                MsgDlg.Show("من فضلك احفظ قبل الطباعة", MsgDlg.MessageType.Error);
+                return;
+            }
+
+            FixedAssets.XRep.xRep001 rep = new FixedAssets.XRep.xRep001(Convert.ToInt32(row.GetMemberValue("BuyorderId")));
+            Classes.Misc.ShowPrintPreview(rep);
+        }
+        private void btnRefreashTBLTBBuyorderdetails_Click(object sender, EventArgs e)
+        {
+            LSMSTblAsnaf.Reload();
+            LSMSCdDepertment.Reload();
+            LSMSUsers.Reload();
+            LSMSBuyorderresonId.Reload();
+        }
         #endregion
+
+        
+
+        
 
     }
 }

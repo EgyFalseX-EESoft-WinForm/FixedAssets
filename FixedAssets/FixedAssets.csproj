@@ -136,7 +136,7 @@
       <DependentUpon>dsData.xsd</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Datasource\dsData.Designer.cs">
+    <Compile Include="Datasource\dsData1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsData.xsd</DependentUpon>
@@ -145,6 +145,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsQry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasource\dsRep.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsRep.xsd</DependentUpon>
     </Compile>
     <Compile Include="Datasource\linq\dsLinqData.designer.cs">
       <AutoGen>True</AutoGen>
@@ -194,16 +199,28 @@
     <Compile Include="Views\Code\CdAssetStateEditorUC.designer.cs">
       <DependentUpon>CdAssetStateEditorUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Data\TBLTBBuyorderdetailsEditorDlg.cs">
+    <Compile Include="Views\Code\CompanyUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Code\CompanyUC.Designer.cs">
+      <DependentUpon>CompanyUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Data\TBLSuppliersEditorUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Data\TBLSuppliersEditorUC.designer.cs">
+      <DependentUpon>TBLSuppliersEditorUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Data\dlg\TBLTBBuyorderdetailsEditorDlg.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Data\TBLTBBuyorderdetailsEditorDlg.Designer.cs">
+    <Compile Include="Views\Data\dlg\TBLTBBuyorderdetailsEditorDlg.Designer.cs">
       <DependentUpon>TBLTBBuyorderdetailsEditorDlg.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Data\TblAsnafEditorDlg.cs">
+    <Compile Include="Views\Data\dlg\TblAsnafEditorDlg.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Data\TblAsnafEditorDlg.Designer.cs">
+    <Compile Include="Views\Data\dlg\TblAsnafEditorDlg.Designer.cs">
       <DependentUpon>TblAsnafEditorDlg.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Data\CdAsnafCategoryEditorUC.cs">
@@ -212,34 +229,34 @@
     <Compile Include="Views\Data\CdAsnafCategoryEditorUC.designer.cs">
       <DependentUpon>CdAsnafCategoryEditorUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Data\TBLAssetOhdaDlg.cs">
+    <Compile Include="Views\Data\dlg\TBLAssetOhdaDlg.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Data\TBLAssetOhdaDlg.Designer.cs">
+    <Compile Include="Views\Data\dlg\TBLAssetOhdaDlg.Designer.cs">
       <DependentUpon>TBLAssetOhdaDlg.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Data\TBLDeleteAssetComponentDlg.cs">
+    <Compile Include="Views\Data\dlg\TBLDeleteAssetComponentDlg.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Data\TBLDeleteAssetComponentDlg.Designer.cs">
+    <Compile Include="Views\Data\dlg\TBLDeleteAssetComponentDlg.Designer.cs">
       <DependentUpon>TBLDeleteAssetComponentDlg.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Data\TBLAddAssetComponentDlg.cs">
+    <Compile Include="Views\Data\dlg\TBLAddAssetComponentDlg.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Data\TBLAddAssetComponentDlg.Designer.cs">
+    <Compile Include="Views\Data\dlg\TBLAddAssetComponentDlg.Designer.cs">
       <DependentUpon>TBLAddAssetComponentDlg.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Data\TBLAssetComponentDlg.cs">
+    <Compile Include="Views\Data\dlg\TBLAssetComponentDlg.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Data\TBLAssetComponentDlg.Designer.cs">
+    <Compile Include="Views\Data\dlg\TBLAssetComponentDlg.Designer.cs">
       <DependentUpon>TBLAssetComponentDlg.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Data\TBLAssetPlaceDlg.cs">
+    <Compile Include="Views\Data\dlg\TBLAssetPlaceDlg.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Data\TBLAssetPlaceDlg.Designer.cs">
+    <Compile Include="Views\Data\dlg\TBLAssetPlaceDlg.Designer.cs">
       <DependentUpon>TBLAssetPlaceDlg.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Data\TblEmpEditorUC.cs">
@@ -248,22 +265,22 @@
     <Compile Include="Views\Data\TblEmpEditorUC.designer.cs">
       <DependentUpon>TblEmpEditorUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Data\TBLReEvaluationDlg.cs">
+    <Compile Include="Views\Data\dlg\TBLReEvaluationDlg.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Data\TBLReEvaluationDlg.Designer.cs">
+    <Compile Include="Views\Data\dlg\TBLReEvaluationDlg.Designer.cs">
       <DependentUpon>TBLReEvaluationDlg.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Data\TBLAssetPropertiyDlg.cs">
+    <Compile Include="Views\Data\dlg\TBLAssetPropertiyDlg.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Data\TBLAssetPropertiyDlg.Designer.cs">
+    <Compile Include="Views\Data\dlg\TBLAssetPropertiyDlg.Designer.cs">
       <DependentUpon>TBLAssetPropertiyDlg.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Data\AssetEditorDlg.cs">
+    <Compile Include="Views\Data\dlg\AssetEditorDlg.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Data\AssetEditorDlg.Designer.cs">
+    <Compile Include="Views\Data\dlg\AssetEditorDlg.Designer.cs">
       <DependentUpon>AssetEditorDlg.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Data\TBLBuyorderUC.cs">
@@ -358,6 +375,12 @@
     <Compile Include="Views\Qry\Qry001UC.designer.cs">
       <DependentUpon>Qry001UC.cs</DependentUpon>
     </Compile>
+    <Compile Include="XRep\xRep001.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRep\xRep001.Designer.cs">
+      <DependentUpon>xRep001.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -379,40 +402,46 @@
     <EmbeddedResource Include="Views\Code\CdAssetStateEditorUC.resx">
       <DependentUpon>CdAssetStateEditorUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Data\TBLTBBuyorderdetailsEditorDlg.resx">
+    <EmbeddedResource Include="Views\Code\CompanyUC.resx">
+      <DependentUpon>CompanyUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Data\TBLSuppliersEditorUC.resx">
+      <DependentUpon>TBLSuppliersEditorUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Data\dlg\TBLTBBuyorderdetailsEditorDlg.resx">
       <DependentUpon>TBLTBBuyorderdetailsEditorDlg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Data\TblAsnafEditorDlg.resx">
+    <EmbeddedResource Include="Views\Data\dlg\TblAsnafEditorDlg.resx">
       <DependentUpon>TblAsnafEditorDlg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Data\CdAsnafCategoryEditorUC.resx">
       <DependentUpon>CdAsnafCategoryEditorUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Data\TBLAssetOhdaDlg.resx">
+    <EmbeddedResource Include="Views\Data\dlg\TBLAssetOhdaDlg.resx">
       <DependentUpon>TBLAssetOhdaDlg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Data\TBLDeleteAssetComponentDlg.resx">
+    <EmbeddedResource Include="Views\Data\dlg\TBLDeleteAssetComponentDlg.resx">
       <DependentUpon>TBLDeleteAssetComponentDlg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Data\TBLAddAssetComponentDlg.resx">
+    <EmbeddedResource Include="Views\Data\dlg\TBLAddAssetComponentDlg.resx">
       <DependentUpon>TBLAddAssetComponentDlg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Data\TBLAssetComponentDlg.resx">
+    <EmbeddedResource Include="Views\Data\dlg\TBLAssetComponentDlg.resx">
       <DependentUpon>TBLAssetComponentDlg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Data\TBLAssetPlaceDlg.resx">
+    <EmbeddedResource Include="Views\Data\dlg\TBLAssetPlaceDlg.resx">
       <DependentUpon>TBLAssetPlaceDlg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Data\TblEmpEditorUC.resx">
       <DependentUpon>TblEmpEditorUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Data\TBLReEvaluationDlg.resx">
+    <EmbeddedResource Include="Views\Data\dlg\TBLReEvaluationDlg.resx">
       <DependentUpon>TBLReEvaluationDlg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Data\TBLAssetPropertiyDlg.resx">
+    <EmbeddedResource Include="Views\Data\dlg\TBLAssetPropertiyDlg.resx">
       <DependentUpon>TBLAssetPropertiyDlg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Data\AssetEditorDlg.resx">
+    <EmbeddedResource Include="Views\Data\dlg\AssetEditorDlg.resx">
       <DependentUpon>AssetEditorDlg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Data\TBLBuyorderUC.resx">
@@ -442,13 +471,16 @@
     <EmbeddedResource Include="Views\Qry\Qry001UC.resx">
       <DependentUpon>Qry001UC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="XRep\xRep001.resx">
+      <DependentUpon>xRep001.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Datasource\dsData.xsc">
       <DependentUpon>dsData.xsd</DependentUpon>
     </None>
     <None Include="Datasource\dsData.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsData.Designer.cs</LastGenOutput>
+      <LastGenOutput>dsData1.Designer.cs</LastGenOutput>
     </None>
     <None Include="Datasource\dsData.xss">
       <DependentUpon>dsData.xsd</DependentUpon>
@@ -463,6 +495,17 @@
     </None>
     <None Include="Datasource\dsQry.xss">
       <DependentUpon>dsQry.xsd</DependentUpon>
+    </None>
+    <None Include="Datasource\dsRep.xsc">
+      <DependentUpon>dsRep.xsd</DependentUpon>
+    </None>
+    <None Include="Datasource\dsRep.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsRep.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Datasource\dsRep.xss">
+      <DependentUpon>dsRep.xsd</DependentUpon>
     </None>
     <None Include="Datasource\linq\dsLinqData.dbml.layout">
       <DependentUpon>dsLinqData.dbml</DependentUpon>
@@ -517,9 +560,7 @@
     <EmbeddedResource Include="Assets\LightGray.png" />
     <EmbeddedResource Include="Assets\MediumGray.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="XRep\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\apply_16x16.png" />
   </ItemGroup>

@@ -38,6 +38,37 @@ SELECT [ComponentId], SUM(Quantity) AS Quantity FROM CTE1 GROUP BY [ComponentId]
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TblAssetsTableAdapter" GeneratorDataComponentClassName="TblAssetsTableAdapter" Name="TblAssets" UserDataComponentName="TblAssetsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FixedAssetsConnectionString (Settings)" DbObjectName="FixedAssets.dbo.TblAssets" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT AssetsID, AssetsCategoryID, AssetName, Sanfbarcode, Assetsdate, asasemony, sumehlak, contentnumber, mostandnumber, AssetplaceId, nesbaehlak, Emprecive, EmpOhda, AssetStateId, UserIn, dateIn FROM dbo.TblAssets</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="AssetsID" DataSetColumn="AssetsID" />
+              <Mapping SourceColumn="AssetsCategoryID" DataSetColumn="AssetsCategoryID" />
+              <Mapping SourceColumn="AssetName" DataSetColumn="AssetName" />
+              <Mapping SourceColumn="Sanfbarcode" DataSetColumn="Sanfbarcode" />
+              <Mapping SourceColumn="Assetsdate" DataSetColumn="Assetsdate" />
+              <Mapping SourceColumn="asasemony" DataSetColumn="asasemony" />
+              <Mapping SourceColumn="sumehlak" DataSetColumn="sumehlak" />
+              <Mapping SourceColumn="contentnumber" DataSetColumn="contentnumber" />
+              <Mapping SourceColumn="mostandnumber" DataSetColumn="mostandnumber" />
+              <Mapping SourceColumn="AssetplaceId" DataSetColumn="AssetplaceId" />
+              <Mapping SourceColumn="nesbaehlak" DataSetColumn="nesbaehlak" />
+              <Mapping SourceColumn="Emprecive" DataSetColumn="Emprecive" />
+              <Mapping SourceColumn="EmpOhda" DataSetColumn="EmpOhda" />
+              <Mapping SourceColumn="AssetStateId" DataSetColumn="AssetStateId" />
+              <Mapping SourceColumn="UserIn" DataSetColumn="UserIn" />
+              <Mapping SourceColumn="dateIn" DataSetColumn="dateIn" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -46,11 +77,45 @@ SELECT [ComponentId], SUM(Quantity) AS Quantity FROM CTE1 GROUP BY [ComponentId]
   <xs:element name="dsQry" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsQry" msprop:Generator_UserDSName="dsQry">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="AssetComponentQuantity" msprop:Generator_TableClassName="AssetComponentQuantityDataTable" msprop:Generator_TableVarName="tableAssetComponentQuantity" msprop:Generator_RowChangedName="AssetComponentQuantityRowChanged" msprop:Generator_TablePropName="AssetComponentQuantity" msprop:Generator_RowDeletingName="AssetComponentQuantityRowDeleting" msprop:Generator_RowChangingName="AssetComponentQuantityRowChanging" msprop:Generator_RowEvHandlerName="AssetComponentQuantityRowChangeEventHandler" msprop:Generator_RowDeletedName="AssetComponentQuantityRowDeleted" msprop:Generator_RowClassName="AssetComponentQuantityRow" msprop:Generator_UserTableName="AssetComponentQuantity" msprop:Generator_RowEvArgName="AssetComponentQuantityRowChangeEvent">
+        <xs:element name="AssetComponentQuantity" msprop:Generator_TableClassName="AssetComponentQuantityDataTable" msprop:Generator_TableVarName="tableAssetComponentQuantity" msprop:Generator_TablePropName="AssetComponentQuantity" msprop:Generator_RowDeletingName="AssetComponentQuantityRowDeleting" msprop:Generator_RowChangingName="AssetComponentQuantityRowChanging" msprop:Generator_RowEvHandlerName="AssetComponentQuantityRowChangeEventHandler" msprop:Generator_RowDeletedName="AssetComponentQuantityRowDeleted" msprop:Generator_UserTableName="AssetComponentQuantity" msprop:Generator_RowChangedName="AssetComponentQuantityRowChanged" msprop:Generator_RowEvArgName="AssetComponentQuantityRowChangeEvent" msprop:Generator_RowClassName="AssetComponentQuantityRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ComponentId" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnComponentId" msprop:Generator_ColumnPropNameInRow="ComponentId" msprop:Generator_ColumnPropNameInTable="ComponentIdColumn" msprop:Generator_UserColumnName="ComponentId" type="xs:int" minOccurs="0" />
+              <xs:element name="ComponentId" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnComponentId" msprop:Generator_ColumnPropNameInRow="ComponentId" msprop:Generator_ColumnPropNameInTable="ComponentIdColumn" msprop:Generator_UserColumnName="ComponentId" type="xs:int" />
               <xs:element name="Quantity" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnQuantity" msprop:Generator_ColumnPropNameInRow="Quantity" msprop:Generator_ColumnPropNameInTable="QuantityColumn" msprop:Generator_UserColumnName="Quantity" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TblAssets" msprop:Generator_TableClassName="TblAssetsDataTable" msprop:Generator_TableVarName="tableTblAssets" msprop:Generator_TablePropName="TblAssets" msprop:Generator_RowDeletingName="TblAssetsRowDeleting" msprop:Generator_RowChangingName="TblAssetsRowChanging" msprop:Generator_RowEvHandlerName="TblAssetsRowChangeEventHandler" msprop:Generator_RowDeletedName="TblAssetsRowDeleted" msprop:Generator_UserTableName="TblAssets" msprop:Generator_RowChangedName="TblAssetsRowChanged" msprop:Generator_RowEvArgName="TblAssetsRowChangeEvent" msprop:Generator_RowClassName="TblAssetsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AssetsID" msprop:Generator_ColumnVarNameInTable="columnAssetsID" msprop:Generator_ColumnPropNameInRow="AssetsID" msprop:Generator_ColumnPropNameInTable="AssetsIDColumn" msprop:Generator_UserColumnName="AssetsID" type="xs:int" />
+              <xs:element name="AssetsCategoryID" msprop:Generator_ColumnVarNameInTable="columnAssetsCategoryID" msprop:Generator_ColumnPropNameInRow="AssetsCategoryID" msprop:Generator_ColumnPropNameInTable="AssetsCategoryIDColumn" msprop:Generator_UserColumnName="AssetsCategoryID" type="xs:int" />
+              <xs:element name="AssetName" msprop:Generator_ColumnVarNameInTable="columnAssetName" msprop:Generator_ColumnPropNameInRow="AssetName" msprop:Generator_ColumnPropNameInTable="AssetNameColumn" msprop:Generator_UserColumnName="AssetName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Sanfbarcode" msprop:Generator_ColumnVarNameInTable="columnSanfbarcode" msprop:Generator_ColumnPropNameInRow="Sanfbarcode" msprop:Generator_ColumnPropNameInTable="SanfbarcodeColumn" msprop:Generator_UserColumnName="Sanfbarcode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Assetsdate" msprop:Generator_ColumnVarNameInTable="columnAssetsdate" msprop:Generator_ColumnPropNameInRow="Assetsdate" msprop:Generator_ColumnPropNameInTable="AssetsdateColumn" msprop:Generator_UserColumnName="Assetsdate" type="xs:dateTime" />
+              <xs:element name="asasemony" msprop:Generator_ColumnVarNameInTable="columnasasemony" msprop:Generator_ColumnPropNameInRow="asasemony" msprop:Generator_ColumnPropNameInTable="asasemonyColumn" msprop:Generator_UserColumnName="asasemony" type="xs:double" />
+              <xs:element name="sumehlak" msprop:Generator_ColumnVarNameInTable="columnsumehlak" msprop:Generator_ColumnPropNameInRow="sumehlak" msprop:Generator_ColumnPropNameInTable="sumehlakColumn" msprop:Generator_UserColumnName="sumehlak" type="xs:double" />
+              <xs:element name="contentnumber" msprop:Generator_ColumnVarNameInTable="columncontentnumber" msprop:Generator_ColumnPropNameInRow="contentnumber" msprop:Generator_ColumnPropNameInTable="contentnumberColumn" msprop:Generator_UserColumnName="contentnumber" type="xs:int" />
+              <xs:element name="mostandnumber" msprop:Generator_ColumnVarNameInTable="columnmostandnumber" msprop:Generator_ColumnPropNameInRow="mostandnumber" msprop:Generator_ColumnPropNameInTable="mostandnumberColumn" msprop:Generator_UserColumnName="mostandnumber" type="xs:int" />
+              <xs:element name="AssetplaceId" msprop:Generator_ColumnVarNameInTable="columnAssetplaceId" msprop:Generator_ColumnPropNameInRow="AssetplaceId" msprop:Generator_ColumnPropNameInTable="AssetplaceIdColumn" msprop:Generator_UserColumnName="AssetplaceId" type="xs:int" />
+              <xs:element name="nesbaehlak" msprop:Generator_ColumnVarNameInTable="columnnesbaehlak" msprop:Generator_ColumnPropNameInRow="nesbaehlak" msprop:Generator_ColumnPropNameInTable="nesbaehlakColumn" msprop:Generator_UserColumnName="nesbaehlak" type="xs:double" />
+              <xs:element name="Emprecive" msprop:Generator_ColumnVarNameInTable="columnEmprecive" msprop:Generator_ColumnPropNameInRow="Emprecive" msprop:Generator_ColumnPropNameInTable="EmpreciveColumn" msprop:Generator_UserColumnName="Emprecive" type="xs:int" />
+              <xs:element name="EmpOhda" msprop:Generator_ColumnVarNameInTable="columnEmpOhda" msprop:Generator_ColumnPropNameInRow="EmpOhda" msprop:Generator_ColumnPropNameInTable="EmpOhdaColumn" msprop:Generator_UserColumnName="EmpOhda" type="xs:int" />
+              <xs:element name="AssetStateId" msprop:Generator_ColumnVarNameInTable="columnAssetStateId" msprop:Generator_ColumnPropNameInRow="AssetStateId" msprop:Generator_ColumnPropNameInTable="AssetStateIdColumn" msprop:Generator_UserColumnName="AssetStateId" type="xs:unsignedByte" />
+              <xs:element name="UserIn" msprop:Generator_ColumnVarNameInTable="columnUserIn" msprop:Generator_ColumnPropNameInRow="UserIn" msprop:Generator_ColumnPropNameInTable="UserInColumn" msprop:Generator_UserColumnName="UserIn" type="xs:int" />
+              <xs:element name="dateIn" msprop:Generator_ColumnVarNameInTable="columndateIn" msprop:Generator_ColumnPropNameInRow="dateIn" msprop:Generator_ColumnPropNameInTable="dateInColumn" msprop:Generator_UserColumnName="dateIn" type="xs:dateTime" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -59,6 +124,10 @@ SELECT [ComponentId], SUM(Quantity) AS Quantity FROM CTE1 GROUP BY [ComponentId]
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:AssetComponentQuantity" />
       <xs:field xpath="mstns:ComponentId" />
+    </xs:unique>
+    <xs:unique name="TblAssets_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TblAssets" />
+      <xs:field xpath="mstns:AssetsID" />
     </xs:unique>
   </xs:element>
 </xs:schema>
