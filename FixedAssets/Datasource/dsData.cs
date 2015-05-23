@@ -1,6 +1,9 @@
-﻿namespace FixedAssets.Datasource {
-    
-    
-    public partial class dsData {
-    }
+﻿namespace FixedAssets.Datasource
+{
+}
+namespace FixedAssets.Datasource
+{
+}
+namespace FixedAssets.Datasource {
+  
 }

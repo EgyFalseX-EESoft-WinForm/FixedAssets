@@ -149,6 +149,10 @@ namespace FixedAssets.Views.Main
             {
                 e.Control = new CompanyUC(RuleElemet);
             }
+            else if (e.Document == docCodeCDStore)
+            {
+                e.Control = new CDStoreEditorUC(RuleElemet);
+            }
 
             //---------Data
             else if (e.Document == docDataCdAssetsCategory)
@@ -171,6 +175,15 @@ namespace FixedAssets.Views.Main
             {
                 e.Control = new TBLSuppliersEditorUC(RuleElemet);
             }
+            else if (e.Document == docDataTBLTwreedOrder)
+            {
+                e.Control = new TBLTwreedOrderEditorUC(RuleElemet);
+            }
+            else if (e.Document == docDataTBLCheck)
+            {
+                e.Control = new TBLCheckUC(RuleElemet);
+            }
+
             //---------Rules
             else if (e.Document == docRuleUsers)
             {

@@ -38,6 +38,7 @@
     <Type Name="CdDepertment">
       <Column Name="DepertmentId" Type="System.Byte" DbType="TinyInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Depertment" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="CdDepertment_TBLBuyorder" Member="TBLBuyorders" ThisKey="DepertmentId" OtherKey="DepertmentId" Type="TBLBuyorder" />
     </Type>
   </Table>
   <Table Name="dbo.CdAssetplace" Member="CdAssetplaces">
@@ -100,12 +101,64 @@
     <Type Name="CDBuyorderreson">
       <Column Name="BuyorderresonId" Type="System.Byte" DbType="TinyInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Buyorderreson" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="CDBuyorderreson_TBLBuyorder" Member="TBLBuyorders" ThisKey="BuyorderresonId" OtherKey="BuyorderresonId" Type="TBLBuyorder" />
     </Type>
   </Table>
   <Table Name="dbo.CDAsnaftype" Member="CDAsnaftypes">
     <Type Name="CDAsnaftype">
       <Column Name="AsnaftypeId" Type="System.Byte" DbType="TinyInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Asnaftype" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBLSuppliers" Member="TBLSuppliers">
+    <Type Name="TBLSupplier">
+      <Column Name="SupplierId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SupplierName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Suppliersegl" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Suppliernashat" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Supplierdrebea" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Suppliermobile" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Suppliertel" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Supplierfax" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Supplieraddress" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Suppliermail" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UserIn" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dateIn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="TBLSupplier_TBLTwreedOrder" Member="TBLTwreedOrders" ThisKey="SupplierId" OtherKey="SupplierId" Type="TBLTwreedOrder" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBLBuyorder" Member="TBLBuyorders">
+    <Type Name="TBLBuyorder">
+      <Column Name="BuyorderId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Buyorderdate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="DepertmentId" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="BuyorderresonId" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="moznadate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="closeorder" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="dateclose" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="dateIn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserIn" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="CDBuyorderreson_TBLBuyorder" Member="CDBuyorderreson" ThisKey="BuyorderresonId" OtherKey="BuyorderresonId" Type="CDBuyorderreson" IsForeignKey="true" />
+      <Association Name="CdDepertment_TBLBuyorder" Member="CdDepertment" ThisKey="DepertmentId" OtherKey="DepertmentId" Type="CdDepertment" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBLTwreedOrder" Member="TBLTwreedOrders">
+    <Type Name="TBLTwreedOrder">
+      <Column Name="TwreedOrderId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TwreedOrderdate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="SupplierId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="twreedplace" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="twreddate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Supplierofferno" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dateIn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserIn" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="TBLSupplier_TBLTwreedOrder" Member="TBLSupplier" ThisKey="SupplierId" OtherKey="SupplierId" Type="TBLSupplier" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CdJoblagna" Member="CdJoblagnas">
+    <Type Name="CdJoblagna">
+      <Column Name="JobId" Type="System.Byte" DbType="TinyInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="JobName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
 </Database>

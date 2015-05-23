@@ -72,6 +72,18 @@ namespace FixedAssets.Datasource.linq
     partial void InsertCDAsnaftype(CDAsnaftype instance);
     partial void UpdateCDAsnaftype(CDAsnaftype instance);
     partial void DeleteCDAsnaftype(CDAsnaftype instance);
+    partial void InsertTBLSupplier(TBLSupplier instance);
+    partial void UpdateTBLSupplier(TBLSupplier instance);
+    partial void DeleteTBLSupplier(TBLSupplier instance);
+    partial void InsertTBLBuyorder(TBLBuyorder instance);
+    partial void UpdateTBLBuyorder(TBLBuyorder instance);
+    partial void DeleteTBLBuyorder(TBLBuyorder instance);
+    partial void InsertTBLTwreedOrder(TBLTwreedOrder instance);
+    partial void UpdateTBLTwreedOrder(TBLTwreedOrder instance);
+    partial void DeleteTBLTwreedOrder(TBLTwreedOrder instance);
+    partial void InsertCdJoblagna(CdJoblagna instance);
+    partial void UpdateCdJoblagna(CdJoblagna instance);
+    partial void DeleteCdJoblagna(CdJoblagna instance);
     #endregion
 		
 		public dsLinqDataDataContext() : 
@@ -213,6 +225,38 @@ namespace FixedAssets.Datasource.linq
 			get
 			{
 				return this.GetTable<CDAsnaftype>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TBLSupplier> TBLSuppliers
+		{
+			get
+			{
+				return this.GetTable<TBLSupplier>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TBLBuyorder> TBLBuyorders
+		{
+			get
+			{
+				return this.GetTable<TBLBuyorder>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TBLTwreedOrder> TBLTwreedOrders
+		{
+			get
+			{
+				return this.GetTable<TBLTwreedOrder>();
+			}
+		}
+		
+		public System.Data.Linq.Table<CdJoblagna> CdJoblagnas
+		{
+			get
+			{
+				return this.GetTable<CdJoblagna>();
 			}
 		}
 	}
@@ -811,6 +855,8 @@ namespace FixedAssets.Datasource.linq
 		
 		private string _Depertment;
 		
+		private EntitySet<TBLBuyorder> _TBLBuyorders;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -823,6 +869,7 @@ namespace FixedAssets.Datasource.linq
 		
 		public CdDepertment()
 		{
+			this._TBLBuyorders = new EntitySet<TBLBuyorder>(new Action<TBLBuyorder>(this.attach_TBLBuyorders), new Action<TBLBuyorder>(this.detach_TBLBuyorders));
 			OnCreated();
 		}
 		
@@ -866,6 +913,19 @@ namespace FixedAssets.Datasource.linq
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="CdDepertment_TBLBuyorder", Storage="_TBLBuyorders", ThisKey="DepertmentId", OtherKey="DepertmentId")]
+		public EntitySet<TBLBuyorder> TBLBuyorders
+		{
+			get
+			{
+				return this._TBLBuyorders;
+			}
+			set
+			{
+				this._TBLBuyorders.Assign(value);
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -884,6 +944,18 @@ namespace FixedAssets.Datasource.linq
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_TBLBuyorders(TBLBuyorder entity)
+		{
+			this.SendPropertyChanging();
+			entity.CdDepertment = this;
+		}
+		
+		private void detach_TBLBuyorders(TBLBuyorder entity)
+		{
+			this.SendPropertyChanging();
+			entity.CdDepertment = null;
 		}
 	}
 	
@@ -1856,6 +1928,8 @@ namespace FixedAssets.Datasource.linq
 		
 		private string _Buyorderreson;
 		
+		private EntitySet<TBLBuyorder> _TBLBuyorders;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -1868,6 +1942,7 @@ namespace FixedAssets.Datasource.linq
 		
 		public CDBuyorderreson()
 		{
+			this._TBLBuyorders = new EntitySet<TBLBuyorder>(new Action<TBLBuyorder>(this.attach_TBLBuyorders), new Action<TBLBuyorder>(this.detach_TBLBuyorders));
 			OnCreated();
 		}
 		
@@ -1911,6 +1986,19 @@ namespace FixedAssets.Datasource.linq
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="CDBuyorderreson_TBLBuyorder", Storage="_TBLBuyorders", ThisKey="BuyorderresonId", OtherKey="BuyorderresonId")]
+		public EntitySet<TBLBuyorder> TBLBuyorders
+		{
+			get
+			{
+				return this._TBLBuyorders;
+			}
+			set
+			{
+				this._TBLBuyorders.Assign(value);
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -1929,6 +2017,18 @@ namespace FixedAssets.Datasource.linq
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_TBLBuyorders(TBLBuyorder entity)
+		{
+			this.SendPropertyChanging();
+			entity.CDBuyorderreson = this;
+		}
+		
+		private void detach_TBLBuyorders(TBLBuyorder entity)
+		{
+			this.SendPropertyChanging();
+			entity.CDBuyorderreson = null;
 		}
 	}
 	
@@ -1993,6 +2093,1053 @@ namespace FixedAssets.Datasource.linq
 					this._Asnaftype = value;
 					this.SendPropertyChanged("Asnaftype");
 					this.OnAsnaftypeChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBLSuppliers")]
+	public partial class TBLSupplier : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _SupplierId;
+		
+		private string _SupplierName;
+		
+		private string _Suppliersegl;
+		
+		private string _Suppliernashat;
+		
+		private string _Supplierdrebea;
+		
+		private string _Suppliermobile;
+		
+		private string _Suppliertel;
+		
+		private string _Supplierfax;
+		
+		private string _Supplieraddress;
+		
+		private string _Suppliermail;
+		
+		private int _UserIn;
+		
+		private System.DateTime _dateIn;
+		
+		private EntitySet<TBLTwreedOrder> _TBLTwreedOrders;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnSupplierIdChanging(int value);
+    partial void OnSupplierIdChanged();
+    partial void OnSupplierNameChanging(string value);
+    partial void OnSupplierNameChanged();
+    partial void OnSupplierseglChanging(string value);
+    partial void OnSupplierseglChanged();
+    partial void OnSuppliernashatChanging(string value);
+    partial void OnSuppliernashatChanged();
+    partial void OnSupplierdrebeaChanging(string value);
+    partial void OnSupplierdrebeaChanged();
+    partial void OnSuppliermobileChanging(string value);
+    partial void OnSuppliermobileChanged();
+    partial void OnSuppliertelChanging(string value);
+    partial void OnSuppliertelChanged();
+    partial void OnSupplierfaxChanging(string value);
+    partial void OnSupplierfaxChanged();
+    partial void OnSupplieraddressChanging(string value);
+    partial void OnSupplieraddressChanged();
+    partial void OnSuppliermailChanging(string value);
+    partial void OnSuppliermailChanged();
+    partial void OnUserInChanging(int value);
+    partial void OnUserInChanged();
+    partial void OndateInChanging(System.DateTime value);
+    partial void OndateInChanged();
+    #endregion
+		
+		public TBLSupplier()
+		{
+			this._TBLTwreedOrders = new EntitySet<TBLTwreedOrder>(new Action<TBLTwreedOrder>(this.attach_TBLTwreedOrders), new Action<TBLTwreedOrder>(this.detach_TBLTwreedOrders));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SupplierId", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int SupplierId
+		{
+			get
+			{
+				return this._SupplierId;
+			}
+			set
+			{
+				if ((this._SupplierId != value))
+				{
+					this.OnSupplierIdChanging(value);
+					this.SendPropertyChanging();
+					this._SupplierId = value;
+					this.SendPropertyChanged("SupplierId");
+					this.OnSupplierIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SupplierName", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string SupplierName
+		{
+			get
+			{
+				return this._SupplierName;
+			}
+			set
+			{
+				if ((this._SupplierName != value))
+				{
+					this.OnSupplierNameChanging(value);
+					this.SendPropertyChanging();
+					this._SupplierName = value;
+					this.SendPropertyChanged("SupplierName");
+					this.OnSupplierNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Suppliersegl", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string Suppliersegl
+		{
+			get
+			{
+				return this._Suppliersegl;
+			}
+			set
+			{
+				if ((this._Suppliersegl != value))
+				{
+					this.OnSupplierseglChanging(value);
+					this.SendPropertyChanging();
+					this._Suppliersegl = value;
+					this.SendPropertyChanged("Suppliersegl");
+					this.OnSupplierseglChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Suppliernashat", DbType="NVarChar(200) NOT NULL", CanBeNull=false)]
+		public string Suppliernashat
+		{
+			get
+			{
+				return this._Suppliernashat;
+			}
+			set
+			{
+				if ((this._Suppliernashat != value))
+				{
+					this.OnSuppliernashatChanging(value);
+					this.SendPropertyChanging();
+					this._Suppliernashat = value;
+					this.SendPropertyChanged("Suppliernashat");
+					this.OnSuppliernashatChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Supplierdrebea", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string Supplierdrebea
+		{
+			get
+			{
+				return this._Supplierdrebea;
+			}
+			set
+			{
+				if ((this._Supplierdrebea != value))
+				{
+					this.OnSupplierdrebeaChanging(value);
+					this.SendPropertyChanging();
+					this._Supplierdrebea = value;
+					this.SendPropertyChanged("Supplierdrebea");
+					this.OnSupplierdrebeaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Suppliermobile", DbType="NVarChar(20) NOT NULL", CanBeNull=false)]
+		public string Suppliermobile
+		{
+			get
+			{
+				return this._Suppliermobile;
+			}
+			set
+			{
+				if ((this._Suppliermobile != value))
+				{
+					this.OnSuppliermobileChanging(value);
+					this.SendPropertyChanging();
+					this._Suppliermobile = value;
+					this.SendPropertyChanged("Suppliermobile");
+					this.OnSuppliermobileChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Suppliertel", DbType="NVarChar(20)")]
+		public string Suppliertel
+		{
+			get
+			{
+				return this._Suppliertel;
+			}
+			set
+			{
+				if ((this._Suppliertel != value))
+				{
+					this.OnSuppliertelChanging(value);
+					this.SendPropertyChanging();
+					this._Suppliertel = value;
+					this.SendPropertyChanged("Suppliertel");
+					this.OnSuppliertelChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Supplierfax", DbType="NVarChar(50)")]
+		public string Supplierfax
+		{
+			get
+			{
+				return this._Supplierfax;
+			}
+			set
+			{
+				if ((this._Supplierfax != value))
+				{
+					this.OnSupplierfaxChanging(value);
+					this.SendPropertyChanging();
+					this._Supplierfax = value;
+					this.SendPropertyChanged("Supplierfax");
+					this.OnSupplierfaxChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Supplieraddress", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string Supplieraddress
+		{
+			get
+			{
+				return this._Supplieraddress;
+			}
+			set
+			{
+				if ((this._Supplieraddress != value))
+				{
+					this.OnSupplieraddressChanging(value);
+					this.SendPropertyChanging();
+					this._Supplieraddress = value;
+					this.SendPropertyChanged("Supplieraddress");
+					this.OnSupplieraddressChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Suppliermail", DbType="NVarChar(100)")]
+		public string Suppliermail
+		{
+			get
+			{
+				return this._Suppliermail;
+			}
+			set
+			{
+				if ((this._Suppliermail != value))
+				{
+					this.OnSuppliermailChanging(value);
+					this.SendPropertyChanging();
+					this._Suppliermail = value;
+					this.SendPropertyChanged("Suppliermail");
+					this.OnSuppliermailChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserIn", DbType="Int NOT NULL")]
+		public int UserIn
+		{
+			get
+			{
+				return this._UserIn;
+			}
+			set
+			{
+				if ((this._UserIn != value))
+				{
+					this.OnUserInChanging(value);
+					this.SendPropertyChanging();
+					this._UserIn = value;
+					this.SendPropertyChanged("UserIn");
+					this.OnUserInChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dateIn", DbType="DateTime NOT NULL")]
+		public System.DateTime dateIn
+		{
+			get
+			{
+				return this._dateIn;
+			}
+			set
+			{
+				if ((this._dateIn != value))
+				{
+					this.OndateInChanging(value);
+					this.SendPropertyChanging();
+					this._dateIn = value;
+					this.SendPropertyChanged("dateIn");
+					this.OndateInChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBLSupplier_TBLTwreedOrder", Storage="_TBLTwreedOrders", ThisKey="SupplierId", OtherKey="SupplierId")]
+		public EntitySet<TBLTwreedOrder> TBLTwreedOrders
+		{
+			get
+			{
+				return this._TBLTwreedOrders;
+			}
+			set
+			{
+				this._TBLTwreedOrders.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_TBLTwreedOrders(TBLTwreedOrder entity)
+		{
+			this.SendPropertyChanging();
+			entity.TBLSupplier = this;
+		}
+		
+		private void detach_TBLTwreedOrders(TBLTwreedOrder entity)
+		{
+			this.SendPropertyChanging();
+			entity.TBLSupplier = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBLBuyorder")]
+	public partial class TBLBuyorder : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _BuyorderId;
+		
+		private System.DateTime _Buyorderdate;
+		
+		private byte _DepertmentId;
+		
+		private byte _BuyorderresonId;
+		
+		private System.DateTime _moznadate;
+		
+		private bool _closeorder;
+		
+		private System.Nullable<System.DateTime> _dateclose;
+		
+		private System.DateTime _dateIn;
+		
+		private int _UserIn;
+		
+		private EntityRef<CDBuyorderreson> _CDBuyorderreson;
+		
+		private EntityRef<CdDepertment> _CdDepertment;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnBuyorderIdChanging(int value);
+    partial void OnBuyorderIdChanged();
+    partial void OnBuyorderdateChanging(System.DateTime value);
+    partial void OnBuyorderdateChanged();
+    partial void OnDepertmentIdChanging(byte value);
+    partial void OnDepertmentIdChanged();
+    partial void OnBuyorderresonIdChanging(byte value);
+    partial void OnBuyorderresonIdChanged();
+    partial void OnmoznadateChanging(System.DateTime value);
+    partial void OnmoznadateChanged();
+    partial void OncloseorderChanging(bool value);
+    partial void OncloseorderChanged();
+    partial void OndatecloseChanging(System.Nullable<System.DateTime> value);
+    partial void OndatecloseChanged();
+    partial void OndateInChanging(System.DateTime value);
+    partial void OndateInChanged();
+    partial void OnUserInChanging(int value);
+    partial void OnUserInChanged();
+    #endregion
+		
+		public TBLBuyorder()
+		{
+			this._CDBuyorderreson = default(EntityRef<CDBuyorderreson>);
+			this._CdDepertment = default(EntityRef<CdDepertment>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BuyorderId", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int BuyorderId
+		{
+			get
+			{
+				return this._BuyorderId;
+			}
+			set
+			{
+				if ((this._BuyorderId != value))
+				{
+					this.OnBuyorderIdChanging(value);
+					this.SendPropertyChanging();
+					this._BuyorderId = value;
+					this.SendPropertyChanged("BuyorderId");
+					this.OnBuyorderIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Buyorderdate", DbType="Date NOT NULL")]
+		public System.DateTime Buyorderdate
+		{
+			get
+			{
+				return this._Buyorderdate;
+			}
+			set
+			{
+				if ((this._Buyorderdate != value))
+				{
+					this.OnBuyorderdateChanging(value);
+					this.SendPropertyChanging();
+					this._Buyorderdate = value;
+					this.SendPropertyChanged("Buyorderdate");
+					this.OnBuyorderdateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DepertmentId", DbType="TinyInt NOT NULL")]
+		public byte DepertmentId
+		{
+			get
+			{
+				return this._DepertmentId;
+			}
+			set
+			{
+				if ((this._DepertmentId != value))
+				{
+					if (this._CdDepertment.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnDepertmentIdChanging(value);
+					this.SendPropertyChanging();
+					this._DepertmentId = value;
+					this.SendPropertyChanged("DepertmentId");
+					this.OnDepertmentIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BuyorderresonId", DbType="TinyInt NOT NULL")]
+		public byte BuyorderresonId
+		{
+			get
+			{
+				return this._BuyorderresonId;
+			}
+			set
+			{
+				if ((this._BuyorderresonId != value))
+				{
+					if (this._CDBuyorderreson.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnBuyorderresonIdChanging(value);
+					this.SendPropertyChanging();
+					this._BuyorderresonId = value;
+					this.SendPropertyChanged("BuyorderresonId");
+					this.OnBuyorderresonIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_moznadate", DbType="Date NOT NULL")]
+		public System.DateTime moznadate
+		{
+			get
+			{
+				return this._moznadate;
+			}
+			set
+			{
+				if ((this._moznadate != value))
+				{
+					this.OnmoznadateChanging(value);
+					this.SendPropertyChanging();
+					this._moznadate = value;
+					this.SendPropertyChanged("moznadate");
+					this.OnmoznadateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_closeorder", DbType="Bit NOT NULL")]
+		public bool closeorder
+		{
+			get
+			{
+				return this._closeorder;
+			}
+			set
+			{
+				if ((this._closeorder != value))
+				{
+					this.OncloseorderChanging(value);
+					this.SendPropertyChanging();
+					this._closeorder = value;
+					this.SendPropertyChanged("closeorder");
+					this.OncloseorderChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dateclose", DbType="Date")]
+		public System.Nullable<System.DateTime> dateclose
+		{
+			get
+			{
+				return this._dateclose;
+			}
+			set
+			{
+				if ((this._dateclose != value))
+				{
+					this.OndatecloseChanging(value);
+					this.SendPropertyChanging();
+					this._dateclose = value;
+					this.SendPropertyChanged("dateclose");
+					this.OndatecloseChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dateIn", DbType="DateTime NOT NULL")]
+		public System.DateTime dateIn
+		{
+			get
+			{
+				return this._dateIn;
+			}
+			set
+			{
+				if ((this._dateIn != value))
+				{
+					this.OndateInChanging(value);
+					this.SendPropertyChanging();
+					this._dateIn = value;
+					this.SendPropertyChanged("dateIn");
+					this.OndateInChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserIn", DbType="Int NOT NULL")]
+		public int UserIn
+		{
+			get
+			{
+				return this._UserIn;
+			}
+			set
+			{
+				if ((this._UserIn != value))
+				{
+					this.OnUserInChanging(value);
+					this.SendPropertyChanging();
+					this._UserIn = value;
+					this.SendPropertyChanged("UserIn");
+					this.OnUserInChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="CDBuyorderreson_TBLBuyorder", Storage="_CDBuyorderreson", ThisKey="BuyorderresonId", OtherKey="BuyorderresonId", IsForeignKey=true)]
+		public CDBuyorderreson CDBuyorderreson
+		{
+			get
+			{
+				return this._CDBuyorderreson.Entity;
+			}
+			set
+			{
+				CDBuyorderreson previousValue = this._CDBuyorderreson.Entity;
+				if (((previousValue != value) 
+							|| (this._CDBuyorderreson.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._CDBuyorderreson.Entity = null;
+						previousValue.TBLBuyorders.Remove(this);
+					}
+					this._CDBuyorderreson.Entity = value;
+					if ((value != null))
+					{
+						value.TBLBuyorders.Add(this);
+						this._BuyorderresonId = value.BuyorderresonId;
+					}
+					else
+					{
+						this._BuyorderresonId = default(byte);
+					}
+					this.SendPropertyChanged("CDBuyorderreson");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="CdDepertment_TBLBuyorder", Storage="_CdDepertment", ThisKey="DepertmentId", OtherKey="DepertmentId", IsForeignKey=true)]
+		public CdDepertment CdDepertment
+		{
+			get
+			{
+				return this._CdDepertment.Entity;
+			}
+			set
+			{
+				CdDepertment previousValue = this._CdDepertment.Entity;
+				if (((previousValue != value) 
+							|| (this._CdDepertment.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._CdDepertment.Entity = null;
+						previousValue.TBLBuyorders.Remove(this);
+					}
+					this._CdDepertment.Entity = value;
+					if ((value != null))
+					{
+						value.TBLBuyorders.Add(this);
+						this._DepertmentId = value.DepertmentId;
+					}
+					else
+					{
+						this._DepertmentId = default(byte);
+					}
+					this.SendPropertyChanged("CdDepertment");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBLTwreedOrder")]
+	public partial class TBLTwreedOrder : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _TwreedOrderId;
+		
+		private System.DateTime _TwreedOrderdate;
+		
+		private int _SupplierId;
+		
+		private string _twreedplace;
+		
+		private System.DateTime _twreddate;
+		
+		private int _Supplierofferno;
+		
+		private System.DateTime _dateIn;
+		
+		private int _UserIn;
+		
+		private EntityRef<TBLSupplier> _TBLSupplier;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnTwreedOrderIdChanging(int value);
+    partial void OnTwreedOrderIdChanged();
+    partial void OnTwreedOrderdateChanging(System.DateTime value);
+    partial void OnTwreedOrderdateChanged();
+    partial void OnSupplierIdChanging(int value);
+    partial void OnSupplierIdChanged();
+    partial void OntwreedplaceChanging(string value);
+    partial void OntwreedplaceChanged();
+    partial void OntwreddateChanging(System.DateTime value);
+    partial void OntwreddateChanged();
+    partial void OnSupplieroffernoChanging(int value);
+    partial void OnSupplieroffernoChanged();
+    partial void OndateInChanging(System.DateTime value);
+    partial void OndateInChanged();
+    partial void OnUserInChanging(int value);
+    partial void OnUserInChanged();
+    #endregion
+		
+		public TBLTwreedOrder()
+		{
+			this._TBLSupplier = default(EntityRef<TBLSupplier>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TwreedOrderId", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int TwreedOrderId
+		{
+			get
+			{
+				return this._TwreedOrderId;
+			}
+			set
+			{
+				if ((this._TwreedOrderId != value))
+				{
+					this.OnTwreedOrderIdChanging(value);
+					this.SendPropertyChanging();
+					this._TwreedOrderId = value;
+					this.SendPropertyChanged("TwreedOrderId");
+					this.OnTwreedOrderIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TwreedOrderdate", DbType="Date NOT NULL")]
+		public System.DateTime TwreedOrderdate
+		{
+			get
+			{
+				return this._TwreedOrderdate;
+			}
+			set
+			{
+				if ((this._TwreedOrderdate != value))
+				{
+					this.OnTwreedOrderdateChanging(value);
+					this.SendPropertyChanging();
+					this._TwreedOrderdate = value;
+					this.SendPropertyChanged("TwreedOrderdate");
+					this.OnTwreedOrderdateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SupplierId", DbType="Int NOT NULL")]
+		public int SupplierId
+		{
+			get
+			{
+				return this._SupplierId;
+			}
+			set
+			{
+				if ((this._SupplierId != value))
+				{
+					if (this._TBLSupplier.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnSupplierIdChanging(value);
+					this.SendPropertyChanging();
+					this._SupplierId = value;
+					this.SendPropertyChanged("SupplierId");
+					this.OnSupplierIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_twreedplace", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string twreedplace
+		{
+			get
+			{
+				return this._twreedplace;
+			}
+			set
+			{
+				if ((this._twreedplace != value))
+				{
+					this.OntwreedplaceChanging(value);
+					this.SendPropertyChanging();
+					this._twreedplace = value;
+					this.SendPropertyChanged("twreedplace");
+					this.OntwreedplaceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_twreddate", DbType="Date NOT NULL")]
+		public System.DateTime twreddate
+		{
+			get
+			{
+				return this._twreddate;
+			}
+			set
+			{
+				if ((this._twreddate != value))
+				{
+					this.OntwreddateChanging(value);
+					this.SendPropertyChanging();
+					this._twreddate = value;
+					this.SendPropertyChanged("twreddate");
+					this.OntwreddateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Supplierofferno", DbType="Int NOT NULL")]
+		public int Supplierofferno
+		{
+			get
+			{
+				return this._Supplierofferno;
+			}
+			set
+			{
+				if ((this._Supplierofferno != value))
+				{
+					this.OnSupplieroffernoChanging(value);
+					this.SendPropertyChanging();
+					this._Supplierofferno = value;
+					this.SendPropertyChanged("Supplierofferno");
+					this.OnSupplieroffernoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dateIn", DbType="DateTime NOT NULL")]
+		public System.DateTime dateIn
+		{
+			get
+			{
+				return this._dateIn;
+			}
+			set
+			{
+				if ((this._dateIn != value))
+				{
+					this.OndateInChanging(value);
+					this.SendPropertyChanging();
+					this._dateIn = value;
+					this.SendPropertyChanged("dateIn");
+					this.OndateInChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserIn", DbType="Int NOT NULL")]
+		public int UserIn
+		{
+			get
+			{
+				return this._UserIn;
+			}
+			set
+			{
+				if ((this._UserIn != value))
+				{
+					this.OnUserInChanging(value);
+					this.SendPropertyChanging();
+					this._UserIn = value;
+					this.SendPropertyChanged("UserIn");
+					this.OnUserInChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBLSupplier_TBLTwreedOrder", Storage="_TBLSupplier", ThisKey="SupplierId", OtherKey="SupplierId", IsForeignKey=true)]
+		public TBLSupplier TBLSupplier
+		{
+			get
+			{
+				return this._TBLSupplier.Entity;
+			}
+			set
+			{
+				TBLSupplier previousValue = this._TBLSupplier.Entity;
+				if (((previousValue != value) 
+							|| (this._TBLSupplier.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._TBLSupplier.Entity = null;
+						previousValue.TBLTwreedOrders.Remove(this);
+					}
+					this._TBLSupplier.Entity = value;
+					if ((value != null))
+					{
+						value.TBLTwreedOrders.Add(this);
+						this._SupplierId = value.SupplierId;
+					}
+					else
+					{
+						this._SupplierId = default(int);
+					}
+					this.SendPropertyChanged("TBLSupplier");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.CdJoblagna")]
+	public partial class CdJoblagna : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private byte _JobId;
+		
+		private string _JobName;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnJobIdChanging(byte value);
+    partial void OnJobIdChanged();
+    partial void OnJobNameChanging(string value);
+    partial void OnJobNameChanged();
+    #endregion
+		
+		public CdJoblagna()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_JobId", DbType="TinyInt NOT NULL", IsPrimaryKey=true)]
+		public byte JobId
+		{
+			get
+			{
+				return this._JobId;
+			}
+			set
+			{
+				if ((this._JobId != value))
+				{
+					this.OnJobIdChanging(value);
+					this.SendPropertyChanging();
+					this._JobId = value;
+					this.SendPropertyChanged("JobId");
+					this.OnJobIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_JobName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string JobName
+		{
+			get
+			{
+				return this._JobName;
+			}
+			set
+			{
+				if ((this._JobName != value))
+				{
+					this.OnJobNameChanging(value);
+					this.SendPropertyChanging();
+					this._JobName = value;
+					this.SendPropertyChanged("JobName");
+					this.OnJobNameChanged();
 				}
 			}
 		}

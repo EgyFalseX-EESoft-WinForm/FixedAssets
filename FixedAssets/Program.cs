@@ -55,6 +55,7 @@ namespace FixedAssets
 
         private static bool Authentication()
         {
+            return true;
             string filePath = Application.StartupPath + "\\lnc.key";
 
             if (!System.IO.File.Exists(filePath))

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 16.5" name="dsLinqData">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 22.125" name="dsLinqData">
   <DataContextMoniker Name="/dsLinqDataDataContext" />
   <nestedChildShapes>
     <classShape Id="f4f8f8ed-42d6-4790-be1d-688f2cc10f2d" absoluteBounds="1, 4.125, 2, 2.1554996744791666">
@@ -91,6 +91,51 @@
       <DataClassMoniker Name="/dsLinqDataDataContext/CDAsnaftype" />
       <nestedChildShapes>
         <elementListCompartment Id="832c82d8-1838-408c-894a-df4ebab0025b" absoluteBounds="4.64, 4.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cf3966a9-9bab-44d6-bda8-ddc9bb2af91b" absoluteBounds="4.5, 15.625, 2, 3.1170068359375">
+      <DataClassMoniker Name="/dsLinqDataDataContext/TBLSupplier" />
+      <nestedChildShapes>
+        <elementListCompartment Id="46cb1452-8318-4edb-a0ca-218a2d5cddbb" absoluteBounds="4.515, 16.085, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="95499299-0e19-410c-b92f-98ff73b6d321" absoluteBounds="1.375, 16.875, 2, 2.5401025390625">
+      <DataClassMoniker Name="/dsLinqDataDataContext/TBLBuyorder" />
+      <nestedChildShapes>
+        <elementListCompartment Id="370aab73-5e55-45f0-925f-bd846ecbf144" absoluteBounds="1.3900000000000001, 17.335, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.34375 : 15.1939925130208); (4.34375 : 19.1098046875); (3.375 : 19.1098046875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dsLinqDataDataContext/CDBuyorderreson/CDBuyorderreson_TBLBuyorder" />
+      <nodes>
+        <classShapeMoniker Id="269d9fd8-5b34-4fb6-880d-240cd9503149" />
+        <classShapeMoniker Id="95499299-0e19-410c-b92f-98ff73b6d321" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.46875 : 7.94399251302083); (7.46875 : 18.9988199283854); (5.58333333333333 : 18.9988199283854 : JumpStart); (5.41666666666667 : 18.9988199283854 : JumpEnd); (4.7259375 : 18.9988199283854); (4.7259375 : 18.9259032617188); (4.42708333333333 : 18.9259032617188 : JumpStart); (4.26041666666667 : 18.9259032617188 : JumpEnd); (3.375 : 18.9259032617188)]" manuallyRouted="true" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dsLinqDataDataContext/CdDepertment/CdDepertment_TBLBuyorder" />
+      <nodes>
+        <classShapeMoniker Id="91051e7b-ac2b-48d4-a6c8-67d512f44a87" />
+        <classShapeMoniker Id="95499299-0e19-410c-b92f-98ff73b6d321" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="52bb79c4-98ee-416b-8313-fe8f8bde0a20" absoluteBounds="4.5, 19.5, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/dsLinqDataDataContext/TBLTwreedOrder" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cd2c36c7-3186-4fa4-afb8-939cd6b7731c" absoluteBounds="4.515, 19.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 18.7420068359375); (5.5 : 19.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dsLinqDataDataContext/TBLSupplier/TBLSupplier_TBLTwreedOrder" />
+      <nodes>
+        <classShapeMoniker Id="cf3966a9-9bab-44d6-bda8-ddc9bb2af91b" />
+        <classShapeMoniker Id="52bb79c4-98ee-416b-8313-fe8f8bde0a20" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ca3a1316-c7bd-468f-82f1-5b06c5bb5001" absoluteBounds="1.75, 20, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/dsLinqDataDataContext/CdJoblagna" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0d01dd57-d0c5-474e-b04a-dc8f21bc68cd" absoluteBounds="1.7650000000000001, 20.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

@@ -136,7 +136,7 @@
       <DependentUpon>dsData.xsd</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Datasource\dsData1.Designer.cs">
+    <Compile Include="Datasource\dsData.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsData.xsd</DependentUpon>
@@ -163,6 +163,12 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Log\L4N.cs" />
+    <Compile Include="Views\Code\CDStoreEditorUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Code\CDStoreEditorUC.designer.cs">
+      <DependentUpon>CDStoreEditorUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Code\CDBuyorderresonEditorUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -204,6 +210,30 @@
     </Compile>
     <Compile Include="Views\Code\CompanyUC.Designer.cs">
       <DependentUpon>CompanyUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Data\dlg\TBLCheckEditorDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Data\dlg\TBLCheckEditorDlg.Designer.cs">
+      <DependentUpon>TBLCheckEditorDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Data\dlg\TBLTwreedOrderDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Data\dlg\TBLTwreedOrderDlg.Designer.cs">
+      <DependentUpon>TBLTwreedOrderDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Data\TBLCheckUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Data\TBLCheckUC.designer.cs">
+      <DependentUpon>TBLCheckUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Data\TBLTwreedOrderEditorUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Data\TBLTwreedOrderEditorUC.designer.cs">
+      <DependentUpon>TBLTwreedOrderEditorUC.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Data\TBLSuppliersEditorUC.cs">
       <SubType>UserControl</SubType>
@@ -375,6 +405,18 @@
     <Compile Include="Views\Qry\Qry001UC.designer.cs">
       <DependentUpon>Qry001UC.cs</DependentUpon>
     </Compile>
+    <Compile Include="XRep\xRep003.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRep\xRep003.Designer.cs">
+      <DependentUpon>xRep003.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XRep\xRep002.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRep\xRep002.Designer.cs">
+      <DependentUpon>xRep002.cs</DependentUpon>
+    </Compile>
     <Compile Include="XRep\xRep001.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -383,6 +425,9 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Code\CDStoreEditorUC.resx">
+      <DependentUpon>CDStoreEditorUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Code\CDBuyorderresonEditorUC.resx">
       <DependentUpon>CDBuyorderresonEditorUC.cs</DependentUpon>
@@ -404,6 +449,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Code\CompanyUC.resx">
       <DependentUpon>CompanyUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Data\dlg\TBLCheckEditorDlg.resx">
+      <DependentUpon>TBLCheckEditorDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Data\dlg\TBLTwreedOrderDlg.resx">
+      <DependentUpon>TBLTwreedOrderDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Data\TBLCheckUC.resx">
+      <DependentUpon>TBLCheckUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Data\TBLTwreedOrderEditorUC.resx">
+      <DependentUpon>TBLTwreedOrderEditorUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Data\TBLSuppliersEditorUC.resx">
       <DependentUpon>TBLSuppliersEditorUC.cs</DependentUpon>
@@ -471,6 +528,12 @@
     <EmbeddedResource Include="Views\Qry\Qry001UC.resx">
       <DependentUpon>Qry001UC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="XRep\xRep003.resx">
+      <DependentUpon>xRep003.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRep\xRep002.resx">
+      <DependentUpon>xRep002.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="XRep\xRep001.resx">
       <DependentUpon>xRep001.cs</DependentUpon>
     </EmbeddedResource>
@@ -480,7 +543,7 @@
     <None Include="Datasource\dsData.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsData1.Designer.cs</LastGenOutput>
+      <LastGenOutput>dsData.Designer.cs</LastGenOutput>
     </None>
     <None Include="Datasource\dsData.xss">
       <DependentUpon>dsData.xsd</DependentUpon>
