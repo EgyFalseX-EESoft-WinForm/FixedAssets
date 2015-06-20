@@ -69,6 +69,56 @@ SELECT [ComponentId], SUM(Quantity) AS Quantity FROM CTE1 GROUP BY [ComponentId]
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vQry002TableAdapter" GeneratorDataComponentClassName="vQry002TableAdapter" Name="vQry002" UserDataComponentName="vQry002TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FixedAssetsConnectionString (Settings)" DbObjectName="FixedAssets.dbo.vQry002" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT autoid, EznEdafaId, EznEdafadate, Storename, SanfID, SanfName, uniteprice, orderquntity, AssetState FROM dbo.vQry002</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="autoid" DataSetColumn="autoid" />
+              <Mapping SourceColumn="EznEdafaId" DataSetColumn="EznEdafaId" />
+              <Mapping SourceColumn="EznEdafadate" DataSetColumn="EznEdafadate" />
+              <Mapping SourceColumn="Storename" DataSetColumn="Storename" />
+              <Mapping SourceColumn="SanfID" DataSetColumn="SanfID" />
+              <Mapping SourceColumn="SanfName" DataSetColumn="SanfName" />
+              <Mapping SourceColumn="uniteprice" DataSetColumn="uniteprice" />
+              <Mapping SourceColumn="orderquntity" DataSetColumn="orderquntity" />
+              <Mapping SourceColumn="AssetState" DataSetColumn="AssetState" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vQry003TableAdapter" GeneratorDataComponentClassName="vQry003TableAdapter" Name="vQry003" UserDataComponentName="vQry003TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FixedAssetsConnectionString (Settings)" DbObjectName="FixedAssets.dbo.vQry003" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT autoid, EznSarfId, EznSarfafdate, Storename, Depertment, EmpName, SanfID, SanfName, sarfquntity, ezndes, AssetState FROM dbo.vQry003</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="autoid" DataSetColumn="autoid" />
+              <Mapping SourceColumn="EznSarfId" DataSetColumn="EznSarfId" />
+              <Mapping SourceColumn="EznSarfafdate" DataSetColumn="EznSarfafdate" />
+              <Mapping SourceColumn="Storename" DataSetColumn="Storename" />
+              <Mapping SourceColumn="Depertment" DataSetColumn="Depertment" />
+              <Mapping SourceColumn="EmpName" DataSetColumn="EmpName" />
+              <Mapping SourceColumn="SanfID" DataSetColumn="SanfID" />
+              <Mapping SourceColumn="SanfName" DataSetColumn="SanfName" />
+              <Mapping SourceColumn="sarfquntity" DataSetColumn="sarfquntity" />
+              <Mapping SourceColumn="ezndes" DataSetColumn="ezndes" />
+              <Mapping SourceColumn="AssetState" DataSetColumn="AssetState" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -77,7 +127,7 @@ SELECT [ComponentId], SUM(Quantity) AS Quantity FROM CTE1 GROUP BY [ComponentId]
   <xs:element name="dsQry" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsQry" msprop:Generator_UserDSName="dsQry">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="AssetComponentQuantity" msprop:Generator_TableClassName="AssetComponentQuantityDataTable" msprop:Generator_TableVarName="tableAssetComponentQuantity" msprop:Generator_TablePropName="AssetComponentQuantity" msprop:Generator_RowDeletingName="AssetComponentQuantityRowDeleting" msprop:Generator_RowChangingName="AssetComponentQuantityRowChanging" msprop:Generator_RowEvHandlerName="AssetComponentQuantityRowChangeEventHandler" msprop:Generator_RowDeletedName="AssetComponentQuantityRowDeleted" msprop:Generator_UserTableName="AssetComponentQuantity" msprop:Generator_RowChangedName="AssetComponentQuantityRowChanged" msprop:Generator_RowEvArgName="AssetComponentQuantityRowChangeEvent" msprop:Generator_RowClassName="AssetComponentQuantityRow">
+        <xs:element name="AssetComponentQuantity" msprop:Generator_TableClassName="AssetComponentQuantityDataTable" msprop:Generator_TableVarName="tableAssetComponentQuantity" msprop:Generator_RowChangedName="AssetComponentQuantityRowChanged" msprop:Generator_TablePropName="AssetComponentQuantity" msprop:Generator_RowDeletingName="AssetComponentQuantityRowDeleting" msprop:Generator_RowChangingName="AssetComponentQuantityRowChanging" msprop:Generator_RowEvHandlerName="AssetComponentQuantityRowChangeEventHandler" msprop:Generator_RowDeletedName="AssetComponentQuantityRowDeleted" msprop:Generator_RowClassName="AssetComponentQuantityRow" msprop:Generator_UserTableName="AssetComponentQuantity" msprop:Generator_RowEvArgName="AssetComponentQuantityRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ComponentId" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnComponentId" msprop:Generator_ColumnPropNameInRow="ComponentId" msprop:Generator_ColumnPropNameInTable="ComponentIdColumn" msprop:Generator_UserColumnName="ComponentId" type="xs:int" />
@@ -85,7 +135,7 @@ SELECT [ComponentId], SUM(Quantity) AS Quantity FROM CTE1 GROUP BY [ComponentId]
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="TblAssets" msprop:Generator_TableClassName="TblAssetsDataTable" msprop:Generator_TableVarName="tableTblAssets" msprop:Generator_TablePropName="TblAssets" msprop:Generator_RowDeletingName="TblAssetsRowDeleting" msprop:Generator_RowChangingName="TblAssetsRowChanging" msprop:Generator_RowEvHandlerName="TblAssetsRowChangeEventHandler" msprop:Generator_RowDeletedName="TblAssetsRowDeleted" msprop:Generator_UserTableName="TblAssets" msprop:Generator_RowChangedName="TblAssetsRowChanged" msprop:Generator_RowEvArgName="TblAssetsRowChangeEvent" msprop:Generator_RowClassName="TblAssetsRow">
+        <xs:element name="TblAssets" msprop:Generator_TableClassName="TblAssetsDataTable" msprop:Generator_TableVarName="tableTblAssets" msprop:Generator_RowChangedName="TblAssetsRowChanged" msprop:Generator_TablePropName="TblAssets" msprop:Generator_RowDeletingName="TblAssetsRowDeleting" msprop:Generator_RowChangingName="TblAssetsRowChanging" msprop:Generator_RowEvHandlerName="TblAssetsRowChangeEventHandler" msprop:Generator_RowDeletedName="TblAssetsRowDeleted" msprop:Generator_RowClassName="TblAssetsRow" msprop:Generator_UserTableName="TblAssets" msprop:Generator_RowEvArgName="TblAssetsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="AssetsID" msprop:Generator_ColumnVarNameInTable="columnAssetsID" msprop:Generator_ColumnPropNameInRow="AssetsID" msprop:Generator_ColumnPropNameInTable="AssetsIDColumn" msprop:Generator_UserColumnName="AssetsID" type="xs:int" />
@@ -119,6 +169,92 @@ SELECT [ComponentId], SUM(Quantity) AS Quantity FROM CTE1 GROUP BY [ComponentId]
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="vQry002" msprop:Generator_TableClassName="vQry002DataTable" msprop:Generator_TableVarName="tablevQry002" msprop:Generator_RowChangedName="vQry002RowChanged" msprop:Generator_TablePropName="vQry002" msprop:Generator_RowDeletingName="vQry002RowDeleting" msprop:Generator_RowChangingName="vQry002RowChanging" msprop:Generator_RowEvHandlerName="vQry002RowChangeEventHandler" msprop:Generator_RowDeletedName="vQry002RowDeleted" msprop:Generator_RowClassName="vQry002Row" msprop:Generator_UserTableName="vQry002" msprop:Generator_RowEvArgName="vQry002RowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="autoid" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnautoid" msprop:Generator_ColumnPropNameInRow="autoid" msprop:Generator_ColumnPropNameInTable="autoidColumn" msprop:Generator_UserColumnName="autoid" type="xs:int" />
+              <xs:element name="EznEdafaId" msprop:Generator_ColumnVarNameInTable="columnEznEdafaId" msprop:Generator_ColumnPropNameInRow="EznEdafaId" msprop:Generator_ColumnPropNameInTable="EznEdafaIdColumn" msprop:Generator_UserColumnName="EznEdafaId" type="xs:int" />
+              <xs:element name="EznEdafadate" msprop:Generator_ColumnVarNameInTable="columnEznEdafadate" msprop:Generator_ColumnPropNameInRow="EznEdafadate" msprop:Generator_ColumnPropNameInTable="EznEdafadateColumn" msprop:Generator_UserColumnName="EznEdafadate" type="xs:dateTime" />
+              <xs:element name="Storename" msprop:Generator_ColumnVarNameInTable="columnStorename" msprop:Generator_ColumnPropNameInRow="Storename" msprop:Generator_ColumnPropNameInTable="StorenameColumn" msprop:Generator_UserColumnName="Storename">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SanfID" msprop:Generator_ColumnVarNameInTable="columnSanfID" msprop:Generator_ColumnPropNameInRow="SanfID" msprop:Generator_ColumnPropNameInTable="SanfIDColumn" msprop:Generator_UserColumnName="SanfID" type="xs:int" />
+              <xs:element name="SanfName" msprop:Generator_ColumnVarNameInTable="columnSanfName" msprop:Generator_ColumnPropNameInRow="SanfName" msprop:Generator_ColumnPropNameInTable="SanfNameColumn" msprop:Generator_UserColumnName="SanfName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="uniteprice" msprop:Generator_ColumnVarNameInTable="columnuniteprice" msprop:Generator_ColumnPropNameInRow="uniteprice" msprop:Generator_ColumnPropNameInTable="unitepriceColumn" msprop:Generator_UserColumnName="uniteprice" type="xs:double" />
+              <xs:element name="orderquntity" msprop:Generator_ColumnVarNameInTable="columnorderquntity" msprop:Generator_ColumnPropNameInRow="orderquntity" msprop:Generator_ColumnPropNameInTable="orderquntityColumn" msprop:Generator_UserColumnName="orderquntity" type="xs:double" />
+              <xs:element name="AssetState" msprop:Generator_ColumnVarNameInTable="columnAssetState" msprop:Generator_ColumnPropNameInRow="AssetState" msprop:Generator_ColumnPropNameInTable="AssetStateColumn" msprop:Generator_UserColumnName="AssetState">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vQry003" msprop:Generator_TableClassName="vQry003DataTable" msprop:Generator_TableVarName="tablevQry003" msprop:Generator_TablePropName="vQry003" msprop:Generator_RowDeletingName="vQry003RowDeleting" msprop:Generator_RowChangingName="vQry003RowChanging" msprop:Generator_RowEvHandlerName="vQry003RowChangeEventHandler" msprop:Generator_RowDeletedName="vQry003RowDeleted" msprop:Generator_UserTableName="vQry003" msprop:Generator_RowChangedName="vQry003RowChanged" msprop:Generator_RowEvArgName="vQry003RowChangeEvent" msprop:Generator_RowClassName="vQry003Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="autoid" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnautoid" msprop:Generator_ColumnPropNameInRow="autoid" msprop:Generator_ColumnPropNameInTable="autoidColumn" msprop:Generator_UserColumnName="autoid" type="xs:int" />
+              <xs:element name="EznSarfId" msprop:Generator_ColumnVarNameInTable="columnEznSarfId" msprop:Generator_ColumnPropNameInRow="EznSarfId" msprop:Generator_ColumnPropNameInTable="EznSarfIdColumn" msprop:Generator_UserColumnName="EznSarfId" type="xs:int" />
+              <xs:element name="EznSarfafdate" msprop:Generator_ColumnVarNameInTable="columnEznSarfafdate" msprop:Generator_ColumnPropNameInRow="EznSarfafdate" msprop:Generator_ColumnPropNameInTable="EznSarfafdateColumn" msprop:Generator_UserColumnName="EznSarfafdate" type="xs:dateTime" />
+              <xs:element name="Storename" msprop:Generator_ColumnVarNameInTable="columnStorename" msprop:Generator_ColumnPropNameInRow="Storename" msprop:Generator_ColumnPropNameInTable="StorenameColumn" msprop:Generator_UserColumnName="Storename">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Depertment" msprop:Generator_ColumnVarNameInTable="columnDepertment" msprop:Generator_ColumnPropNameInRow="Depertment" msprop:Generator_ColumnPropNameInTable="DepertmentColumn" msprop:Generator_UserColumnName="Depertment">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EmpName" msprop:Generator_ColumnVarNameInTable="columnEmpName" msprop:Generator_ColumnPropNameInRow="EmpName" msprop:Generator_ColumnPropNameInTable="EmpNameColumn" msprop:Generator_UserColumnName="EmpName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SanfID" msprop:Generator_ColumnVarNameInTable="columnSanfID" msprop:Generator_ColumnPropNameInRow="SanfID" msprop:Generator_ColumnPropNameInTable="SanfIDColumn" msprop:Generator_UserColumnName="SanfID" type="xs:int" />
+              <xs:element name="SanfName" msprop:Generator_ColumnVarNameInTable="columnSanfName" msprop:Generator_ColumnPropNameInRow="SanfName" msprop:Generator_ColumnPropNameInTable="SanfNameColumn" msprop:Generator_UserColumnName="SanfName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sarfquntity" msprop:Generator_ColumnVarNameInTable="columnsarfquntity" msprop:Generator_ColumnPropNameInRow="sarfquntity" msprop:Generator_ColumnPropNameInTable="sarfquntityColumn" msprop:Generator_UserColumnName="sarfquntity" type="xs:double" />
+              <xs:element name="ezndes" msprop:Generator_ColumnVarNameInTable="columnezndes" msprop:Generator_ColumnPropNameInRow="ezndes" msprop:Generator_ColumnPropNameInTable="ezndesColumn" msprop:Generator_UserColumnName="ezndes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AssetState" msprop:Generator_ColumnVarNameInTable="columnAssetState" msprop:Generator_ColumnPropNameInRow="AssetState" msprop:Generator_ColumnPropNameInTable="AssetStateColumn" msprop:Generator_UserColumnName="AssetState">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -128,6 +264,14 @@ SELECT [ComponentId], SUM(Quantity) AS Quantity FROM CTE1 GROUP BY [ComponentId]
     <xs:unique name="TblAssets_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:TblAssets" />
       <xs:field xpath="mstns:AssetsID" />
+    </xs:unique>
+    <xs:unique name="vQry002_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vQry002" />
+      <xs:field xpath="mstns:autoid" />
+    </xs:unique>
+    <xs:unique name="vQry003_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vQry003" />
+      <xs:field xpath="mstns:autoid" />
     </xs:unique>
   </xs:element>
 </xs:schema>

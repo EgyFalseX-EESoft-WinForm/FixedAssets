@@ -85,13 +85,16 @@ namespace FixedAssets.Views.Data
             try
             {
                 DevExpress.Xpo.Metadata.XPDataTableObject row = ((DevExpress.Xpo.Metadata.XPDataTableObject)gridViewMain.GetRow(e.RowHandle));
-                object ChecklagnaID = row.GetMemberValue("ChecklagnaID");
+                DevExpress.Xpo.Metadata.XPDataTableObject TwreedOrderRow = (DevExpress.Xpo.Metadata.XPDataTableObject)row.GetMemberValue("TwreedOrderId");
+                object TwreedOrderId = TwreedOrderRow.GetMemberValue("TwreedOrderId");
 
-                if (row != null && ChecklagnaID != null)
+                if (row != null && TwreedOrderId != null)
                 {
                     //load details
-                    LoadId((int)ChecklagnaID);
+                    LoadId((int)TwreedOrderId);
+                    tBLCheckdetailsTableAdapter.FillByChecklagnaID(dsData.TBLCheckdetails, Convert.ToInt32(row.GetMemberValue("ChecklagnaID")));
                     gridViewDetails.RefreshData();
+                    tBLCheckEmpTableAdapter.FillByChecklagnaID(dsData.TBLCheckEmp, Convert.ToInt32(row.GetMemberValue("ChecklagnaID")));
                     gridViewEmp.RefreshData();
                 }
             }
@@ -171,6 +174,7 @@ namespace FixedAssets.Views.Data
                 return;
             int ChecklagnaID = Convert.ToInt32(ParentRow.GetMemberValue("ChecklagnaID"));
             Row.ChecklagnaID = ChecklagnaID;
+            Row.accepted = false;
             Row.UserIn = Classes.Managers.UserManager.defaultInstance.User.UserId;
             Row.dateIn = Classes.Managers.DataManager.GetServerDatetime;
         }

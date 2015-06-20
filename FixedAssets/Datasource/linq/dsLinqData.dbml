@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="FixedAssets" Class="dsLinqDataDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=FixedAssets;Integrated Security=True" SettingsObjectName="FixedAssets.Properties.Settings" SettingsPropertyName="FixedAssetsConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=FalseX-PC;Initial Catalog=FixedAssets;Persist Security Info=True;User ID=sa" SettingsObjectName="FixedAssets.Properties.Settings" SettingsPropertyName="FixedAssetsConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Users" Member="Users">
     <Type Name="User">
       <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -152,6 +152,7 @@
       <Column Name="Supplierofferno" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="dateIn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="UserIn" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="TBLTwreedOrder_TBLCheck" Member="TBLChecks" ThisKey="TwreedOrderId" OtherKey="TwreedOrderId" Type="TBLCheck" />
       <Association Name="TBLSupplier_TBLTwreedOrder" Member="TBLSupplier" ThisKey="SupplierId" OtherKey="SupplierId" Type="TBLSupplier" IsForeignKey="true" />
     </Type>
   </Table>
@@ -159,6 +160,24 @@
     <Type Name="CdJoblagna">
       <Column Name="JobId" Type="System.Byte" DbType="TinyInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="JobName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CDStore" Member="CDStores">
+    <Type Name="CDStore">
+      <Column Name="StoreId" Type="System.Byte" DbType="TinyInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Storename" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBLCheck" Member="TBLChecks">
+    <Type Name="TBLCheck">
+      <Column Name="ChecklagnaID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BuyorderId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Checklagnadate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Decisionno" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TwreedOrderId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dateIn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserIn" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="TBLTwreedOrder_TBLCheck" Member="TBLTwreedOrder" ThisKey="TwreedOrderId" OtherKey="TwreedOrderId" Type="TBLTwreedOrder" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

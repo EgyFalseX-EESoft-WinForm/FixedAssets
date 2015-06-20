@@ -24,10 +24,11 @@ namespace FixedAssets
 
             Log.L4N.Init();
 
-            if (FXFW.SqlDB.LoadSqlDBPath("FixedAssets") && Authentication())
+            if (FXFW.SqlDB.LoadSqlDBPath("FixedAssets") /*&& Authentication()*/)
             {
                 Properties.Settings.Default["FixedAssetsConnectionString"] = FXFW.SqlDB.SqlConStr;
                 DevExpress.Xpo.XpoDefault.ConnectionString = FXFW.SqlDB.SqlConStr;
+                DatabaseScripts.FireScript();
                 ApplicationStart();
             }
 
@@ -55,7 +56,7 @@ namespace FixedAssets
 
         private static bool Authentication()
         {
-            return true;
+            
             string filePath = Application.StartupPath + "\\lnc.key";
 
             if (!System.IO.File.Exists(filePath))

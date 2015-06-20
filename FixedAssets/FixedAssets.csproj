@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>FixedAssets</RootNamespace>
     <AssemblyName>FixedAssets</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -24,6 +24,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,6 +34,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>FixedAssets.ico</ApplicationIcon>
@@ -132,9 +134,9 @@
     <Compile Include="Classes\Managers\UserManager.cs" />
     <Compile Include="Classes\Misc.cs" />
     <Compile Include="Classes\Types.cs" />
+    <Compile Include="DatabaseScripts.cs" />
     <Compile Include="Datasource\dsData.cs">
       <DependentUpon>dsData.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Datasource\dsData.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -217,11 +219,35 @@
     <Compile Include="Views\Data\dlg\TBLCheckEditorDlg.Designer.cs">
       <DependentUpon>TBLCheckEditorDlg.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Data\dlg\TBLEznSarfEditorDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Data\dlg\TBLEznSarfEditorDlg.Designer.cs">
+      <DependentUpon>TBLEznSarfEditorDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Data\dlg\TBLEznEdafaEditorDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Data\dlg\TBLEznEdafaEditorDlg.Designer.cs">
+      <DependentUpon>TBLEznEdafaEditorDlg.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Data\dlg\TBLTwreedOrderDlg.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Data\dlg\TBLTwreedOrderDlg.Designer.cs">
       <DependentUpon>TBLTwreedOrderDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Data\TBLEznSarfUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Data\TBLEznSarfUC.designer.cs">
+      <DependentUpon>TBLEznSarfUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Data\TBLEznEdafaUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Data\TBLEznEdafaUC.designer.cs">
+      <DependentUpon>TBLEznEdafaUC.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Data\TBLCheckUC.cs">
       <SubType>UserControl</SubType>
@@ -399,11 +425,35 @@
     <Compile Include="Views\Permission\UsersUC.designer.cs">
       <DependentUpon>UsersUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Qry\Qry003UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Qry\Qry003UC.designer.cs">
+      <DependentUpon>Qry003UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Qry\Qry002UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Qry\Qry002UC.designer.cs">
+      <DependentUpon>Qry002UC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Qry\Qry001UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Views\Qry\Qry001UC.designer.cs">
       <DependentUpon>Qry001UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XRep\xRep005.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRep\xRep005.Designer.cs">
+      <DependentUpon>xRep005.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XRep\xRep004.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRep\xRep004.Designer.cs">
+      <DependentUpon>xRep004.cs</DependentUpon>
     </Compile>
     <Compile Include="XRep\xRep003.cs">
       <SubType>Component</SubType>
@@ -453,8 +503,20 @@
     <EmbeddedResource Include="Views\Data\dlg\TBLCheckEditorDlg.resx">
       <DependentUpon>TBLCheckEditorDlg.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Data\dlg\TBLEznSarfEditorDlg.resx">
+      <DependentUpon>TBLEznSarfEditorDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Data\dlg\TBLEznEdafaEditorDlg.resx">
+      <DependentUpon>TBLEznEdafaEditorDlg.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Data\dlg\TBLTwreedOrderDlg.resx">
       <DependentUpon>TBLTwreedOrderDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Data\TBLEznSarfUC.resx">
+      <DependentUpon>TBLEznSarfUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Data\TBLEznEdafaUC.resx">
+      <DependentUpon>TBLEznEdafaUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Data\TBLCheckUC.resx">
       <DependentUpon>TBLCheckUC.cs</DependentUpon>
@@ -525,8 +587,20 @@
     <EmbeddedResource Include="Views\Permission\UsersUC.resx">
       <DependentUpon>UsersUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Qry\Qry003UC.resx">
+      <DependentUpon>Qry003UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Qry\Qry002UC.resx">
+      <DependentUpon>Qry002UC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Qry\Qry001UC.resx">
       <DependentUpon>Qry001UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRep\xRep005.resx">
+      <DependentUpon>xRep005.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRep\xRep004.resx">
+      <DependentUpon>xRep004.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="XRep\xRep003.resx">
       <DependentUpon>xRep003.cs</DependentUpon>

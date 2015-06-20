@@ -71,6 +71,7 @@
             this.tbMSG.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.tbMSG.Properties.ReadOnly = true;
             this.tbMSG.Properties.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tbMSG.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tbMSG.Size = new System.Drawing.Size(302, 84);
             this.tbMSG.TabIndex = 0;
             this.tbMSG.TabStop = false;

@@ -183,6 +183,14 @@ namespace FixedAssets.Views.Main
             {
                 e.Control = new TBLCheckUC(RuleElemet);
             }
+            else if (e.Document == docDataTBLEznEdafa)
+            {
+                e.Control = new TBLEznEdafaUC(RuleElemet);
+            }
+            else if (e.Document == docDataTBLEznSarf)
+            {
+                e.Control = new TBLEznSarfUC(RuleElemet);
+            }
 
             //---------Rules
             else if (e.Document == docRuleUsers)
@@ -204,6 +212,14 @@ namespace FixedAssets.Views.Main
             else if (e.Document == docQryQry001)//Qry
             {
                 e.Control = new Qry001UC();
+            }
+            else if (e.Document == docQryQry002)
+            {
+                e.Control = new Qry002UC();
+            }
+            else if (e.Document == docQryQry003)
+            {
+                e.Control = new Qry003UC();
             }
 
         }
