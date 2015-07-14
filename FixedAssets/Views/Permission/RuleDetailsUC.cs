@@ -28,43 +28,31 @@ namespace FixedAssets.Views.Permission
         public static void LoadDefaultNodes(DevExpress.XtraTreeList.TreeList Tree, FixedAssets.Views.Main.MainForm MainFrm)
         {
             Tree.Nodes.Clear();
-            //NICSQLTools.Forms.Main.MainTilesFrm MainFrm = (NICSQLTools.Forms.Main.MainTilesFrm)Parent.Parent.Parent;
-
             Tree.BeginUnboundLoad();
-
             // Create a root node .
-            TreeListNode RootNode = null;
-            TreeListNode RootDashBoardNode = Tree.AppendNode(new object[] { "Code", false, false, false, false }, RootNode);
-            TreeListNode RootEditorNode = Tree.AppendNode(new object[] { "Data", false, false, false, false }, RootNode);
-            TreeListNode RootQueriesNode = Tree.AppendNode(new object[] { "Queries", false, false, false, false }, RootNode);
-            TreeListNode RootRulesNode = Tree.AppendNode(new object[] { "Rules", false, false, false, false }, RootNode);
-            TreeListNode RootReportsNode = Tree.AppendNode(new object[] { "Reports", false, false, false, false }, RootNode);
-            
-
-            //RootEditorNode.Tag = "root"; RootQueriesNode.Tag = "root"; RootRulesNode.Tag = "root"; RootReportsNode.Tag = "root"; RootDashBoardNode.Tag = "root";
-
-            foreach (DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile tile in MainFrm.tileContainerCode.Items)
-            {
-                Tree.AppendNode(new object[] { tile.Document.Caption, false, false, false, false, tile.Document.ControlName }, RootDashBoardNode);
-            }
-            foreach (DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile tile in MainFrm.tileContainerData.Items)
-            {
-                Tree.AppendNode(new object[] { tile.Document.Caption, false, false, false, false, tile.Document.ControlName }, RootEditorNode);
-            }
-            foreach (DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile tile in MainFrm.tileContainerQry.Items)
-            {
-                Tree.AppendNode(new object[] { tile.Document.Caption, false, false, false, false, tile.Document.ControlName }, RootQueriesNode);
-            }
-            foreach (DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile tile in MainFrm.tileContainerRule.Items)
-            {
-                Tree.AppendNode(new object[] { tile.Document.Caption, false, false, false, false, tile.Document.ControlName }, RootRulesNode);
-            }
-            foreach (DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile tile in MainFrm.tileContainerReport.Items)
-            {
-                Tree.AppendNode(new object[] { tile.Document.Caption, false, false, false, false, tile.Document.ControlName }, RootReportsNode);
-            }
-            
+            TreeListNode RootNode = Tree.AppendNode(new object[] { "Main", false, false, false, false, "Main" }, 0); ;
+            ExtractTilesFromTileContainer(MainFrm.tileContainerMain, RootNode);
             Tree.EndUnboundLoad();
+        }
+        private static void ExtractTilesFromTileContainer(DevExpress.XtraBars.Docking2010.Views.WindowsUI.TileContainer TCont, DevExpress.XtraTreeList.Nodes.TreeListNode RootNode)
+        {
+            foreach (DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile tile in TCont.Items)
+            {
+                DevExpress.XtraTreeList.Nodes.TreeListNode NewNode = RootNode.TreeList.AppendNode(new object[] { tile.Document.Caption, false, false, false, false, tile.Document.ControlName }, RootNode);
+
+                if (tile.ActivationTarget != null)
+                {
+                    if (tile.ActivationTarget.GetType() == typeof(DevExpress.XtraBars.Docking2010.Views.WindowsUI.TileContainer))
+                        ExtractTilesFromTileContainer((DevExpress.XtraBars.Docking2010.Views.WindowsUI.TileContainer)tile.ActivationTarget, NewNode);
+                    else if (tile.ActivationTarget.GetType() == typeof(DevExpress.XtraBars.Docking2010.Views.WindowsUI.TabbedGroup))
+                        ExtractTilesFromGroupContainer((DevExpress.XtraBars.Docking2010.Views.WindowsUI.TabbedGroup)tile.ActivationTarget, NewNode);
+                }
+            }
+        }
+        private static void ExtractTilesFromGroupContainer(DevExpress.XtraBars.Docking2010.Views.WindowsUI.TabbedGroup GCont, DevExpress.XtraTreeList.Nodes.TreeListNode RootNode)
+        {
+            foreach (DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document doc in GCont.Items)
+                RootNode.TreeList.AppendNode(new object[] { doc.Caption, false, false, false, false, doc.ControlName }, RootNode);
         }
         void LoadUserData(int RuleID)
         {

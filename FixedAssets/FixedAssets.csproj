@@ -846,6 +846,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FixedAssets.ico" />
+    <None Include="Resources\Data3_64.png" />
+    <None Include="Resources\Data3_32.png" />
+    <None Include="Resources\Data2_32.png" />
+    <None Include="Resources\Data2_64.png" />
+    <None Include="Resources\Data1_64.png" />
+    <None Include="Resources\Data1_32.png" />
     <None Include="Resources\up_32x32.png" />
     <None Include="Resources\FixedAssets.png" />
   </ItemGroup>
