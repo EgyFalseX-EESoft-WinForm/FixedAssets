@@ -137,21 +137,9 @@ namespace FixedAssets.Views.Main
             {
                 e.Control = new CDInsuranceCoEditorUC(RuleElemet);
             }
-            else if (e.Document == docCodeCDUnit)
-            {
-                e.Control = new CDUnitEditorUC(RuleElemet);
-            }
-            else if (e.Document == docCodeCDBuyorderreson)
-            {
-                e.Control = new CDBuyorderresonEditorUC(RuleElemet);
-            }
             else if (e.Document == docCodeTBLCompany)
             {
                 e.Control = new CompanyUC(RuleElemet);
-            }
-            else if (e.Document == docCodeCDStore)
-            {
-                e.Control = new CDStoreEditorUC(RuleElemet);
             }
 
             //---------Data
@@ -162,14 +150,6 @@ namespace FixedAssets.Views.Main
             else if (e.Document == docDataTblEmp)
             {
                 e.Control = new TblEmpEditorUC(RuleElemet);
-            }
-            else if (e.Document == docDataCdAsnafCategory)
-            {
-                e.Control = new CdAsnafCategoryEditorUC(RuleElemet);
-            }
-            else if (e.Document == docDataTBLBuyorder)
-            {
-                e.Control = new TBLBuyorderUC(RuleElemet);
             }
             else if (e.Document == docDataTBLSuppliers)
             {
